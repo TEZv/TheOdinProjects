@@ -61,7 +61,7 @@ body {
     margin: 5px;
     cursor: pointer;
     border-radius: 20px;
-    transition: all .15s ease;
+    transition: all .14s ease;
 }
 
 button {
@@ -103,16 +103,6 @@ button {
     transform: scale(1.09);
     opacity: .9;
 }
-
-
-
-
-
-
-
-
-
-
 
 footer {
   padding: 40px;
