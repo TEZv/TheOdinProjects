@@ -234,3 +234,60 @@ function calculeaza(){
 	document.getElementById("inputScreen").innerHTML = ceva;
 }
 
+function deleteLast(){
+	let x = document.getElementById("inputScreen").innerHTML;
+	let lungime = x.length;
+	let g = x.charAt(Number(lungime) - 1);	
+	if(g != " "){
+		document.getElementById("inputScreen").innerHTML = x.slice(0, (Number(lungime) - 1));
+	}
+	else{
+		document.getElementById("inputScreen").innerHTML = x.slice(0, (Number(lungime) - 3));	
+	}
+}
+
+// keyDown support
+
+document.addEventListener('keydown', (e) => {
+ const C = document.querySelector('[data-C]')
+ const del = document.querySelector('[data-del]')
+ const zero = document.querySelector('[data-zero]')
+ const one = document.querySelector('[data-one]')
+ const two = document.querySelector('[data-two]')
+ const three = document.querySelector('[data-three]')
+ const four = document.querySelector('[data-four]')
+ const five = document.querySelector('[data-five]')
+ const six = document.querySelector('[data-six]')
+ const seven = document.querySelector('[data-seven]')
+ const eight = document.querySelector('[data-eight]')
+ const nine = document.querySelector('[data-nine]')
+ const dot = document.querySelector('[data-dot]')
+ const plus = document.querySelector('[data-plus]')
+ const minus = document.querySelector('[data-minus]')
+ const times = document.querySelector('[data-multiply]')
+ const divide = document.querySelector('[data-divide]')
+ const sqrt = document.querySelector('[data-sqrt]')
+ const pow = document.querySelector('[data-pow]')
+ const equal = document.querySelector('[data-equal]')
+
+  if (e.keyCode === 46) C.click()
+  if (e.keyCode === 8) del.click()
+  if (e.keyCode === 190 || e.keyCode === 110) dot.click()
+  if (e.keyCode === 48|| e.keyCode === 96) zero.click()
+  if (e.keyCode === 49 || e.keyCode === 97) one.click()
+  if (e.keyCode === 50 || e.keyCode === 98) two.click() 
+  if (e.keyCode === 51 || e.keyCode === 99) three.click()
+  if (e.keyCode === 52 || e.keyCode === 100) four.click() 
+  if (e.keyCode === 53 || e.keyCode === 101) five.click() 
+  if (e.keyCode === 54 || e.keyCode === 102) six.click() 
+  if (e.keyCode === 55 || e.keyCode === 103) seven.click() 
+  if (e.keyCode === 56 || e.keyCode === 104) eight.click()
+  if (e.keyCode === 57 || e.keyCode === 105) nine.click() 
+  if (e.keyCode === 107 || e.keyCode === 187) plus.click() 
+  if (e.keyCode === 189 || e.keyCode === 109) minus.click() 
+  if (e.keyCode === 106) times.click() 
+  if (e.keyCode === 191 || e.keyCode === 111) divide.click() 
+  if (e.keyCode === 83) sqrt.click() //s
+  if (e.keyCode === 80) pow.click() //p
+  if (e.keyCode === 13) equal.click() 
+})
