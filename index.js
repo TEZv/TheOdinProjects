@@ -112,4 +112,27 @@ function putNumber(numar){
 	
 	if(numar == " √ " && !operator.includes(wer)){
 		return false;
+    }
+    //if screen empty do not write an operator && replace operator if one is last entry
+	if((x == "" || wer == " √ ")&& operator.includes(numar)){
+		return false;
+	}else{
+		if(operator.includes(wer) && operator.includes(numar)){
+			return document.getElementById("inputScreen").innerHTML = x.slice(0,Number(lungime) - 3) + numar;
+		}else{
+			let pos = x.lastIndexOf(".");
+			if((pos == -1) && numar == "."){
+				return document.getElementById("inputScreen").innerHTML = x + numar;		
+			}else{
+				let xxx = (x.slice(pos,lungime)).search(/ [-+/*] /);
+				if (xxx > -1 || numar != "."){
+					return document.getElementById("inputScreen").innerHTML = x + numar;
+				}else{
+					return false;
+				}
+			}
+		}
 	}
+	return document.getElementById("inputScreen").innerHTML = x + numar;
+}
+
