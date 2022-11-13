@@ -71,3 +71,19 @@ document.getElementById("divide").addEventListener("click", function(){
 document.getElementById("point").addEventListener("click", function(){
 	putNumber(`${document.getElementById("point").innerHTML}`);
 });
+document.getElementById("squareRoot").addEventListener("click", function(){
+	putNumber(" √ ");
+});
+
+document.getElementById("power").addEventListener("click", function(){
+	putNumber(" ^ ");
+});
+document.getElementById("delete"). addEventListener("click", deleteLast);
+
+
+document.getElementById("equals").addEventListener("click", calculeaza);
+
+function cleanSlate(){
+	document.getElementById("inputScreen").innerHTML = "";
+	document.getElementById("expressionScreen").innerHTML = "";
+}
