@@ -21,3 +21,32 @@ function operate(a, z, b){
 			break;
 	}
 }
+function squareRoot(number){
+	return Math.round((Math.sqrt(number)) * 100000000) / 100000000;
+}
+
+document.getElementById("clear").addEventListener("click", cleanSlate);
+document.getElementById("1").addEventListener("click", function(){
+	putNumber(`${document.getElementById("1").innerHTML}`);
+});
+document.getElementById("2").addEventListener("click", function(){
+	putNumber(`${document.getElementById("2").innerHTML}`);
+});
+document.getElementById("3").addEventListener("click", function(){
+	putNumber(`${document.getElementById("3").innerHTML}`);
+});
+document.getElementById("4").addEventListener("click", function(){
+	putNumber(`${document.getElementById("4").innerHTML}`);
+});
+document.getElementById("5").addEventListener("click", function(){
+	putNumber(`${document.getElementById("5").innerHTML}`);
+});
+document.getElementById("6").addEventListener("click", function(){
+	putNumber(`${document.getElementById("6").innerHTML}`);
+});
+document.getElementById("7").addEventListener("click", function(){
+	putNumber(`${document.getElementById("7").innerHTML}`);
+});
+document.getElementById("8").addEventListener("click", function(){
+	putNumber(`${document.getElementById("8").innerHTML}`);
+});
