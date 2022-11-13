@@ -50,3 +50,24 @@ document.getElementById("7").addEventListener("click", function(){
 document.getElementById("8").addEventListener("click", function(){
 	putNumber(`${document.getElementById("8").innerHTML}`);
 });
+document.getElementById("9").addEventListener("click", function(){
+	putNumber(`${document.getElementById("9").innerHTML}`);
+});
+document.getElementById("0").addEventListener("click", function(){
+	putNumber(`${document.getElementById("0").innerHTML}`);
+});
+document.getElementById("plus").addEventListener("click", function(){
+	putNumber(`${document.getElementById("plus").innerHTML}`);
+});
+document.getElementById("minus").addEventListener("click", function(){
+	putNumber(`${document.getElementById("minus").innerHTML}`);
+});
+document.getElementById("multiply").addEventListener("click", function(){
+	putNumber(`${document.getElementById("multiply").innerHTML}`);
+});
+document.getElementById("divide").addEventListener("click", function(){
+	putNumber(`${document.getElementById("divide").innerHTML}`);
+});
+document.getElementById("point").addEventListener("click", function(){
+	putNumber(`${document.getElementById("point").innerHTML}`);
+});
