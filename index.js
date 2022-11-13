@@ -87,3 +87,29 @@ function cleanSlate(){
 	document.getElementById("inputScreen").innerHTML = "";
 	document.getElementById("expressionScreen").innerHTML = "";
 }
+function putNumber(numar){
+		
+	var operator = [" + ", " / ", " * ", " - ", " ^ "];	
+	let x = document.getElementById("inputScreen").innerHTML;
+	if (x =="Can't divide by zero!"){
+		x = "";
+	}
+	
+	let lungime = x.length;
+	
+	if(x == "0" && numar == "0"){
+		return false;	
+	}
+	
+	if(x == "" && numar == " √ "){
+		return document.getElementById("inputScreen").innerHTML = x + numar;	
+	}
+	
+	let wer = x.slice(Number(lungime) - 3, lungime);
+	if(numar == " √ " && operator.includes(wer)){
+		return document.getElementById("inputScreen").innerHTML = x + numar;
+	}
+	
+	if(numar == " √ " && !operator.includes(wer)){
+		return false;
+	}
