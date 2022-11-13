@@ -1,8 +1,10 @@
 :root {
     --light-pink-color: rgba(255, 152, 152, 0.514);
+    --pink-color: rgb(255, 204, 204);
     --dark-green-color: rgb(31, 75, 75);
     --light-green-color: rgba(83, 155, 155, 0.795);
     --black-color: #000000;
+    --yellow-color: rgb(190, 58, 10);
 }
 
 
@@ -49,7 +51,7 @@ body {
 #container {
     border-style: solid;
     border-radius: 30px;
-    width: 300px;
+    width: 900px;
     margin: 20px auto;
     padding: 25px;
     background-color: var(--light-green-color);
@@ -62,41 +64,46 @@ body {
     margin: 6px;
     border-radius: 3px;
     cursor: pointer;
-    box-shadow: 2px 2px;
+    box-shadow: 2px 4px var(--dark-green-color);
     font-weight: 1000;
-    border: 1px solid rgb(255, 255, 255);
+    border: 1px solid var(--dark-green-color);
     outline: none;
 }
 
 .number:active,
 .operand:active,
 .special:active {
-    box-shadow: 1px 1px;
+    box-shadow: 4px 4px var(--dark-green-color);
 }
 
+.number:hover,
+.operand:hover,
+.special:hover {
+    box-shadow: 2px 4px var(--light-green-color);
+}
 
 .operand {
-    border: 1px solid rgb(47, 79, 79);
+    border: 1px solid var(--dark-green-color);
 }
 
 #clear,
 #delete {
-    border: 1px solid rgb(255, 69, 0);
+    border: 1px solid var(--yellow-color);
 }
 
 .operand {
-    background-color: DarkSlateGray;
+    background-color: var(--light-green-color);
 }
 
 .number,
 #point,
 #equals {
-    background-color: white;
+    background-color: var(--pink-color);
 }
 
 #clear,
 #delete {
-    background-color: OrangeRed;
+    background-color: var(--yellow-color);
 }
 
 #squareRoot,
