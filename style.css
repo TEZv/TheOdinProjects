@@ -32,119 +32,87 @@ li {
   margin-bottom: 5px;
 }
 body {
-  background: var(--light-pink-color);
+    background: var(--light-pink-color);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
 }
 
-#buttons {
-  height: 350px;
-  width: 300px;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+.calculator {
+    height: 70vh;
+    max-height: 600px;
+    width: 50vw;
+    max-width: 400px;
+    border: var(--black-color) solid 1px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 5px;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: var(--light-green-color);
 }
 
-#screen {
-  margin-bottom: 20px;
-  border-style: solid;
-  width: 300px;
-  height: 140px;
-  border-radius: 15px;
-  background-color: var(--dark-green-color);
-  box-shadow: inset 0 0 15px var(--black-color);
+.btn {
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: all .15s ease;
 }
 
-#expressionScreen,
-#inputScreen {
-  width: 290px;
-  height: 40px;
-  margin-bottom: 10px;
-  margin-top: 0px;
-  margin-right: 5px;
-  text-align: right;
+button {
+    font-size: 2rem;
+    outline: none;
 }
 
-#inputScreen {
-  font: bold 120% "McLaren", monospace;
+#display {
+    grid-column: 1 / 5;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+    align-items: center;
+    margin: 5px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    background-color: var(--dark-green-color);
+    box-shadow: 5px 10px 18px black;
+
 }
 
-#expressionScreen {
-  font: 80% "McLaren", monospace;
+#clear {
+    background-color: var(--pink-b-color);
+    grid-column: span 2;
 }
 
-#container {
-  border-style: solid;
-  border-radius: 30px;
-  width: 900px;
-  margin: 120px auto;
-  margin-bottom: -550px;
-  padding: 25px;
-  background-color: var(--light-green-color);
-  box-shadow: inset 0 0 15px var(--black-color);
+#enter {
+    background-color: var(--yellow-color);
+    grid-column: span 2;
 }
 
-.special,
-.operand,
-.number {
-  margin: 6px;
-  border-radius: 3px;
-  cursor: pointer;
-  box-shadow: 2px 4px var(--dark-green-color);
-  font-weight: 1000;
-  border: 1px solid var(--dark-green-color);
-  outline: none;
+.clicked {
+    transform: scale(.9);
+    box-shadow: 5px 10px 18px var(--black-color);
+    opacity: .9;
 }
 
-.number:active,
-.operand:active,
-.special:active {
-  box-shadow: 4px 4px var(--dark-green-color);
+.btn:hover {
+    transform: scale(1.1);
+    opacity: .9;
 }
 
-.number:hover,
-.operand:hover,
-.special:hover {
-  box-shadow: 2px 4px var(--light-green-color);
-}
 
-.operand {
-  border: 1px solid var(--dark-green-color);
-}
 
-#clear,
-#delete {
-  border: 1px solid var(--yellow-color);
-}
 
-.operand {
-  background-color: var(--light-green-color);
-}
 
-.number,
-#point,
-#equals {
-  background-color: var(--pink-color);
-}
 
-#clear,
-#delete {
-  background-color: var(--yellow-color);
-}
 
-#squareRoot,
-#point {
-  font: bold 100% "McLaren", monospace;
-}
 
-.instructions {
-  display: block;
-  margin-bottom: 150px;
-  padding-left: 970px;
-  height: 500px;
-  width: 350px;
-  position: relative;
-  color: black;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  font-size: large;
-}
+
+
 
 footer {
   padding: 40px;
