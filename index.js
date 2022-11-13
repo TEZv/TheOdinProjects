@@ -136,3 +136,101 @@ function putNumber(numar){
 	return document.getElementById("inputScreen").innerHTML = x + numar;
 }
 
+function calculeaza(){
+	
+	let ceva = document.getElementById("inputScreen").innerHTML;
+	document.getElementById("expressionScreen").innerHTML = ceva;
+	let operator = ["√", "^", "*", "/", "-", "+"];
+	let total;
+	let primul;
+	let aldoilea;
+	let marime1;
+	let marime2;
+	let locatiePrimul;
+	let locatieDoi;
+	let lungime;
+	let semn;
+	let x2;
+	let match2;
+	let lastIndex2;
+	let lastIndex;
+	let x;
+	let match;
+	
+	//daca ultimul caracter este un operator - altfel da eroare
+	let sizeInput = ceva.length;
+	let wer = ceva.slice(sizeInput - 2, sizeInput - 1);
+	
+	if(operator.includes(wer)){
+		return false;
+	}
+	
+	for(let i = 0; i < operator.length; i++){	
+		while(ceva.indexOf(operator[i]) > -1){
+			let operatorSign = ceva.indexOf(operator[i]);
+			
+			if(ceva.includes("Can't divide by zero!")){
+				ceva = "Can't divide by zero!";
+				break;
+			}
+			
+			//for minus sign
+			if (operatorSign == 0){
+				operatorSign = ceva.slice(1).indexOf(operator[i]);
+				operatorSign = operatorSign + 1;
+			}
+			
+			x = ceva.slice(0, operatorSign);
+				
+			match = x.match(/ [-+/*] /g);
+			
+			if(ceva.slice(0,1) == "-" && ceva.slice(1).match(/ [-+/*] /g) === null){
+				break;
+			}
+			
+			if(match === null){
+				lastIndex = 0;
+			}else{
+				lastIndex  = x.lastIndexOf(match[match.length-1]);
+			}
+			
+			if (lastIndex == 0){
+				primul = ceva.slice(0, (operatorSign -1));
+				marime1 = ceva.slice(0, (operatorSign -1)).length;
+				locatiePrimul = 0;
+			}
+			else{
+				primul = ceva.slice((lastIndex + 3), (operatorSign -1));
+				marime1 = ceva.slice(lastIndex + 3, (operatorSign -1)).length;
+				locatiePrimul = lastIndex + 3;
+			}
+			
+			semn = ceva.charAt(Number(operatorSign));
+			if(semn == "√"){
+				marime1 = 0;
+			}
+			
+			x2 = ceva.slice(operatorSign + 2);
+			match2 = x2.match(/ [-+/*^] /g);
+			
+			if(match2 === null){
+				marime2 = ceva.slice(operatorSign + 2).length; 
+			}else{
+				lastIndex2  = x2.indexOf(match2[0]);
+				marime2 = ceva.substr(operatorSign + 2, lastIndex2).length; 
+			}
+			
+			aldoilea = ceva.substr(operatorSign + 2, marime2);
+			
+			lungime = marime1 + (marime2) + 3;
+			
+			if(operator[i] == "√"){
+				ceva = ceva.replace(ceva.substr(operatorSign - 1, lungime), squareRoot(aldoilea));
+			}else{
+				ceva = ceva.replace(ceva.substr(locatiePrimul, lungime), operate(parseFloat(primul), semn, parseFloat(aldoilea)));
+			}
+		}
+	}
+	document.getElementById("inputScreen").innerHTML = ceva;
+}
+
