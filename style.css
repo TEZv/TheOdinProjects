@@ -15,7 +15,7 @@
 h1 {
   font-size: 70px;
   text-align: center;
-  margin-bottom: -60px;
+  margin-bottom: 30px;
 }
 
 h3,
@@ -43,10 +43,10 @@ body {
 }
 
 .calculator {
-    height: 70vh;
-    max-height: 600px;
-    width: 50vw;
-    max-width: 400px;
+    height: 71vh;
+    max-height: 610px;
+    width: 52vw;
+    max-width: 405px;
     border: var(--black-color) solid 1px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -77,9 +77,9 @@ button {
     align-items: center;
     margin: 5px;
     border-radius: 5px;
-    margin-bottom: 20px;
+    margin-bottom: 19px;
     background-color: var(--dark-green-color);
-    box-shadow: 5px 10px 18px black;
+    box-shadow: 4px 9px 17px var(--black-color);
 
 }
 
@@ -94,13 +94,13 @@ button {
 }
 
 .clicked {
-    transform: scale(.9);
-    box-shadow: 5px 10px 18px var(--black-color);
-    opacity: .9;
+    transform: scale(.8);
+    box-shadow: 4px 9px 16px var(--black-color);
+    opacity: .8;
 }
 
 .btn:hover {
-    transform: scale(1.1);
+    transform: scale(1.09);
     opacity: .9;
 }
 
