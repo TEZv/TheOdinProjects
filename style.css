@@ -60,3 +60,50 @@ body {
     border: 1px solid rgb(255, 255, 255);
     outline: none;
 }
+
+.number:active,
+.operand:active,
+.special:active {
+    box-shadow: 1px 1px;
+}
+
+
+.operand {
+    border: 1px solid rgb(47, 79, 79);
+}
+
+#clear,
+#delete {
+    border: 1px solid rgb(255, 69, 0);
+}
+
+.operand {
+    background-color: DarkSlateGray;
+}
+
+.number,
+#point,
+#equals {
+    background-color: white;
+}
+
+#clear,
+#delete {
+    background-color: OrangeRed;
+}
+
+#squareRoot,
+#point {
+    font: bold 100% "McLaren", monospace;
+}
+
+.instructions {
+    display: block;
+    float: left;
+    height: 500px;
+    width: 350px;
+    position: relative;
+    color: black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: large;
+}
