@@ -6,4 +6,4 @@ Don't put a minus before the integer, it won't work (it's only for simple calcul
 
 Thanks for your attention.
 
-See live: https://tezv.github.io/TheOdinProject-Calculator/.
+See live: <a href="https://tezv-calculator.netlify.app/">here:)</a>.
