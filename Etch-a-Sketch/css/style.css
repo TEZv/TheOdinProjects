@@ -44,7 +44,7 @@ body {
 
 .container {
   margin-top: 20px;
-  margin-bottom: -130px;
+  margin-bottom: -200px;
   width: 1100px;
   height: 800px;
   display: flex;
@@ -55,7 +55,7 @@ body {
 }
 
 .input-container {
-  margin: 10px 0;
+  margin: -10px 0;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -71,7 +71,7 @@ body {
   background-color: var(--bg-color);
   position: relative;
   left: 475px;
-  bottom: -25px;
+  bottom: -95px;
   border-radius: 50px;
 }
 
@@ -80,8 +80,8 @@ body {
   height: 50px;
   background-color: var(--red-color);
   position: relative;
-  left: 485px;
-  bottom: 165px;
+  left: 490px;
+  bottom: 95px;
   border-radius: 50px;
 }
 
@@ -91,7 +91,7 @@ body {
   background-color: var(--bg-color);
   position: relative;
   right: 475px;
-  bottom: 75px;
+  bottom: 7px;
   border-radius: 50px;
 }
 
@@ -101,7 +101,7 @@ body {
   background-color: var(--red-color);
   position: relative;
   left: -487px;
-  bottom: 216px;
+  bottom: 148px;
   border-radius: 50px;
 }
 
