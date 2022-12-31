@@ -81,3 +81,30 @@ body {
     width: 25px;
     height: 25px;
 }
+
+#textbox {
+    width: 253px;
+    border-radius: 15px;
+    font-weight: 100;
+}
+
+#textbox::-webkit-input-placeholder {
+    color: rgb(24, 19, 19);
+    opacity: 0.2;
+    text-align: center;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+#button-submit,
+#button-reset {
+    border-radius: 15px;
+    padding: 3px 10px;
+    background-color: #333c3f;
+    cursor: pointer;
+}
