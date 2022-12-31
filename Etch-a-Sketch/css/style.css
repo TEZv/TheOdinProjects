@@ -17,160 +17,165 @@
 *,
 ::after,
 ::before {
-    box-sizing: border-box;
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 1.5rem;
+  box-sizing: border-box;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 1.5rem;
 }
 
 html {
-    background: linear-gradient(-85deg, var(--dark-blue-color), var(--green-color), var(--white-color), var(--red-color));
+  background: linear-gradient(
+    -85deg,
+    var(--dark-blue-color),
+    var(--green-color),
+    var(--white-color),
+    var(--red-color)
+  );
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex: 0 1 auto;
-    padding: 0;
-    margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 0 1 auto;
+  padding: 0;
+  margin: 0;
 }
 
 .container {
-    margin-top: 20px;
-    margin-bottom: -130px;
-    width: 1100px;
-    height: 800px;
-    display: flex;
-    flex-wrap: wrap;
-    background-color: var(--light-black-color);
-    border-radius: 45px;
-    border: 100px solid var(--light-red-color);
+  margin-top: 20px;
+  margin-bottom: -130px;
+  width: 1100px;
+  height: 800px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: var(--light-black-color);
+  border-radius: 45px;
+  border: 100px solid var(--light-red-color);
 }
 
 .input-container {
-    margin: 10px 0;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    background-color: var(--light-brown-color);
-    padding: 20px 10px;
-    gap: 20px;
-    border-radius: 15px;
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: var(--light-brown-color);
+  padding: 20px 10px;
+  gap: 20px;
+  border-radius: 15px;
 }
 
 .ring {
-    width: 100px;
-    height: 100px;
-    background-color: var(--bg-color);
-    position: relative;
-    left: 475px;
-    bottom: -25px;
-    border-radius: 50px;
-    
+  width: 100px;
+  height: 100px;
+  background-color: var(--bg-color);
+  position: relative;
+  left: 475px;
+  bottom: -25px;
+  border-radius: 50px;
 }
 
 .ring-black {
-    width: 50px;
-    height: 50px;
-    background-color: var(--red-color);
-    position: relative;
-    left: 485px;
-    bottom: 165px;
-    border-radius: 50px;
+  width: 50px;
+  height: 50px;
+  background-color: var(--red-color);
+  position: relative;
+  left: 485px;
+  bottom: 165px;
+  border-radius: 50px;
 }
 
 .ring-item {
-    width: 100px;
-    height: 100px;
-    background-color: var(--bg-color);
-    position: relative;
-    right: 475px;
-    bottom: 75px;
-    border-radius: 50px;
+  width: 100px;
+  height: 100px;
+  background-color: var(--bg-color);
+  position: relative;
+  right: 475px;
+  bottom: 75px;
+  border-radius: 50px;
 }
 
 .ring-item-black {
-    width: 50px;
-    height: 50px;
-    background-color: var(--red-color);
-    position: relative;
-    left: -487px;
-    bottom: 216px;
-    border-radius: 50px;
+  width: 50px;
+  height: 50px;
+  background-color: var(--red-color);
+  position: relative;
+  left: -487px;
+  bottom: 216px;
+  border-radius: 50px;
 }
 
 .grid-size {
-    flex: 1 1 0;
+  flex: 1 1 0;
 }
 
 .color-play {
-    display: flex;
-    justify-content: center;
-    flex: 1 1 0;
+  display: flex;
+  justify-content: center;
+  flex: 1 1 0;
 }
 
 #shadowing,
 #rainbow {
-    margin-top: 4px;
-    width: 25px;
-    height: 25px;
+  margin-top: 4px;
+  width: 25px;
+  height: 25px;
 }
 
 #textbox {
-    width: 253px;
-    border-radius: 15px;
-    font-weight: 100;
+  width: 253px;
+  border-radius: 15px;
+  font-weight: 100;
 }
 
 #textbox::-webkit-input-placeholder {
-    color: var(--brown-color);
-    opacity: 0.2;
-    text-align: center;
+  color: var(--brown-color);
+  opacity: 0.2;
+  text-align: center;
 }
 
 .buttons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 10px;
 }
 
 #button-check,
 #button-clear {
-    border-radius: 15px;
-    padding: 3px 10px;
-    background-color: var(--dark-blue-color);
-    cursor: pointer;
-    color: var(--red-color);
+  border-radius: 15px;
+  padding: 3px 10px;
+  background-color: var(--dark-blue-color);
+  cursor: pointer;
+  color: var(--red-color);
 }
 
 #button-check:hover,
 #button-clear:hover {
-    background-color: var(--bg-color);
+  background-color: var(--bg-color);
 }
 
 .option {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  text-align: center;
 }
 
 .number-select {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
 #fav-color {
-    border-style: hidden;
-    background-color: var(--light-red-color);
-    padding: 0;
-    margin: 0;
-    width: 30px;
-    height: 33px;
+  border-style: hidden;
+  background-color: var(--light-red-color);
+  padding: 0;
+  margin: 0;
+  width: 30px;
+  height: 33px;
 }
