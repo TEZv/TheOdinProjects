@@ -247,3 +247,60 @@ function deleteGrid() {
   }
 }
 
+//fade grid
+function fadeGrid(item) {
+  // if the cell hasnt been coloured, set it to the background color (un marked cells are transperent)
+  if (item.style.backgroundColor == '' || item.style.backgroundColor == 'transperent') {
+    item.style.backgroundColor == bgColor;
+  }
+
+  // attatch class to each item. this fades the color to the background color over 1.5 seconds
+
+  // apply a random fadeout time to each item
+
+  let fadeSpeed = Math.random() * 10;
+  if (fadeSpeed > 8) {
+    item.classList.add('clear-fade');
+  } else if (fadeSpeed > 6) {
+    item.classList.add('clear-fade-2');
+  } else if (fadeSpeed > 4) {
+    item.classList.add('clear-fade-3');
+  } else if (fadeSpeed > 2) {
+    item.classList.add('clear-fade-4');
+  } else {
+    item.classList.add('clear-fade-5');
+  }
+}
+
+// clear grid with a fade out
+let root = document.documentElement;
+const clearButton = document.querySelector('#clear-grid');
+function clearGrid() {
+  // sets the css background color to the js variable bgColor. this is so the fadeout class can be applied, and use its background color
+  root.style.setProperty('--bg-color', bgColor);
+  gridItems = document.querySelectorAll('.grid-item');
+  for (let i = 0; i < gridItems.length; i++) {
+    fadeGrid(gridItems[i]);
+  }
+  // set a timer so the fade has time to execute, then reset all the grid cells.
+  setTimeout(function () {
+    for (let i = 0; i < gridItems.length; i++) {
+      gridItems[i].style.backgroundColor = '';
+      gridItems[i].removeAttribute('data-inked');
+      gridItems[i].removeAttribute('data-shade');
+      gridItems[i].classList.remove('clear-fade');
+      gridItems[i].classList.remove('clear-fade-2');
+      gridItems[i].classList.remove('clear-fade-3');
+      gridItems[i].classList.remove('clear-fade-4');
+      gridItems[i].classList.remove('clear-fade-5');
+    }
+  }, 1500);
+  container.style.backgroundColor = bgColor;
+
+  // turn off the button after a very short delay
+  setTimeout(function () {
+    clearButton.classList.remove('btn-on');
+  }, 1400);
+}
+clearButton.addEventListener('click', clearGrid);
+
