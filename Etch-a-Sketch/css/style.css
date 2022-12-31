@@ -5,7 +5,7 @@
     --red-color: rgba(15, 104, 49, 0.63);
     --yellow-color: rgb(255, 252, 88);
     --brown-color: rgb(32, 12, 12);
-    --green-color: rgb(30, 94, 131);
+    --green-color: rgb(153, 192, 108);
 }
 
 * {
@@ -36,11 +36,12 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 .header {
-    margin-top: 50px;
+    margin-bottom: 100px;
+    padding-top: 25px;
     color: var(--blue-color);
     font-size: 100px;
     text-align: center;
-    font-family: gameover;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
 
 .grid-wrapper {
@@ -77,11 +78,12 @@ input[type="color"] {
     display: block;
     outline: none;
     border: none;
-    background-color: rgba(0, 0, 0, 0);
+    background-color: var(--brown-color);
     border-radius: 2px;
     width: 200%;
     height: 200%;
     transform: translateX(-10px) translateY(-10px);
+    cursor: pointer;
 
 }
 
@@ -89,19 +91,18 @@ input[type="color"] {
     height: 36px;
     overflow: hidden;
     border-radius: 2px;
-    border: 1px solid rgb(62, 166, 255);
+    border: 1px solid var(--green-color);
     width: 35%;
     margin-bottom: 10px;
 }
 
 .color-card {
-    font-family: roboto;
     font-weight: 500;
     font-size: 14px;
     color: var(--green-color);
     display: flex;
     position: relative;
-
+    margin-left: 20px;
 }
 
 .color-card span {
@@ -197,7 +198,7 @@ button {
 }
 
 .controls {
-    width: 300px;
+    width: 320px;
     background-color: var(--blue-color);
     border-radius: 4px;
     padding: 30px;
