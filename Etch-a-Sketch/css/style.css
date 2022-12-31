@@ -1,8 +1,8 @@
 :root {
   --bg-color: #ffcece;
   --blue-color: rgb(40, 25, 49);
-  --dark-blue-color: rgb(34, 19, 68);
-  --red-color: rgba(15, 104, 49, 0.63);
+  --dark-blue-color: rgb(66, 58, 87);
+  --red-color: rgb(255, 0, 0);
   --yellow-color: rgb(255, 252, 88);
   --brown-color: rgb(32, 12, 12);
   --light-brown-color: #3b1212;
@@ -35,29 +35,19 @@ body {
     margin: 0;
 }
 
-.container.default > div {
-    width: 50px;
-    height: 50px;
-    border: 100px solid var(--white-color);
-    
-}
-
 .container {
-    margin: 30px;
-    width: 800px;
+    margin: 20px;
+    width: 1100px;
     height: 800px;
     display: flex;
     flex-wrap: wrap;
     background-color: white;
-    border-radius: 15px;
-}
-
-.red {
-    background-color: rgb(255, 166, 166);
+    border-radius: 45px;
+    border: 100px solid var(--red-color);
 }
 
 .input-container {
-    margin: 30px 0;
+    margin: 10px 0;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
