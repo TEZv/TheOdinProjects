@@ -93,3 +93,56 @@ shaderButton.addEventListener('click', () => {
   }
 });
 
+// shading function
+
+function RGBToHex(rgb) {
+  // Choose correct separator
+  let sep = rgb.indexOf(',') > -1 ? ',' : ' ';
+  // Turn "rgb(r,g,b)" into [r,g,b]
+  rgb = rgb.substr(4).split(')')[0].split(sep);
+
+  let r = (+rgb[0]).toString(16),
+    g = (+rgb[1]).toString(16),
+    b = (+rgb[2]).toString(16);
+
+  if (r.length == 1) r = '0' + r;
+  if (g.length == 1) g = '0' + g;
+  if (b.length == 1) b = '0' + b;
+  b = (+rgb[2]).toString(16);
+
+  if (r.length == 1) r = '0' + r;
+  if (g.length == 1) g = '0' + g;
+  if (b.length == 1) b = '0' + b;
+  return '#' + r + g + b;
+}
+
+function adjust(RGBToHex, rgb, amount) {
+  let color = RGBToHex(rgb);
+  return (
+    '#' +
+    color
+      .replace(/^#/, '')
+      .replace(/../g, (color) =>
+        ('0' + Math.min(255, Math.max(0, parseInt(color, 16) + amount)).toString(16)).substr(-2)
+      )
+  );
+}
+
+// eyedrop color grabbing tool
+const dropper = document.querySelector('#color-grabber');
+let grab = false;
+dropper.addEventListener('click', () => {
+  // when grab is true, all drawing is frozen until a color is selected
+  if (grab) {
+    grab = false;
+    dropper.classList.remove('btn-on');
+  } else {
+    grab = true;
+  }
+
+  if (fill) {
+    fill = false;
+    colorFillButton.classList.remove('btn-on');
+  }
+});
+
