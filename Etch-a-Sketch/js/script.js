@@ -146,3 +146,104 @@ dropper.addEventListener('click', () => {
   }
 });
 
+// default eraser to false and listen for toggle
+let eraser = false;
+const eraserButton = document.querySelector('#eraser-btn');
+eraserButton.addEventListener('click', () => {
+  if (eraser) {
+    eraser = false;
+  } else {
+    eraser = true;
+    shading = false;
+    shaderButton.classList.remove('btn-on');
+    rainbow = false;
+    rainbowButton.classList.remove('btn-on');
+    lighten = false;
+    lightenButton.classList.remove('btn-on');
+  }
+
+  if (grab) {
+    grab = false;
+    dropper.classList.remove('btn-on');
+  }
+});
+
+// default rainbow ink to false and listen for toggle
+let rainbow = false;
+const rainbowButton = document.querySelector('#rainbow-btn');
+rainbowButton.addEventListener('click', () => {
+  if (rainbow) {
+    rainbow = false;
+  } else {
+    rainbow = true;
+    shading = false;
+    shaderButton.classList.remove('btn-on');
+    lighten = false;
+    lightenButton.classList.remove('btn-on');
+    eraser = false;
+    eraserButton.classList.remove('btn-on');
+  }
+
+  if (grab) {
+    grab = false;
+    dropper.classList.remove('btn-on');
+  }
+});
+
+//create random colour generator
+function randomColor() {
+  // return "#" + Math.floor(Math.random()*16777215).toString(16);
+  // this returns fewer colors but they are all nice and bright
+  return `hsl(${Math.random() * 360}, 100%, 50%)`;
+}
+
+// slider
+
+let progressBar = document.getElementById('progress-bar');
+
+function rangeSlider(value) {
+  let gridLabels = document.querySelectorAll('#range-value');
+  progressBar.style.width = (value / 60) * 100 + '%';
+  for (let i = 0; i < gridLabels.length; i++) {
+    gridLabels[i].textContent = value;
+  }
+  // document.querySelectorAll('#range-value').textContent = value;
+  gridSize = parseInt(value);
+  deleteGrid();
+  createGrid();
+  listen();
+  reInit();
+  // turn the grid button back on if it is off.
+  const gridButton = document.querySelector('#grid-btn');
+  if (gridButton.classList.contains('btn-on')) {
+    //pass
+  } else {
+    gridButton.classList.toggle('btn-on');
+  }
+}
+
+function reInit() {
+  deleteGrid();
+  createGrid();
+  listen();
+}
+
+// let progressBar = document.getElementById('progress-bar');
+
+function rangeSliderValue(value) {
+  let gridLabels = document.querySelectorAll('#range-value');
+  for (let i = 0; i < gridLabels.length; i++) {
+    gridLabels[i].textContent = value;
+  }
+  progressBar.style.width = (value / 60) * 100 + '%';
+}
+
+function deleteGrid() {
+  while (container.firstChild) {
+    container.removeEventListener('mousedown', drawClick);
+    container.removeEventListener('mouseenter', drawClickHover);
+    container.lastChild = null;
+    container.removeChild(container.lastChild);
+  }
+}
+
