@@ -64,8 +64,8 @@ body {
     height: 100px;
     background-color: var(--bg-color);
     position: relative;
-    left: 480px;
-    bottom: 130px;
+    left: 475px;
+    bottom: -25px;
     border-radius: 50px;
     
 }
@@ -74,8 +74,8 @@ body {
     height: 100px;
     background-color: var(--bg-color);
     position: relative;
-    right: 480px;
-    bottom: 230px;
+    right: 475px;
+    bottom: 75px;
     border-radius: 50px;
 }
 
@@ -121,7 +121,7 @@ body {
     padding: 3px 10px;
     background-color: var(--dark-blue-color);
     cursor: pointer;
-    color: var(--light-red-color);
+    color: var(--red-color);
 }
 
 #button-check:hover,
@@ -147,7 +147,7 @@ body {
 
 #fav-color {
     border-style: hidden;
-    background-color: #5f98ac;
+    background-color: var(--light-red-color);
     padding: 0;
     margin: 0;
     width: 30px;
