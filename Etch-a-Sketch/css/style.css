@@ -8,7 +8,8 @@
     --light-brown-color: #3b1212;
     --green-color: rgb(153, 192, 108);
     --white-color: rgb(203, 255, 154);
-    --black-color: rgba(20, 14, 14, 0);
+    --black-color: rgba(10, 10, 10, 0);
+    --dark-black-color: rgb(60, 41, 78);
 }
 
 * {
@@ -94,7 +95,7 @@ input[type="color"] {
     height: 36px;
     overflow: hidden;
     border-radius: 2px;
-    border: 1px solid var(--green-color);
+    border: 1px solid var(--dark-black-color);
     width: 35%;
     margin-bottom: 10px;
 }
@@ -123,7 +124,7 @@ button {
     background-color: var(--black-color);
     font-size: 14px;
     outline: none;
-    border: 1px solid var(--green-color);
+    border: 1px solid var(--dark-black-color);
     border-radius: 2px;
     padding: 9px 15px;
     width: 100%;
