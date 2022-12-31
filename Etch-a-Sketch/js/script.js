@@ -203,7 +203,7 @@ eraserButton.addEventListener('click', () => {
   }
 });
 
-// default rainbow ink to false and listen for toggle
+// default rainbow ink to false and listen for turn-on
 let rainbow = false;
 const rainbowButton = document.querySelector('#rainbow-btn');
 rainbowButton.addEventListener('click', () => {
@@ -629,7 +629,7 @@ function listen() {
         grab = false;
 
         // once color has been grabbed, turn off other buttons so you can draw with the new color without
-        // having to toggle the other button manually
+        // having to turn-on the other button manually
         rainbow = false;
         rainbowButton.classList.remove('btn-on');
         shading = false;
@@ -657,7 +657,7 @@ function listen() {
       // carry over shading when the bg color changes
       //set all shaded items to bg color, so that the shading ran be re-applyed to the new bg color
 
-      // dont change the color of shaded inked cells, only background cells that have been shaded
+      // don't change the color of shaded inked cells, only background cells that have been shaded
       if (!gridItems[i].dataset.inked) {
         if (gridItems[i].dataset.shade) {
           gridItems[i].style.backgroundColor = bgColor;
@@ -676,18 +676,18 @@ function listen() {
     }
   });
 
-  // toggle grid lines
+  // turn-on grid lines
   const gridButton = document.querySelector('#grid-btn');
 
   gridButton.addEventListener('click', () => {
     for (i = 0; i < gridItems.length; i++) {
-      //toggle top and left cell borders
+      //turn-on top and left cell borders
       gridItems[i].classList.toggle('border-top-left');
-      //toggle the remaining right borders
+      //turn-on the remaining right borders
       if (gridItems[i].dataset.right) {
         gridItems[i].classList.toggle('border-right');
       }
-      // toggle the remaining bottom borders
+      // turn-on the remaining bottom borders
       if (gridItems[i].dataset.bottom) {
         gridItems[i].classList.toggle('border-bottom');
       }
