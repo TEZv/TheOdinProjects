@@ -101,3 +101,51 @@ input[type="color"] {
     transform: translateX(-10px) translateY(-10px);
 
 }
+
+.color-box {
+    height: 36px;
+    overflow: hidden;
+    border-radius: 2px;
+    border: 1px solid rgb(62, 166, 255);
+    width: 35%;
+    margin-bottom: 10px;
+
+    /* transform: translateY(-10px); */
+
+
+}
+
+.color-card {
+    font-family: roboto;
+    font-weight: 500;
+    font-size: 14px;
+    color: rgb(62, 166, 255);
+    display: flex;
+    position: relative;
+
+}
+
+.color-card span {
+    margin-left: 9px;
+    position: absolute;
+    top: 10px;
+    left: 88px;
+
+}
+
+
+
+button {
+    display: block;
+    color: rgb(62, 166, 255);
+    font-weight: 500;
+    font-family: roboto;
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 14px;
+    outline: none;
+    border: 1px solid rgb(62, 166, 255);
+    border-radius: 2px;
+    padding: 9px 15px;
+    width: 100%;
+    margin-bottom: 10px;
+}
