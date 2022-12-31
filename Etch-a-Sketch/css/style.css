@@ -205,3 +205,12 @@ button {
 .border-bottom {
     border-bottom: 1px solid rgb(156, 156, 156);
 }
+
+.slider-box {
+    position: relative;
+    width: 100%;
+}
+
+#range-value {
+    text-align: center;
+}
