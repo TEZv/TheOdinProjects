@@ -5,7 +5,9 @@
     --red-color: rgba(15, 104, 49, 0.63);
     --yellow-color: rgb(255, 252, 88);
     --brown-color: rgb(32, 12, 12);
+    --light-brown-color: #3b1212;
     --green-color: rgb(153, 192, 108);
+    --white-color: rgb(203, 255, 154);
 }
 
 * {
@@ -21,7 +23,7 @@ body {
 input[type="range"] {
     width: 100%;
     height: 2px;
-    background: var(--yellow-color);
+    background: var(--green-color);
     appearance: none;
     outline: none;
     border-radius: 2px;
@@ -71,7 +73,7 @@ input[type="range"]::-webkit-slider-thumb {
 
 .main {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
 input[type="color"] {
@@ -162,25 +164,24 @@ button {
 
 .btn-on {
     background-color: var(--green-color);
-    color: #3b1212;
+    color: var(--light-brown-color);
 }
 
 .grid-item {
-    /* background-color: rgb(255, 255, 255); */
     user-select: none;
 }
 
 .border-top-left {
-    border-top: 1px solid rgb(156, 156, 156);
-    border-left: 1px solid rgb(156, 156, 156);
+    border-top: 1px solid var(--white-color);
+    border-left: 1px solid var(--white-color);
 }
 
 .border-right {
-    border-right: 1px solid rgb(156, 156, 156);
+    border-right: 1px solid var(--white-color);
 }
 
 .border-bottom {
-    border-bottom: 1px solid rgb(156, 156, 156);
+    border-bottom: 1px solid var(--white-color);
 }
 
 .slider-box {
@@ -200,14 +201,15 @@ button {
 .controls {
     width: 320px;
     background-color: var(--blue-color);
-    border-radius: 4px;
+    border-top-left-radius: 60px;
+    border-bottom-right-radius: 50px;
     padding: 30px;
 }
 
 #progress-bar {
     width: 40%;
     height: 2px;
-    background-color: var(--green-color);
+    background-color: var(--yellow-color);
     border-radius: 2px;
     position: absolute;
     top: 12px;
@@ -216,30 +218,30 @@ button {
 
 .clear-fade {
     background-color: var(--bg-color) !important;
-    transition: background-color 1.5s ease;
+    transition: background-color 1.4s ease;
 }
 
 .clear-fade-2 {
     background-color: var(--bg-color) !important;
-    transition: background-color 1.4s ease;
+    transition: background-color 1.3s ease;
 }
 
 .clear-fade-3 {
     background-color: var(--bg-color) !important;
-    transition: background-color 1.3s ease;
+    transition: background-color 1.2s ease;
 }
 
 .clear-fade-4 {
     background-color: var(--bg-color) !important;
-    transition: background-color 1.2s ease;
+    transition: background-color 1.1s ease;
 }
 
 .clear-fade-5 {
     background-color: var(--bg-color) !important;
-    transition: background-color 1.1s ease;
+    transition: background-color 1.0s ease;
 }
 
 .clear-fade-6 {
     background-color: var(--bg-color) !important;
-    transition: background-color 1.0s ease;
+    transition: background-color 0.9s ease;
 }
