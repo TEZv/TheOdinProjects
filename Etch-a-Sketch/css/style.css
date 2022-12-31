@@ -187,3 +187,21 @@ button {
     background-color: rgb(62, 166, 255);
     color: #202020;
 }
+
+.grid-item {
+    /* background-color: rgb(255, 255, 255); */
+    user-select: none;
+}
+
+.border-top-left {
+    border-top: 1px solid rgb(156, 156, 156);
+    border-left: 1px solid rgb(156, 156, 156);
+}
+
+.border-right {
+    border-right: 1px solid rgb(156, 156, 156);
+}
+
+.border-bottom {
+    border-bottom: 1px solid rgb(156, 156, 156);
+}
