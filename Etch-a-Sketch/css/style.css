@@ -119,13 +119,14 @@ body {
 #button-clear {
     border-radius: 15px;
     padding: 3px 10px;
-    background-color: #333c3f;
+    background-color: var(--dark-blue-color);
     cursor: pointer;
+    color: var(--light-red-color);
 }
 
 #button-check:hover,
 #button-clear:hover {
-    background-color: aliceblue;
+    background-color: var(--bg-color);
 }
 
 .option {
