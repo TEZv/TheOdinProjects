@@ -165,3 +165,25 @@ button {
 .slider-box {
     margin-bottom: 10px;
 }
+
+.grid-size {
+    font-family: roboto;
+    font-weight: 500;
+    font-size: 14px;
+    color: rgb(62, 166, 255);
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#grid-btn {
+    margin-bottom: 30px;
+}
+
+#clear-grid {
+    margin-bottom: 0px;
+}
+
+.btn-on {
+    background-color: rgb(62, 166, 255);
+    color: #202020;
+}
