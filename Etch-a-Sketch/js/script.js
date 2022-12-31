@@ -440,3 +440,224 @@ function colorFill(e) {
     }
 
     // console.log(toFill);
+      
+       for (let i = 0; i < toFill.length; i++) {
+      if (rainbow) {
+        e.target.parentElement.children[toFill[i]].style.backgroundColor = randomColor();
+      } else {
+        e.target.parentElement.children[toFill[i]].style.backgroundColor = ink;
+      }
+
+      e.target.parentElement.children[toFill[i]].setAttribute('data-inked', 'true');
+    }
+
+    colorFillButton.classList.remove('btn-on');
+    fill = false;
+  }
+}
+
+// draw on the grid when clicked
+function drawClick(e) {
+  // when fill or grab is true do not do anything (a seperate listener is waiting for fill / grab input)
+  if (!grab && !fill) {
+    if (eraser) {
+      e.target.style.backgroundColor = '';
+      //data-inked = true means the background color change wont affect these elements
+      e.target.removeAttribute('data-inked');
+      e.target.removeAttribute('data-shade');
+    } else if (rainbow) {
+      e.target.style.backgroundColor = randomColor();
+      e.target.setAttribute('data-inked', 'true');
+      e.target.removeAttribute('data-shade');
+    } else if (shading) {
+      // first check to see if this grid item has been shadded. if it hasnt, set data-shade to 1
+      // this is nessesarry to transfer shading between bg color changes
+      if (!e.target.dataset.shade) {
+        e.target.setAttribute('data-shade', '1');
+      } else {
+        // if the grid item has been shadded, increment the data-shade value
+        // this keeps track of how many times the grid item has been shaded
+        let shadeAmount = parseInt(e.target.getAttribute('data-shade'));
+        shadeAmount++;
+        e.target.setAttribute('data-shade', `${shadeAmount}`);
+      } // a transperent item cant be shadded. if item is transperent first set the cell color to bg color
+      if (e.target.style.backgroundColor == '' || e.target.style.backgroundColor == 'transperent') {
+        e.target.style.backgroundColor = bgColor;
+      }
+
+      e.target.style.backgroundColor = adjust(RGBToHex, e.target.style.backgroundColor, -15);
+      // e.target.setAttribute('data-inked', 'true');
+    } else if (lighten) {
+      if (!e.target.dataset.shade) {
+        e.target.setAttribute('data-shade', '-1');
+      } else {
+        // if the grid item has been lightened, decrement the data-shade value
+        // this keeps track of how many times the grid item has been shaded
+        let shadeAmount = parseInt(e.target.getAttribute('data-shade'));
+        shadeAmount--;
+        e.target.setAttribute('data-shade', `${shadeAmount}`);
+      }
+      if (e.target.style.backgroundColor == '' || e.target.style.backgroundColor == 'transperent') {
+        e.target.style.backgroundColor = bgColor;
+      }
+      e.target.style.backgroundColor = adjust(RGBToHex, e.target.style.backgroundColor, +15);
+      // e.target.setAttribute('data-inked', 'true');
+    } else {
+      e.target.style.backgroundColor = ink;
+      e.target.setAttribute('data-inked', 'true');
+      e.target.removeAttribute('data-shade');
+    }
+  }
+}
+// draw when hovering into a grid with the mouse held down
+function drawClickHover(e) {
+  if (e.buttons > 0) {
+    if (!grab && !fill) {
+      if (eraser) {
+        e.target.style.backgroundColor = '';
+        //data-inked = true means the background color change wont affect these elements
+        e.target.removeAttribute('data-inked');
+        e.target.removeAttribute('data-shade');
+      } else if (rainbow) {
+        e.target.style.backgroundColor = randomColor();
+        e.target.setAttribute('data-inked', 'true');
+        e.target.removeAttribute('data-shade');
+      } else if (shading) {
+        // first check to see if this grid item has been shadded. if it hasnt, set data-shade to 1
+        // this is nessesarry to transfer shading between bg color changes
+        if (!e.target.dataset.shade) {
+          e.target.setAttribute('data-shade', '1');
+        } else {
+          // if the grid item has been shadded, increment the data-shade value
+          // this keeps track of how many times the grid item has been shaded
+          let shadeAmount = parseInt(e.target.getAttribute('data-shade'));
+          shadeAmount++;
+          e.target.setAttribute('data-shade', `${shadeAmount}`);
+        } // a transperent item cant be shadded. if item is transperent first set the cell color to bg color
+        if (
+          e.target.style.backgroundColor == '' ||
+          e.target.style.backgroundColor == 'transperent'
+        ) {
+          e.target.style.backgroundColor = bgColor;
+        }
+
+        e.target.style.backgroundColor = adjust(RGBToHex, e.target.style.backgroundColor, -15);
+        // e.target.setAttribute('data-inked', 'true');
+      } else if (lighten) {
+        if (!e.target.dataset.shade) {
+          e.target.setAttribute('data-shade', '-1');
+        } else {
+          // if the grid item has been lightened, decrement the data-shade value
+          // this keeps track of how many times the grid item has been shaded
+          let shadeAmount = parseInt(e.target.getAttribute('data-shade'));
+          shadeAmount--;
+          e.target.setAttribute('data-shade', `${shadeAmount}`);
+        }
+        if (
+          e.target.style.backgroundColor == '' ||
+          e.target.style.backgroundColor == 'transperent'
+        ) {
+          e.target.style.backgroundColor = bgColor;
+        }
+        e.target.style.backgroundColor = adjust(RGBToHex, e.target.style.backgroundColor, +15);
+        // e.target.setAttribute('data-inked', 'true');
+      } else {
+        e.target.style.backgroundColor = ink;
+        e.target.setAttribute('data-inked', 'true');
+        e.target.removeAttribute('data-shade');
+      }
+    }
+  }
+}
+
+// listen for events
+function listen() {
+  gridItems = document.querySelectorAll('.grid-item');
+  for (let i = 0; i < gridItems.length; i++) {
+    gridItems[i].addEventListener('mousedown', drawClick);
+    // listen for a mouse over and change colour only if mouse button is pressed
+    gridItems[i].addEventListener('mouseenter', drawClickHover);
+  }
+
+  //listen for clicks on all grid items when grab is true (color picker)
+  for (let i = 0; i < gridItems.length; i++) {
+    gridItems[i].addEventListener('click', (e) => {
+      if (grab) {
+        ink = e.target.style.backgroundColor;
+        // if trying to grab the color of the background (transperent cell)
+        if (ink == '') {
+          colorPicker.value = bgColor;
+        } else {
+          colorPicker.value = RGBToHex(ink);
+        }
+        dropper.classList.remove('btn-on');
+        grab = false;
+
+        // once color has been grabbed, turn off other buttons so you can draw with the new color without
+        // having to toggle the other button manually
+        rainbow = false;
+        rainbowButton.classList.remove('btn-on');
+        shading = false;
+        shaderButton.classList.remove('btn-on');
+        lighten = false;
+        lightenButton.classList.remove('btn-on');
+        eraser = false;
+        eraserButton.classList.remove('btn-on');
+      }
+    });
+  }
+
+  // listen for clicks on all grid items when fill is true (colour fill)
+  for (let i = 0; i < gridItems.length; i++) {
+    gridItems[i].addEventListener('click', colorFill);
+  }
+
+  bgColorPicker.addEventListener('input', (e) => {
+    gridItems = document.querySelectorAll('.grid-item');
+    bgColor = e.target.value;
+    for (let i = 0; i < gridItems.length; i++) {
+      if (!gridItems[i].dataset.inked) {
+        container.style.backgroundColor = bgColor;
+      }
+      // carry over shading when the bg color changes
+      //set all shaded items to bg color, so that the shading ran be re-applyed to the new bg color
+
+      // dont change the color of shaded inked cells, only background cells that have been shaded
+      if (!gridItems[i].dataset.inked) {
+        if (gridItems[i].dataset.shade) {
+          gridItems[i].style.backgroundColor = bgColor;
+          // grab the value of data-shade (the amount of times the cell has been shaded)
+          let shadeAmount = parseInt(gridItems[i].getAttribute('data-shade'));
+          // multiply the default shading intensity by shadeAmount, then apply this ammount
+          //of shading to the cell
+          let reshadeValue = shadeAmount * -15;
+          gridItems[i].style.backgroundColor = adjust(
+            RGBToHex,
+            gridItems[i].style.backgroundColor,
+            reshadeValue
+          );
+        }
+      }
+    }
+  });
+
+  // toggle grid lines
+  const gridButton = document.querySelector('#grid-btn');
+
+  gridButton.addEventListener('click', () => {
+    for (i = 0; i < gridItems.length; i++) {
+      //toggle top and left cell borders
+      gridItems[i].classList.toggle('border-top-left');
+      //toggle the remaining right borders
+      if (gridItems[i].dataset.right) {
+        gridItems[i].classList.toggle('border-right');
+      }
+      // toggle the remaining bottom borders
+      if (gridItems[i].dataset.bottom) {
+        gridItems[i].classList.toggle('border-bottom');
+      }
+    }
+  });
+}
+
+listen();
