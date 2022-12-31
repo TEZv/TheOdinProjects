@@ -32,80 +32,79 @@ li {
   margin-bottom: 5px;
 }
 img {
-    margin-top: 7px;
-    margin-left: 9px;
+  margin-top: 7px;
+  margin-left: 9px;
 }
 body {
-    background: var(--light-pink-color);
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    flex-direction: column;
+  background: var(--light-pink-color);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
 }
 
 .calculator {
-    height: 71vh;
-    max-height: 610px;
-    width: 52vw;
-    max-width: 405px;
-    border: var(--black-color) solid 1px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(6, 1fr);
-    gap: 5px;
-    border-radius: 10px;
-    padding: 20px;
-    background-color: var(--light-green-color);
+  height: 71vh;
+  max-height: 610px;
+  width: 52vw;
+  max-width: 405px;
+  border: var(--black-color) solid 1px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  gap: 5px;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: var(--light-green-color);
 }
 
 .btn {
-    margin: 5px;
-    cursor: pointer;
-    border-radius: 20px;
-    transition: all .14s ease;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: all 0.14s ease;
 }
 
 button {
-    font-size: 2rem;
-    outline: none;
+  font-size: 2rem;
+  outline: none;
 }
 
 #display {
-    grid-column: 1 / 5;
-    display: flex;
-    justify-content: flex-end;
-    padding: 10px;
-    align-items: center;
-    margin: 5px;
-    border-radius: 5px;
-    margin-bottom: 19px;
-    background-color: var(--dark-green-color);
-    box-shadow: 4px 9px 17px var(--black-color);
-
+  grid-column: 1 / 5;
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+  align-items: center;
+  margin: 5px;
+  border-radius: 5px;
+  margin-bottom: 19px;
+  background-color: var(--dark-green-color);
+  box-shadow: 4px 9px 17px var(--black-color);
 }
 
 #clear {
-    background-color: var(--pink-b-color);
-    grid-column: span 2;
+  background-color: var(--pink-b-color);
+  grid-column: span 2;
 }
 
 #enter {
-    background-color: var(--yellow-color);
-    grid-column: span 2;
+  background-color: var(--yellow-color);
+  grid-column: span 2;
 }
 
 .clicked {
-    transform: scale(.8);
-    box-shadow: 4px 9px 16px var(--black-color);
-    opacity: .8;
+  transform: scale(0.8);
+  box-shadow: 4px 9px 16px var(--black-color);
+  opacity: 0.8;
 }
 
 .btn:hover {
-    transform: scale(1.09);
-    opacity: .9;
+  transform: scale(1.09);
+  opacity: 0.9;
 }
 
 footer {
