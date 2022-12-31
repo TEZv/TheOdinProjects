@@ -304,3 +304,139 @@ function clearGrid() {
 }
 clearButton.addEventListener('click', clearGrid);
 
+// set fill to true when the color fill button is pressed
+// if fill is true set it to false (clicking the button without filling)
+// when fill is true all other events on the grid will stop and listen for a grid area to fill
+const colorFillButton = document.querySelector('#color-fill');
+let fill = false;
+colorFillButton.addEventListener('click', () => {
+  if (grab) {
+    grab = false;
+    dropper.classList.remove('btn-on');
+  }
+  if (fill) {
+    fill = false;
+  } else {
+    fill = true;
+  }
+});
+// convert array into matrix representing the grid
+function toMatrix(arr, width) {
+  return arr.reduce(function (rows, key, index) {
+    return (index % width == 0 ? rows.push([key]) : rows[rows.length - 1].push(key)) && rows;
+  }, []);
+}
+
+//helper funtion to grab adjacent cells of a 2d grid
+//function getAdjacent2D(x, y) {
+// let xAbove = [x - 1, y];
+
+// let xBellow = [x + 1, y];
+
+// let xLeft = [x, y - 1];
+
+// let xRight = [x, y + 1];
+
+// return [xAbove, xBellow, xLeft, xRight]
+//}
+
+//helper function to grab adjacent cells of a 2d grid stored as a 1d array
+// only return cells that do not cross over the edge of the grid
+function getAdjacent1D(x, gridX, gridY) {
+  let xAbove = null;
+  let xBellow = null;
+  let xLeft = null;
+  let xRight = null;
+
+  // make sure x is not in the top row before returning the cell above
+  if (gridX != 0) {
+    xAbove = [x - gridSize];
+  }
+  // make sure x is not in the bottom row before returning the cell bellow
+  if (gridX != gridSize - 1) {
+    xBellow = [x + gridSize];
+  }
+  // make sure x is not in the left column before returning the cell to its left
+  if (gridY != 0) {
+    xLeft = [x - 1];
+  }
+  // make sure x is not in the right column before returning the cell to its right
+  if (gridY != gridSize - 1) {
+    xRight = [x + 1];
+  }
+
+  // console.log(xAbove, xBellow, xLeft, xRight);
+  return [xAbove, xBellow, xLeft, xRight];
+}
+
+//colorfill
+function colorFill(e) {
+  if (fill) {
+    //get index of the clicked grid cell
+    let ogIndex = Array.from(e.target.parentElement.children).indexOf(e.target);
+    // console.log(ogIndex);
+
+    // create a list of items to color
+    let toFill = [ogIndex];
+    let addedToFill = 1;
+
+    gridItems = document.querySelectorAll('.grid-item');
+    let gridItemsArray = Array.from(gridItems);
+    // console.log(gridItemsArray.length);
+
+    // create grid-like representation of grid items
+    let gridItemsArray2D = toMatrix(gridItemsArray, gridSize);
+    // console.log(gridItemsArray2D);
+
+    // get index of clicked item in 2d array
+    let gridX = Math.floor(ogIndex / gridSize);
+    let gridY = ogIndex % gridSize;
+    // console.log(gridX);
+    // console.log(gridY);
+
+    // console.log(getAdjacent2D(gridX, gridY));
+
+    // console.log(getAdjacent1D(ogIndex, gridX, gridY));
+
+    // toFill=[12, 13, 11, 17, 7, 2, 6, 8, 22, 16, 18, 10, 14];
+    while (addedToFill != 0) {
+      let toCheck = toFill.slice(-addedToFill);
+      // toCheck = [2, 6, 8, 22, 16, 18, 10, 14];
+      let addedItems = [];
+      // console.log(toCheck);
+      addedToFill = 0;
+      for (let j = 0; j < toCheck.length; j++) {
+        // console.log(toCheck[j]);
+        let toAdd = getAdjacent1D(toCheck[j], gridX, gridY);
+        // console.log(toAdd);
+        for (let i = 0; i < toAdd.length; i++) {
+          if (toAdd[i] != null) {
+            if (!toFill.includes(toAdd[i][0])) {
+              // for some reason it was adding items above the top line
+              // and bellow the bottom line, i couldnt work it out so
+              // added this if. It would also add string numbers if i changed
+              // the grid size with the slider
+              if (
+                toAdd[i][0] >= 0 &&
+                toAdd[i][0] < gridSize ** 2 &&
+                typeof toAdd[i][0] == 'number'
+              ) {
+                // only color in the surounding items if they are the same color as the selected item
+                if (
+                  e.target.parentElement.children[toAdd[i][0]].style.backgroundColor ==
+                  e.target.style.backgroundColor
+                ) {
+                  toFill.push(toAdd[i][0]);
+                  addedItems.push(toAdd[i][0]);
+                }
+              }
+            }
+          }
+        }
+      }
+      addedToFill = addedItems.length;
+      // console.log(addedItems.length);
+      // console.log(addedItems);
+    }
+
+    // console.log(toFill);
