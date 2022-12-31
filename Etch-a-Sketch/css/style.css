@@ -82,3 +82,22 @@ body {
     margin-left: auto;
     margin-right: auto;
 }
+
+.main {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+input[type="color"] {
+    display: block;
+    outline: none;
+    border: none;
+    /* border: 1px solid rgb(62, 166, 255); */
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 2px;
+    width: 200%;
+    /* padding: 4px 8px; */
+    height: 200%;
+    transform: translateX(-10px) translateY(-10px);
+
+}
