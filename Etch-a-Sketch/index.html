@@ -9,57 +9,51 @@
     <title>Etch-a-Sketch:)</title>
 </head>
 <body>
+    
     <div class="wrapper">
         <div class="header">
             <p>TURN ON YOUR IMAGINATION</p>
         </div>
         <div class="main">
+
+            <div class="grid-wrapper">
+                <div class="grid-container toggle-grid" draggable="false"></div>
+            </div>
+            
             <div class="controls">
-    
+            
                 <div class="color-card">
                     <div class="color-box">
                         <input type="color" id="color-select">
                     </div>
-                    <span>Colour -> Pen</span>
+                    <span>PEN</span>
                 </div>
                 <div class="color-card cc2">
                     <div class="color-box">
                         <input type="color" id="bg-color-select" value="#ffffff">
                     </div>
-                    <span>Colour -> Background</span>
+                    <span>BACKGROUND</span>
                 </div>
-                <button id="color-fill">Colour Fill</button>
-                <button id="color-grabber">Colour Grabber</button>
-    
+                <button id="color-fill">FILL</button>
+                <button id="color-grabber">GRABBER</button>
                 <button id="eraser-btn">TURN-ON Eraser</button>
                 <button id="rainbow-btn">TURN-ON Rainbow</button>
                 <button id="shader-btn">TURN-ON Shading</button>
                 <button id="lighten-btn">TURN-ON Lighten</button>
-                
+            
                 <div class="slider-box">
                     <input type="range" value="24" min="1" max="60" id="range-slider" onmousemove="rangeSliderValue(this.value)"
                         onChange="rangeSlider(this.value)">
-                        <div id="progress-bar"></div>
+                    <div id="progress-bar"></div>
                 </div>
+            
                 <p class="grid-size">Grid size: <span id="range-value">24</span> x <span id="range-value">24</span></p>
-                
                 <button id="grid-btn" class="btn-on">Toggle Grid Lines</button>
                 <button id="clear-grid">Clear</button>
-            </div>
-            <div class="grid-wrapper">
-                <div class="grid-container toggle-grid" draggable="false"></div>
+            
             </div>
         </div>
     </div>
-    <p class="grid-size">Grid size: <span id="range-value">24</span> x <span id="range-value">24</span></p>
-    <button id="grid-btn" class="btn-on">Toggle Grid Lines</button>
-    <button id="clear-grid">Clear</button>
-</div>
-<div class="grid-wrapper">
-    <div class="grid-container toggle-grid" draggable="false"></div>
-</div>
-</div>
-</div>
 
 <script src="./js/script.js"></script>
 </body>
