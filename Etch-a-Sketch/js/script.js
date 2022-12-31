@@ -72,3 +72,24 @@ colorPicker.addEventListener('input', (e) => {
   // colorFillButton.classList.remove('btn-on');
 });
 
+// shading toggle
+let shading = false;
+const shaderButton = document.querySelector('#shader-btn');
+shaderButton.addEventListener('click', () => {
+  if (shading) {
+    shading = false;
+  } else {
+    shading = true;
+    rainbow = false;
+    rainbowButton.classList.remove('btn-on');
+    lighten = false;
+    lightenButton.classList.remove('btn-on');
+    eraser = false;
+    eraserButton.classList.remove('btn-on');
+  }
+  if (grab) {
+    grab = false;
+    dropper.classList.remove('btn-on');
+  }
+});
+
