@@ -108,3 +108,33 @@ body {
     background-color: #333c3f;
     cursor: pointer;
 }
+
+#button-submit:hover,
+#button-reset:hover {
+    background-color: aliceblue;
+}
+
+.option {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    text-align: center;
+}
+
+.number-select {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#fav-color {
+    border-style: hidden;
+    background-color: #5f98ac;
+    padding: 0;
+    margin: 0;
+    width: 30px;
+    height: 33px;
+}
