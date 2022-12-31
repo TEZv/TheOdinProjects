@@ -147,7 +147,7 @@ button {
 }
 
 .grid-size {
-    font-family: roboto;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: 500;
     font-size: 14px;
     color: var(--green-color);
