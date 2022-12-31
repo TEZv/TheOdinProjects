@@ -6,6 +6,6 @@ If you put minus before the integer, it'll show you "0-Number" (it's only for si
 
 Thanks for your attention.
 
-See live: <a href="">here:)</a>.
+See live: <a href="https://tezv-etch-a-sketch.netlify.app/">here:)</a>.
 And for another Branch here: <a href="">here:)</a>.
 
