@@ -57,6 +57,19 @@ body {
     border-radius: 15px;
 }
 
+.ring {
+    width: 200px;
+    height: 200px;
+    background-color: var(--bg-color);
+    display: flex;
+    justify-items: space-between;
+    align-items: space-between;
+}
+
+.ring-item {
+
+}
+
 .grid-size {
     flex: 1 1 0;
 }
