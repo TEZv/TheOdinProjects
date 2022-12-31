@@ -35,5 +35,11 @@
                 <button id="rainbow-btn">TURN-ON Rainbow</button>
                 <button id="shader-btn">TURN-ON Shading</button>
                 <button id="lighten-btn">TURN-ON Lighten</button>
+
+                <div class="slider-box">
+                    <input type="range" value="24" min="1" max="60" id="range-slider" onmousemove="rangeSliderValue(this.value)"
+                        onChange="rangeSlider(this.value)">
+                    <div id="progress-bar"></div>
+                </div>
 </body>
 </html>
