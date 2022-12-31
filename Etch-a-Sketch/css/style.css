@@ -1,12 +1,12 @@
 :root {
   --bg-color: #ffcece;
   --blue-color: rgb(40, 25, 49);
-  --dark-blue-color: rgb(66, 58, 87);
+  --dark-blue-color: rgb(25, 22, 32);
   --red-color: rgb(255, 0, 0);
   --yellow-color: rgb(255, 252, 88);
   --brown-color: rgb(32, 12, 12);
   --light-brown-color: #3b1212;
-  --green-color: rgb(153, 192, 108);
+  --green-color: rgb(78, 107, 44);
   --white-color: rgb(203, 255, 154);
   --black-color: rgba(10, 10, 10, 0);
   --dark-black-color: rgb(60, 41, 78);
@@ -22,7 +22,7 @@
 }
 
 html {
-    background-color: var(--dark-blue-color);
+    background: linear-gradient(45deg, var(--dark-blue-color), var(--green-color), var(--red-color));
 }
 
 body {
@@ -42,7 +42,7 @@ body {
     height: 800px;
     display: flex;
     flex-wrap: wrap;
-    background-color: white;
+    background-color: var(--light-black-color);
     border-radius: 45px;
     border: 100px solid var(--red-color);
 }
@@ -52,7 +52,7 @@ body {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    background-color: rgb(30, 47, 53);
+    background-color: var(--light-brown-color);
     padding: 20px 10px;
     gap: 20px;
     border-radius: 15px;
