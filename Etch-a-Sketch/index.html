@@ -35,35 +35,32 @@
                 <button id="rainbow-btn">TURN-ON Rainbow</button>
                 <button id="shader-btn">TURN-ON Shading</button>
                 <button id="lighten-btn">TURN-ON Lighten</button>
-
+                
                 <div class="slider-box">
                     <input type="range" value="24" min="1" max="60" id="range-slider" onmousemove="rangeSliderValue(this.value)"
                         onChange="rangeSlider(this.value)">
-                    <div id="progress-bar"></div>
+                        <div id="progress-bar"></div>
                 </div>
                 <p class="grid-size">Grid size: <span id="range-value">24</span> x <span id="range-value">24</span></p>
                 
                 <button id="grid-btn" class="btn-on">Toggle Grid Lines</button>
                 <button id="clear-grid">Clear</button>
-                
-                </div>
-                <div class="grid-wrapper">
-                    <div class="grid-container toggle-grid" draggable="false"></div>
-                </div>
-                </div>
-                </div>
+            </div>
+            <div class="grid-wrapper">
+                <div class="grid-container toggle-grid" draggable="false"></div>
+            </div>
+        </div>
+    </div>
+    <p class="grid-size">Grid size: <span id="range-value">24</span> x <span id="range-value">24</span></p>
+    <button id="grid-btn" class="btn-on">Toggle Grid Lines</button>
+    <button id="clear-grid">Clear</button>
+</div>
+<div class="grid-wrapper">
+    <div class="grid-container toggle-grid" draggable="false"></div>
+</div>
+</div>
+</div>
 
-                <p class="grid-size">Grid size: <span id="range-value">24</span> x <span id="range-value">24</span></p>
-                
-                <button id="grid-btn" class="btn-on">Toggle Grid Lines</button>
-                <button id="clear-grid">Clear</button>
-                
-                </div>
-                <div class="grid-wrapper">
-                    <div class="grid-container toggle-grid" draggable="false"></div>
-                </div>
-                </div>
-                </div>
-                
+<script src="./js/script.js"></script>
 </body>
 </html>
