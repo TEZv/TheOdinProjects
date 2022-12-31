@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --bg-color: #ffffff;
+}
+
+/* this is the class that is applied to the grid when it is cleared.
+after 1.5 seconds the class is removed */
+
+/* multiple classes so that some pixels will fade faster than others */
+.clear-fade {
+    background-color: var(--bg-color) !important;
+    transition: background-color 1.5s ease;
+}
+
+.clear-fade-2 {
+    background-color: var(--bg-color) !important;
+    transition: background-color 1.4s ease;
+}
+
+.clear-fade-3 {
+    background-color: var(--bg-color) !important;
+    transition: background-color 1.3s ease;
+}
+
+.clear-fade-4 {
+    background-color: var(--bg-color) !important;
+    transition: background-color 1.2s ease;
+}
