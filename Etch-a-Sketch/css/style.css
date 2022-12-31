@@ -1,15 +1,16 @@
 :root {
   --bg-color: #ffcece;
   --blue-color: rgb(40, 25, 49);
-  --dark-blue-color: rgb(25, 22, 32);
-  --red-color: rgb(255, 0, 0);
+  --dark-blue-color: rgb(22, 14, 43);
+  --red-color: rgb(65, 39, 39);
+  --light-red-color: rgb(224, 3, 3);
   --yellow-color: rgb(255, 252, 88);
   --brown-color: rgb(32, 12, 12);
-  --light-brown-color: #3b1212;
-  --green-color: rgb(78, 107, 44);
-  --white-color: rgb(203, 255, 154);
+  --light-brown-color: #3a1919;
+  --green-color: rgba(49, 7, 27, 0.959);
+  --white-color: rgb(60, 73, 50);
   --black-color: rgba(10, 10, 10, 0);
-  --dark-black-color: rgb(60, 41, 78);
+  --dark-black-color: rgb(43, 29, 56);
   --light-black-color: rgb(245, 234, 255);
 }
 
@@ -22,7 +23,7 @@
 }
 
 html {
-    background: linear-gradient(45deg, var(--dark-blue-color), var(--green-color), var(--red-color));
+    background: linear-gradient(-85deg, var(--dark-blue-color), var(--green-color), var(--white-color), var(--red-color));
 }
 
 body {
@@ -44,7 +45,7 @@ body {
     flex-wrap: wrap;
     background-color: var(--light-black-color);
     border-radius: 45px;
-    border: 100px solid var(--red-color);
+    border: 100px solid var(--light-red-color);
 }
 
 .input-container {
