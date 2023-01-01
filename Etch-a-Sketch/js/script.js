@@ -1,6 +1,6 @@
 const container = document.querySelector(".container");
 const input = document.querySelector(".input");
-const submit = document.querySelector("#button-check");
+const submit = document.querySelector("#button-choose");
 const reset = document.querySelector("#button-clear");
 const color = document.querySelector("#fav-color");
 const rainbow = document.querySelector("#rainbow");
