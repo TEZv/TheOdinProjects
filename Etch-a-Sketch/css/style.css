@@ -51,7 +51,7 @@ body {
   flex-wrap: wrap;
   background-color: var(--light-black-color);
   border-radius: 45px;
-  border: 100px solid var(--light-red-color);
+  border: 10px solid var(--light-red-color);
 }
 
 .input-container {
@@ -141,7 +141,7 @@ body {
   margin-top: 10px;
 }
 
-#button-check,
+#button-choose,
 #button-clear {
   border-radius: 15px;
   padding: 3px 10px;
@@ -150,7 +150,7 @@ body {
   color: var(--red-color);
 }
 
-#button-check:hover,
+#button-choose:hover,
 #button-clear:hover {
   background-color: var(--bg-color);
 }
