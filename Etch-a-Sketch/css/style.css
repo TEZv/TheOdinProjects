@@ -95,8 +95,8 @@ header {
 
 main {
   display: flex;
-  height: 600px;
-  width: 70%;
+  height: 620px;
+  width: 100%;
   padding: 10px;
   justify-content: center;
   align-items: center;
@@ -139,6 +139,14 @@ footer:hover {
   cursor: pointer;
 }
 
+.circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--yellow-color);
+  box-shadow: var(--light-brown-color) 1.95px 1.95px 2.6px;
+}
+
 #sketch-container {
   border: 3px solid var(--red-color);
   border-radius: 5px;
@@ -170,14 +178,6 @@ footer:hover {
   width: 100%;
 }
 
-.circle {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background-color: var(--yellow-color);
-  box-shadow: var(--light-brown-color) 1.95px 1.95px 2.6px;
-}
-
 #settings-container {
   height: 500px;
   min-width: 200px;
@@ -190,7 +190,7 @@ footer:hover {
 }
 
 #settings-container input[type=color] {
-  background-color: var(--light-red-color);
+  background-color: var(--bg-color);
   padding: 5px 10px;
   border-radius: 5px;
   border: 0px;
