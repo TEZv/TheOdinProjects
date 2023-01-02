@@ -33,12 +33,12 @@ newGrid.addEventListener("click", getUserInput);
 
 //Shows a prompt on the screen to get a number of pixels from the user
 function getUserInput() {
-    userInput = Number(prompt("What is the size of the new grid? till 50"));
+    userInput = Number(prompt("What is the size of the new grid? till 70"));
     verifyUserInput(userInput);
     createGrid();
 }
 
-//Verifies if the user input is a number from 1 to 50
+//Verifies if the user input is a number from 1 to 70
 function verifyUserInput() {
     if (Number.isNaN(userInput) || userInput < 1 || userInput > 70) {
         alert("The input is not valid. Pick a number from 1 to 70.");
