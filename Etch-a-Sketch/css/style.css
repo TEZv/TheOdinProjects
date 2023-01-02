@@ -85,8 +85,27 @@ h1 {
   text-shadow: 5px 5px var(--bg-color);
 }
 
-.grid {
-  box-shadow: 15px 15px;
+.container-sketch {
+    /* border: 3px solid red; */
+    border-radius: 5px;
+    height: 600px;
+    width: 550px;
+    background-color: var(--green-color);
+    display: flex;
+    flex-flow: column nowrap;
+    row-gap: 10px;
+    padding: 15px 20px;
+    box-shadow: var(--black-color) 1.95px 1.95px 2.6px;
+    align-items: center;
+}
+
+.board-sketch {
+  /* border: 3px solid orange; */
+  width: 510px;
+  height: 510px;
+  background-color: var(--white-color);
+  display: flex;
+  flex-flow: row wrap;
 }
 
 
