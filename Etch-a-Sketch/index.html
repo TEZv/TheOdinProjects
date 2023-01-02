@@ -16,44 +16,35 @@
     <title>Etch-a-Sketch-SecondEdition:)</title>
   </head>
   <body>
-    <header><h1>Etch-A-Sketch</h1></header>
-    <main>
-      <section id="container-sketch">
-        <div id="board-sketch"></div>
-        <div id="container-circle">
-          <div class="circle"></div>
-          <div class="circle"></div>
-        </div>
-      </section>
-      <aside id="container-settings">
-        <div id="container-range">
-          <label id="gridsize-label" for="gridsize-picker">16 x 16</label>
-          <input
-            type="range"
-            name="gridsize-picker"
-            id="gridsize-picker"
-            min="16"
-            max="64"
-            step="2"
-            value="16"
-          />
-        </div>
-
-        <input type="color" name="color-picker" id="color-picker" />
-        <button id="btn-color">Pick Me</button>
-        <button id="btn-rainbow">Fancy Mode</button>
-        <button id="btn-eraser">Erase Mode</button>
-        <button id="btn-clean">Clean Mode</button>
-      </aside>
-    </main>
+  <main>
+    <section id="sketch-container">
+      <div id="sketch-board"></div>
+      <div id="circle-container">
+        <div class="circle"></div>
+        <div class="circle"></div>
+      </div>
+    </section>
+    <aside id="settings-container">
+      <div id="range-container">
+        <label id="gridsize-label" for="gridsize-picker">16 x 16</label>
+        <input type="range" name="gridsize-picker" id="gridsize-picker" min="16" max="64" step="2" value="16" />
+      </div>
+  
+      <input type="color" name="color-picker" id="color-picker" />
+      <button id="color-mode-btn">Color Mode</button>
+      <button id="rainbow-btn">Rainbow</button>
+      <button id="eraser-btn">Eraser</button>
+      <button id="clear-btn">Clear</button>
+    </aside>
+  </main>
     <footer>
       <p>
+        <h1>Etch-A-Sketch</h1>
         <a href="https://github.com/TEZv"
           ><span class="span-name">TEZv </span></a
-        >Monday 01/02/2023 (January)
+        ><time>Monday 01/02/2023 (January)</time> 
       </p>
     </footer>
-
     <script src="./js/script.js"></script>
   </body>
 </html>
