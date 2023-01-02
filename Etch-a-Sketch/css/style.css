@@ -67,10 +67,13 @@ body {
   box-sizing: border-box;
 }
 
-header {
+h1 {
   font-size: 4rem;
   color: var(--red-color);
   text-shadow: 10px 3px var(--bg-color);
+  display: inline;
+  margin-left: 16px;
+  margin-right: 106px;
 }
 
 main {
@@ -107,6 +110,7 @@ button {
 }
 
 footer {
+  
   margin-top: auto;
   margin-bottom: 1.1rem;
   font-size: 1.5rem;
@@ -116,7 +120,6 @@ footer {
 
 time:hover {
   color: var(--bg-color);
-  text-decoration: overline;
   cursor: pointer;
 }
 
@@ -137,14 +140,17 @@ time:hover {
   display: flex;
   flex-flow: column nowrap;
   row-gap: 10px;
-  padding: 15px 20px;
+  padding: 50px 50px;
+  padding-top: 90px;
+  margin-top: 300px;
   box-shadow: var(--brown-color) 1.95px 1.95px 2.6px;
   align-items: center;
 }
 
 #sketch-board {
-  width: 1000px;
-  height: 900px;
+  padding-bottom: 200px;
+  width: 900px;
+  height: 1000px;
   background-color: var(--light-black-color);
   display: flex;
   flex-flow: row wrap;
