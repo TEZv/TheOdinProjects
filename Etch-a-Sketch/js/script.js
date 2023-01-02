@@ -1,129 +1,122 @@
-const container = document.querySelector(".container");
-const input = document.querySelector(".input");
-const submit = document.querySelector("#button-choose");
-const reset = document.querySelector("#button-clear");
-const color = document.querySelector("#fav-color");
-const rainbow = document.querySelector("#rainbow");
-const shadowing = document.querySelector("#shadowing");
-let colorHere = color.addEventListener("input", takeColor);
-let rainbowMod = rainbow.addEventListener("change", makeRainbow);
-let strength = shadowing.addEventListener("change", makeStrength);
-const SQUARE = 640000;
-let rainbowModCheck = false;
-let strengthModCheck = false;
-let intValue = 16;
-let opacityValue = [];
+const sketchBoard = document.getElementById("board-sketch");
+const gridSizePicker = document.getElementById("gridsize-picker");
+const gridSizeLabel = document.getElementById("gridsize-label");
+const colorPicker = document.getElementById("color");
+const colorModeButton = document.getElementById("btn-color");
+const rainbowModeButton = document.getElementById("btn-rainbow");
+const clearButton = document.getElementById("btn-clean");
+const eraserButton = document.getElementById("btn-eraser");
+const sketchBoardWidth = 500;
 
-defaultGrid();
+let sketchingColor = colorPicker.value;
+let currentGridSize = parseInt(gridSizePicker.value);
+let coloringMode = true;
+let rainbowMode = false;
+let erasingMode = false;
 
-function defaultGrid() {
-  container.innerHTML = "";
-  for (let i = 0; i < 256; i++) {
-    let baby = document.createElement("div");
-    baby.classList.add("pixel");
-    container.appendChild(baby);
-    baby.setAttribute("id", `${i}`);
-  }
-  listenAfterSizeChanged();
-}
+let mouseIsDown = false;
+document.body.addEventListener("mousedown", () => (mouseIsDown = true));
+document.body.addEventListener("mouseup", () => (mouseIsDown = false));
 
-submit.addEventListener("click", (e) => {
-  e.preventDefault();
-  gridMaker();
+// Go the populateGrid function on window load
+window.onload = populateGrid(currentGridSize);
+
+// Grid Size Picker .event listener to update the text showing current grid size
+gridSizePicker.addEventListener("change", function () {
+  currentGridSize = gridSizePicker.value;
+  gridSizeLabel.textContent = currentGridSize + " x " + currentGridSize;
 });
 
-reset.addEventListener("click", (e) => {
-  e.preventDefault();
-  gridMaker();
+// .Event listener to update the number of square in the sketchboard
+gridSizePicker.addEventListener("change", function () {
+  erasingMode = false;
+  coloringMode = true;
+  rainbowMode = false;
+  unpopulateGrid();
+  populateGrid(currentGridSize);
 });
 
-function gridMaker() {
-  let input = document.getElementById("textbox");
-  if (input.value) {
-    intValue = Number(input.value);
-    if (intValue < 100 && 0 < intValue) {
-      resizeField(intValue);
-      document.getElementById("textbox").value = "";
-    } else {
-      resizeField(16);
-    }
-  } else {
-    resizeField(intValue);
+// .Event listener to update the color for sketching
+colorPicker.addEventListener("change", function () {
+  erasingMode = false;
+  coloringMode = true;
+  rainbowMode = false;
+  sketchingColor = colorPicker.value;
+});
+
+// .Event listener to clear the sketchboard
+clearButton.addEventListener("click", clearBoard);
+
+// Event listener to enter erasing mode
+eraserButton.addEventListener("click", function () {
+  erasingMode = true;
+  coloringMode = false;
+  rainbowMode = false;
+});
+
+// .Event listener to enter coloring mode
+colorModeButton.addEventListener("click", function () {
+  erasingMode = false;
+  coloringMode = true;
+  rainbowMode = false;
+});
+
+// .Event listener to enter rainbow coloring mode
+rainbowModeButton.addEventListener("click", function () {
+  erasingMode = false;
+  coloringMode = false;
+  rainbowMode = true;
+});
+
+function unpopulateGrid() {
+  sketchBoard.innerHTML = "";
+}
+
+function populateGrid(currentGridSize) {
+  // Use for loop to create necessary number of grid squares
+  // and add them to the sketch board
+  const numberOfSquares = currentGridSize ** 2;
+  for (let i = 0; i < numberOfSquares; i++) {
+    const gridSquare = createGridSquare(currentGridSize);
+    sketchBoard.appendChild(gridSquare);
   }
 }
 
-function resizeField(inputInt) {
-  container.innerHTML = "";
-  let size = Number(Math.sqrt(SQUARE / Math.pow(inputInt, 2))).toFixed(5);
-  container.classList.remove("default");
-  for (let i = 0; i < Math.pow(inputInt, 2); i++) {
-    let baby = document.createElement("div");
-    baby.classList.add("pixel");
-    baby.setAttribute("id", `${i}`);
-    baby.style.width = `${size}px`;
-    baby.style.height = `${size}px`;
-    container.appendChild(baby);
-  }
-  listenAfterSizeChanged();
+function createGridSquare(currentGridSize) {
+  const gridSquareHeightAndWidth = sketchBoardWidth / currentGridSize;
+  const gridSquare = document.createElement("div");
+  gridSquare.classList.add("grid-square");
+  gridSquare.style.height = gridSquareHeightAndWidth + "px";
+  gridSquare.style.width = gridSquareHeightAndWidth + "px";
+  gridSquare.addEventListener("mouseover", changeGridSquareColor);
+  gridSquare.addEventListener("mousedown", changeGridSquareColor);
+  return gridSquare;
 }
 
-function listenAfterSizeChanged() {
-  const pixel = document.querySelectorAll(".pixel");
-  for (let i = 0; i < pixel.length; i++) {
-    opacityValue[i] = 0.1;
-  }
-  pixel.forEach((e) => e.addEventListener("mouseover", changeColor));
-}
-function changeColor(e) {
-  if (strengthModCheck) {
-    if (e.target.style.backgroundColor) {
-      opacityValue[e.target.id] += 0.1;
-      let temp = parseFloat(opacityValue[e.target.id]).toFixed(1);
-      if (temp <= 1.0) {
-        e.target.style.backgroundColor = addAlpha(takeColor(), temp);
-      }
-    } else {
-      e.target.style.backgroundColor = addAlpha(takeColor(), 0.1);
-    }
-  } else {
-    e.target.style.backgroundColor = setFinalColor();
+function changeGridSquareColor(event) {
+  if (event.type == "mouseover" && !mouseIsDown) return;
+  if (erasingMode && !coloringMode && !rainbowMode) {
+    event.target.style.backgroundColor = "whitesmoke";
+  } else if (!erasingMode && coloringMode && !rainbowMode) {
+    event.target.style.backgroundColor = sketchingColor;
+  } else if (!erasingMode && !coloringMode && rainbowMode) {
+    event.target.style.backgroundColor = generateRandomRGBValue();
   }
 }
 
-function takeColor() {
-  return color.value;
+function clearBoard() {
+  coloringMode = true;
+  erasingMode = false;
+  rainbowMode = false;
+  const gridSquares = sketchBoard.childNodes;
+  gridSquares.forEach((gridSquare) => {
+    gridSquare.style.backgroundColor = "whitesmoke";
+  });
 }
 
-function makeRainbow() {
-  if (this.checked) {
-    rainbowModCheck = true;
-  } else {
-    rainbowModCheck = false;
-  }
-}
-
-function makeStrength() {
-  if (this.checked) {
-    strengthModCheck = true;
-    rainbow.disabled = true;
-  } else {
-    strengthModCheck = false;
-    rainbow.disabled = false;
-  }
-}
-
-function setFinalColor() {
-  let color = "";
-  if (rainbowModCheck && !strengthModCheck) {
-    color = "#" + ((Math.random() * 0xffffff) << 0).toString(16);
-    return color;
-  } else {
-    color = takeColor();
-    return color;
-  }
-}
-
-function addAlpha(color, opacity) {
-  let opacityPercent = Math.round(Math.max(opacity || 1) * 255);
-  return color + opacityPercent.toString(16);
+function generateRandomRGBValue() {
+  const R = Math.floor(Math.random() * 256);
+  const G = Math.floor(Math.random() * 256);
+  const B = Math.floor(Math.random() * 256);
+  return `rgb(${R},${G},${B})`;
 }
