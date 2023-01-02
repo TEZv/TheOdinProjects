@@ -63,10 +63,30 @@ body {
     box-sizing: border-box;
 }
 
+
+header {
+  font-size: 4rem;
+  color: var(--light-brown-color);
+}
+
+main {
+  display: flex;
+  border: 3px solid var(--dark-black-color);
+  height: 590px;
+  width: 70%;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  column-gap: 15px; 
+  margin-top: 15px;
+}
+
 h1 {
   text-shadow: 5px 5px var(--bg-color);
 }
 
 .grid {
-  box-shadow: 10px 10px;
+  box-shadow: 15px 15px;
 }
+
+
