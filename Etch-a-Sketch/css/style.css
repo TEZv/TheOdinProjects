@@ -87,6 +87,9 @@ main {
   margin-top: 10px;
 }
 
+aside {
+  margin-top: 210px;
+}
 a {
   text-decoration: none;
   color: var(--bg-color);
