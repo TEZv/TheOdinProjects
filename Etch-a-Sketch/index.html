@@ -16,27 +16,20 @@
     <title>Etch-a-Sketch-SecondEdition:)</title>
   </head>
   <body>
-  <main>
-    <section id="sketch-container">
-      <div id="sketch-board"></div>
-      <div id="circle-container">
-        <div class="circle"></div>
-        <div class="circle"></div>
-      </div>
-    </section>
-    <aside id="settings-container">
-      <div id="range-container">
-        <label id="gridsize-label" for="gridsize-picker">16 x 16</label>
-        <input type="range" name="gridsize-picker" id="gridsize-picker" min="16" max="64" step="2" value="16" />
-      </div>
-  
-      <input type="color" name="color-picker" id="color-picker" />
-      <button id="color-mode-btn">Color Mode</button>
-      <button id="rainbow-btn">Rainbow</button>
-      <button id="eraser-btn">Eraser</button>
-      <button id="clear-btn">Clear</button>
-    </aside>
-  </main>
+  <div class="box">
+    <div class="container-border">
+      <div class="border"></div>
+    </div>
+    <div class="bottom">
+      <div class="circle"></div>
+      <button id="black-button" class="button" type="button">Black</button>
+      <button id="rgb-button" class="button" type="button">Color</button>
+      <button id="grayscale-button" class="button" type="button">Grayscale</button>
+      <button id="clear-button" class="button" type="button">Clear</button>
+      <button id="grid-button" class="button" type="button">New Grid</button>
+      <div class="circle"></div>
+    </div>
+  </div>
     <footer>
       <p>
         <h1>Etch-A-Sketch</h1>
