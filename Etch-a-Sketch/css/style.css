@@ -104,6 +104,13 @@ h1 {
   margin-right: 256px;
 }
 
+input {
+  border-radius: 50px;
+  border: 2px solid var(--blue-color);
+  width: 70px;
+  height: 30px;
+}
+
 a {
   text-decoration: none;
   color: var(--bg-color);
