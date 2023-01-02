@@ -101,7 +101,7 @@ h1 {
   text-shadow: 10px 3px var(--bg-color);
   display: inline;
   margin-left: 10px;
-  margin-right: 196px;
+  margin-right: 256px;
 }
 
 a {
@@ -118,7 +118,7 @@ footer {
   font-size: 1.5rem;
   color: var(--red-color);
   position: absolute;
-  top: 900px;
+  top: 910px;
 
 }
 
@@ -128,7 +128,7 @@ time:hover {
 }
 
 .box {
-  width: 1000px;
+  width: 1200px;
   background-color: var(--yellow-color);
   border-radius: 20px;
   box-shadow: 0 0 20px var(--light-red-color);
@@ -143,8 +143,8 @@ time:hover {
 }
 
 .board {
-  width: 600px;
-  height: 600px;
+  width: 700px;
+  height: 700px;
   display: flex;
   flex-wrap: wrap;
 }
