@@ -28,7 +28,7 @@
     color: var(--blue-color);
   }
   60% {
-      color: var(--brown-color);
+    color: var(--brown-color);
   }
   80% {
     background-color: var(--dark-black-color);
@@ -78,7 +78,8 @@ html {
 body {
   animation: rainbowButtonground 60s infinite;
   font-size: 1rem;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   background-color: var(--dark-black-color);
   width: 100vw;
   height: 100vh;
@@ -128,7 +129,6 @@ footer {
   color: var(--red-color);
   position: absolute;
   top: 910px;
-
 }
 
 time:hover {
@@ -196,8 +196,9 @@ time:hover {
   border: 0px;
   cursor: pointer;
   border-radius: 5px;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  font-size: 1.8rem;;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 1.8rem;
   transition: all 0.3s;
   box-shadow: var(--yellow-color) 20px 0 20px;
 }
@@ -206,4 +207,3 @@ time:hover {
   background-color: var(--white-color);
   box-shadow: 0 6px 20px var(--blue-color);
 }
-
