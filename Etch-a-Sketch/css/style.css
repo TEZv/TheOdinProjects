@@ -46,6 +46,21 @@
 body {
   animation: rainbowButtonground 60s infinite;
   background-color: var(--green-color);
+  font-size: 1rem;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  min-height: 110vh;
+  font-size: 10px;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 h1 {
