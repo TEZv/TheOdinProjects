@@ -1,8 +1,6 @@
 # TheOdinProject-Etch-a-Sketch
 
-Here's a project about simple calculation)
-
-If you put minus before the integer, it'll show you "0-Number" (it's only for simple calculation).
+Here's a project about simple drawing, a.k.a `SKETCH`)
 
 Thanks for your attention.
 
