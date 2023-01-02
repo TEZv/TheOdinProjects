@@ -1,122 +1,167 @@
-const sketchBoard = document.getElementById("board-sketch");
-const gridSizePicker = document.getElementById("gridsize-picker");
-const gridSizeLabel = document.getElementById("gridsize-label");
-const colorPicker = document.getElementById("color");
-const colorModeButton = document.getElementById("btn-color");
-const rainbowModeButton = document.getElementById("btn-rainbow");
-const clearButton = document.getElementById("btn-clean");
-const eraserButton = document.getElementById("btn-eraser");
-const sketchBoardWidth = 500;
+//^^^^^^^^^^ CREATE GRID ^^^^^^^^^^^^//
 
-let sketchingColor = colorPicker.value;
-let currentGridSize = parseInt(gridSizePicker.value);
-let coloringMode = true;
-let rainbowMode = false;
-let erasingMode = false;
+//VARIABLES
+const board = document.querySelector(".board");
+const newGrid = document.querySelector("#grid-button");
 
-let mouseIsDown = false;
-document.body.addEventListener("mousedown", () => (mouseIsDown = true));
-document.body.addEventListener("mouseup", () => (mouseIsDown = false));
+//INITIALIZATION
+let squares = [];
+let userInput = 20;
+let boardWidth = getComputedStyle(board).width;
+boardWidth = Number(boardWidth.slice(0, -2));
 
-// Go the populateGrid function on window load
-window.onload = populateGrid(currentGridSize);
+createGrid();
+toggleBlack();
 
-// Grid Size Picker .event listener to update the text showing current grid size
-gridSizePicker.addEventListener("change", function () {
-  currentGridSize = gridSizePicker.value;
-  gridSizeLabel.textContent = currentGridSize + " x " + currentGridSize;
-});
+//EVENT LISTENER
+newGrid.addEventListener("click", getUserInput);
 
-// .Event listener to update the number of square in the sketchboard
-gridSizePicker.addEventListener("change", function () {
-  erasingMode = false;
-  coloringMode = true;
-  rainbowMode = false;
-  unpopulateGrid();
-  populateGrid(currentGridSize);
-});
-
-// .Event listener to update the color for sketching
-colorPicker.addEventListener("change", function () {
-  erasingMode = false;
-  coloringMode = true;
-  rainbowMode = false;
-  sketchingColor = colorPicker.value;
-});
-
-// .Event listener to clear the sketchboard
-clearButton.addEventListener("click", clearBoard);
-
-// Event listener to enter erasing mode
-eraserButton.addEventListener("click", function () {
-  erasingMode = true;
-  coloringMode = false;
-  rainbowMode = false;
-});
-
-// .Event listener to enter coloring mode
-colorModeButton.addEventListener("click", function () {
-  erasingMode = false;
-  coloringMode = true;
-  rainbowMode = false;
-});
-
-// .Event listener to enter rainbow coloring mode
-rainbowModeButton.addEventListener("click", function () {
-  erasingMode = false;
-  coloringMode = false;
-  rainbowMode = true;
-});
-
-function unpopulateGrid() {
-  sketchBoard.innerHTML = "";
+//FUNCTIONS
+//Shows a prompt on the screen to get a number of pixels from the user
+function getUserInput() {
+    userInput = Number(prompt("What is the size of the new grid? till 50"));
+    verifyUserInput(userInput);
+    createGrid();
 }
 
-function populateGrid(currentGridSize) {
-  // Use for loop to create necessary number of grid squares
-  // and add them to the sketch board
-  const numberOfSquares = currentGridSize ** 2;
-  for (let i = 0; i < numberOfSquares; i++) {
-    const gridSquare = createGridSquare(currentGridSize);
-    sketchBoard.appendChild(gridSquare);
-  }
+//Verifies if the user input is a number from 1 to 50
+function verifyUserInput() {
+    if (Number.isNaN(userInput) || userInput < 1 || userInput > 70) {
+        alert("The input is not valid. Pick a number from 1 to 70.");
+        userInput = 20;
+        return;
+    }
+    return;
 }
 
-function createGridSquare(currentGridSize) {
-  const gridSquareHeightAndWidth = sketchBoardWidth / currentGridSize;
-  const gridSquare = document.createElement("div");
-  gridSquare.classList.add("grid-square");
-  gridSquare.style.height = gridSquareHeightAndWidth + "px";
-  gridSquare.style.width = gridSquareHeightAndWidth + "px";
-  gridSquare.addEventListener("mouseover", changeGridSquareColor);
-  gridSquare.addEventListener("mousedown", changeGridSquareColor);
-  return gridSquare;
+//Creates a grid from the user input
+
+
+function createGrid() {
+    removeOldSquares();
+
+    //Calculates the width of the square from the user input
+    let squareWidth = boardWidth / userInput;
+
+    for (let i = 0; i < Math.pow(userInput, 2); i++) {
+        squares[i] = document.createElement("div");
+        squares[i].classList.add("square");
+        squares[i].style.width = `${squareWidth}px`;
+        squares[i].style.height = `${squareWidth}px`;
+        board.appendChild(squares[i]);
+    }
+    toggleBlack();
 }
 
-function changeGridSquareColor(event) {
-  if (event.type == "mouseover" && !mouseIsDown) return;
-  if (erasingMode && !coloringMode && !rainbowMode) {
-    event.target.style.backgroundColor = "whitesmoke";
-  } else if (!erasingMode && coloringMode && !rainbowMode) {
-    event.target.style.backgroundColor = sketchingColor;
-  } else if (!erasingMode && !coloringMode && rainbowMode) {
-    event.target.style.backgroundColor = generateRandomRGBValue();
-  }
+//Deletes the last grid for the new grid to show
+function removeOldSquares() {
+    squares.forEach(item => {
+        board.removeChild(item);
+    })
+    squares = [];
 }
 
-function clearBoard() {
-  coloringMode = true;
-  erasingMode = false;
-  rainbowMode = false;
-  const gridSquares = sketchBoard.childNodes;
-  gridSquares.forEach((gridSquare) => {
-    gridSquare.style.backgroundColor = "whitesmoke";
-  });
+//---------- CLEAR THE GRID ----------//
+const clearButton = document.querySelector("#clear-button");
+
+clearButton.addEventListener("click", clearGrid);
+
+function clearGrid() {
+    squares.forEach(item => {
+        item.style.backgroundColor = "white";
+    })
 }
 
-function generateRandomRGBValue() {
-  const R = Math.floor(Math.random() * 256);
-  const G = Math.floor(Math.random() * 256);
-  const B = Math.floor(Math.random() * 256);
-  return `rgb(${R},${G},${B})`;
+//---------- BLACK INK ----------//
+const blackButton = document.querySelector("#black-button");
+
+blackButton.addEventListener("click", toggleBlack);
+
+function toggleBlack() {
+    squares.forEach(item => {
+        item.removeEventListener("mouseenter", changeColorToRGB);
+        item.removeEventListener("mouseenter", changeColorToGray);
+        item.addEventListener("mouseenter", changeColorToBlack);
+    })
+    return;
+}
+
+function changeColorToBlack() {
+    this.style.backgroundColor = "black";
+}
+
+//---------- RGB INK ----------//
+const rgbButton = document.querySelector("#rgb-button");
+
+rgbButton.addEventListener("click", toggleRGB);
+
+function toggleRGB() {
+    squares.forEach(item => {
+        item.removeEventListener("mouseenter", changeColorToBlack);
+        item.removeEventListener("mouseenter", changeColorToGray);
+        item.addEventListener("mouseenter", changeColorToRGB);
+    })
+    return;
+}
+
+function changeColorToRGB() {
+    this.style.backgroundColor = createRGB();
+}
+
+//Make a random rgb string
+function createRGB() {
+    let redValue = Math.floor(Math.random() * 255);
+    let greenValue = Math.floor(Math.random() * 255);
+    let blueValue = Math.floor(Math.random() * 255);
+    let rgb = `rgb(${redValue}, ${greenValue}, ${blueValue})`;
+    return rgb;
+}
+
+//---------- GRAYSCALE INK ----------//
+const grayButton = document.querySelector("#grayscale-button");
+
+grayButton.addEventListener("click", toggleGray);
+
+function toggleGray() {
+    squares.forEach(item => {
+        item.removeEventListener("mouseenter", changeColorToBlack);
+        item.removeEventListener("mouseenter", changeColorToRGB);
+        item.addEventListener("mouseenter", changeColorToGray);
+    })
+    return;
+}
+
+function changeColorToGray() {
+    this.style.backgroundColor = createGray(this);
+}
+
+//Make a gray color 10% darker than the current color
+function createGray(element) {
+    let currentColor = getComputedStyle(element).backgroundColor;
+    let newColor = "";
+
+    //Pick the first rgb value inside the string and turn it into a number
+    for (let i = 4; i < currentColor.length; i++) {
+        if (isNaN(currentColor[i])) {
+            currentColor = Number(currentColor.slice(4, i));
+            break;
+        }
+    }
+    //Checks if the color is black
+    if (currentColor == 0) {
+        newColor = `hsl(0, 0%, 0%)`
+    }
+    //Creates an hsl lightness value and subtracts it by 10 to make the new color 10% darker than the current color
+    else {
+        let newLightness = Math.floor(getLightnessHSL(currentColor) - 10);
+        newColor = `hsl(0, 0%, ${newLightness}%)`
+    }
+    return newColor;
+}
+
+//Converts an rgb value to an hsl lightness
+function getLightnessHSL(value) {
+    let convertedValue = value/255;
+    let lightness = convertedValue * 100;
+    return lightness;
 }
