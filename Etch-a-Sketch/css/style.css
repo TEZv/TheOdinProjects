@@ -107,8 +107,10 @@ h1 {
 input {
   border-radius: 50px;
   border: 2px solid var(--blue-color);
-  width: 70px;
+  width: 5%;
   height: 30px;
+  overflow: hidden;
+  margin-bottom: 10px;
 }
 
 a {
