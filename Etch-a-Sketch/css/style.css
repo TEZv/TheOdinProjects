@@ -100,8 +100,8 @@ h1 {
   color: var(--red-color);
   text-shadow: 10px 3px var(--bg-color);
   display: inline;
-  margin-left: 16px;
-  margin-right: 106px;
+  margin-left: 10px;
+  margin-right: 196px;
 }
 
 a {
@@ -117,10 +117,9 @@ a:hover {
 footer {
   font-size: 1.5rem;
   color: var(--red-color);
-  position: relative;
-  top: 410px;
+  position: absolute;
+  top: 900px;
 
- 
 }
 
 time:hover {
@@ -129,7 +128,7 @@ time:hover {
 }
 
 .box {
-  width: 800px;
+  width: 1000px;
   background-color: var(--yellow-color);
   border-radius: 20px;
   box-shadow: 0 0 20px var(--light-red-color);
@@ -144,8 +143,8 @@ time:hover {
 }
 
 .board {
-  width: 400px;
-  height: 400px;
+  width: 600px;
+  height: 600px;
   display: flex;
   flex-wrap: wrap;
 }
