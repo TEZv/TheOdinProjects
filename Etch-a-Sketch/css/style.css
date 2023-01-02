@@ -2,7 +2,7 @@
   --bg-color: #ffcece;
   --blue-color: rgb(40, 25, 49);
   --dark-blue-color: rgb(22, 14, 43);
-  --red-color: rgb(65, 39, 39);
+  --red-color: rgb(247, 127, 127);
   --light-red-color: rgb(224, 3, 3);
   --yellow-color: rgb(255, 252, 88);
   --brown-color: rgb(32, 12, 12);
@@ -86,17 +86,17 @@ h1 {
 }
 
 .container-sketch {
-    /* border: 3px solid red; */
-    border-radius: 5px;
-    height: 600px;
-    width: 550px;
-    background-color: var(--green-color);
-    display: flex;
-    flex-flow: column nowrap;
-    row-gap: 10px;
-    padding: 15px 20px;
-    box-shadow: var(--black-color) 1.95px 1.95px 2.6px;
-    align-items: center;
+  /* border: 3px solid red; */
+  border-radius: 5px;
+  height: 600px;
+  width: 550px;
+  background-color: var(--green-color);
+  display: flex;
+  flex-flow: column nowrap;
+  row-gap: 10px;
+  padding: 15px 20px;
+  box-shadow: var(--black-color) 1.95px 1.95px 2.6px;
+  align-items: center;
 }
 
 .board-sketch {
@@ -108,4 +108,66 @@ h1 {
   flex-flow: row wrap;
 }
 
+.container-circle {
+  /* border: 3px solid black; */
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--red-color);
+  box-shadow: var(--dark-black-color) 1.95px 1.95px 2.6px;
+}
+
+#container-sketch {
+  /* border: 3px solid blue; */
+  height: 500px;
+  min-width: 200px;
+  padding: auto 20px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  row-gap: 50px;
+}
+
+#container-settings input[type=color] {
+  background-color: var(--bg-color);
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 0px;
+  width: 120px;
+  height: 40px;
+}
+
+#range-container {
+  display: flex;
+  flex-flow: column nowrap;
+  row-gap: 10px;
+  font-size: 2rem;
+  color: var(--light-red-color);
+  align-items: center;
+}
+
+button {
+  background-color: var(--bg-color);
+  color: var(--dark-blue-color);
+  width: 120px;
+  height: 40px;
+  border-radius: 5px;
+  border: 0px;
+  font-size: 2rem;
+  box-shadow: var(--dark-black-color) 1.95px 1.95px 2.6px;
+}
+
+footer {
+  margin-top: auto;
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  color: var(--green-color);
+}
 
