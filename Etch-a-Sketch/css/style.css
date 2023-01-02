@@ -121,8 +121,8 @@ time:hover {
 }
 
 .circle {
-  width: 60px;
-  height: 60px;
+  width: 55px;
+  height: 55px;
   border-radius: 50%;
   background-color: var(--yellow-color);
   box-shadow: var(--light-brown-color) 1.95px 1.95px 2.6px;
