@@ -144,7 +144,7 @@ h1 {
   height: 40px;
 }
 
-#range-container {
+#container-range {
   display: flex;
   flex-flow: column nowrap;
   row-gap: 10px;
