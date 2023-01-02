@@ -12,124 +12,46 @@
   --black-color: rgba(10, 10, 10, 0);
   --dark-black-color: rgb(43, 29, 56);
   --light-black-color: rgb(245, 234, 255);
+  --grid-rows: 1;
+  --grid-cols: 1;
 }
 
-#container {
-  display: grid;
-  grid-template-rows: repeat(var(--grid-rows), 1fr);
-  grid-template-columns: repeat(var(--grid-cols), 1fr);
-  height: 400px;
-  width: 600px;
-  position: absolute;
-  left: 0; 
-  right: 0; 
-  margin-left: auto; 
-  margin-right: auto; 
-  border-radius: 5%;
-  transition: 0.5ms;
+@keyframes rainbowButtonground {
+  0% {
+    color: var(--light-brown-color);
+  }
+  10% {
+    color: var(--dark-blue-color);
+  }
+  20% {
+    color: var(--black-color);
+  }
+  40% {
+    color: var(--blue-color);
+  }
+  60% {
+      color: var(--brown-color);
+  }
+  80% {
+    background-color: var(--dark-black-color);
+  }
+  100% {
+    background-color: var(--brown-color);
+  }
+  120% {
+    background-color: var(--green-color);
+  }
 }
-
-.box {
-  background-color: gray;
-  
-
-}
-
-.box-after {
-  background-color:black !important;
-  
-}
-
-#clear {
-  border-radius: 5%;
-  background-color: orangered;
-  color: white;
-  width: 200px;
-  height: 100px;
-  font-size: 55px;
-}
-
-#clear:hover {
-  border: yellow;
-  color: yellow;
-  border-radius: 5%;
-}
-
-#head {
-  left: 0; 
-  right: 0; 
-  margin-left: auto; 
-  margin-right: auto; 
-  display: flex;
-  justify-content: center;
-  margin-top: 30px;
-}
-
-.title {
-  padding-left: 30px;
-  padding-right: 30px;
-  font-size: 26px;
-  color: gold;
-}
-
-#eas {
-  display: block;
-  background-color: red;
-  position: absolute; 
-  height: 600px;
-  width: 900px;
-  left: 0; 
-  right: 0; 
-  margin-left: auto; 
-  margin-right: auto; 
-  border-radius: 5%;
-  padding-bottom: 50px;
-}
-
-#mainTitle {
-  font-family: cursive;
-  font-size: 32px;
-}
-
-#dialLeft {
-  background-color: white;
-  height: 120px;
-  width: 120px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  border-radius: 50%;
-}
-
-#dialRight {
-  background-color: white;
-  height: 120px;
-  width: 120px;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  border-radius: 50%;
-}
-
 
 body {
-  background-image: url("images/ee0fb5a201e5a82ec077d00f38d6c0f4.jpg");
+  animation: rainbowButtonground 60s infinite;
+  background-color: var(--green-color);
 }
 
-
-#normal {
-  border-radius: 5%;
-  background-color: white;
-  color: black;
-  width: 200px;
-  height: 100px;
-  font-size: 20px;
+h1 {
+  text-shadow: 5px 5px var(--bg-color);
 }
 
-#rainbow {
-  background: linear-gradient(to right, orange , yellow, green, cyan, blue, violet);
-  width: 200px;
-  height: 100px;
-  font-size: 20px;
-  border-radius: 5%;
+.grid {
+  box-shadow: 10px 10px;
 }
