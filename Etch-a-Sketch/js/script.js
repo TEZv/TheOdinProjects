@@ -3,6 +3,7 @@
 //VARIABLES
 const board = document.querySelector(".board");
 const newGrid = document.querySelector("#grid-button");
+const color = document.querySelector('#fav-color');
 
 //INITIALIZATION
 let squares = [];
@@ -17,6 +18,19 @@ toggleBlack();
 newGrid.addEventListener("click", getUserInput);
 
 //FUNCTIONS
+//
+//function setFinalColor() {
+    //let color = '';
+    //if (rainbowModCheck && !strengthModCheck) {
+        //color = '#' + (Math.random()*0xFFFFFF<<0).toString(16);
+        //return color;
+    //} else {
+        //color = takeColor();
+        //return color;
+    //}
+//}
+
+
 //Shows a prompt on the screen to get a number of pixels from the user
 function getUserInput() {
     userInput = Number(prompt("What is the size of the new grid? till 50"));
