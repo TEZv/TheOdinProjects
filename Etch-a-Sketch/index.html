@@ -16,20 +16,43 @@
     <title>Etch-a-Sketch-SecondEdition:)</title>
   </head>
   <body>
-    <button id="grid">!CHANGE GRID!</button>
-  <button id="black">!TRY BLACK!</button>
-  <button id="rainbow">!YAY-RAINBOW!</button>
-  <div id="title-container">
-    <div id="head">
-      <p class="title">Imagination</p>
-      <p class="title" id="mainTitle">Etch-A-Sketch</p>
-      <p class="title">DRAWING</p>
-    </div>
-  <div id="container">
-        
-  </div>
-  <div id="turn-left"></div>
-  <div id="turn-right"></div>
+    <header><h1>Etch-A-Sketch</h1></header>
+    <main>
+      <section id="container-sketch">
+        <div id="board-sketch"></div>
+        <div id="container-circle">
+          <div class="circle"></div>
+          <div class="circle"></div>
+        </div>
+      </section>
+      <aside id="container-settings">
+        <div id="container-range">
+          <label id="gridsize-label" for="gridsize-picker">16 x 16</label>
+          <input
+            type="range"
+            name="gridsize-picker"
+            id="gridsize-picker"
+            min="16"
+            max="64"
+            step="2"
+            value="16"
+          />
+        </div>
+
+        <input type="color" name="color-picker" id="color-picker" />
+        <button id="btn-color">Pick Me</button>
+        <button id="btn-rainbow">Fancy Mode</button>
+        <button id="btn-eraser">Erase Mode</button>
+        <button id="btn-clean">Clean Mode</button>
+      </aside>
+    </main>
+    <footer>
+      <p>
+        <a href="https://github.com/TEZv"
+          ><span class="span-name">TEZv </span></a
+        >Monday 01/02/2023 (January)
+      </p>
+    </footer>
 
     <script src="./js/script.js"></script>
   </body>
