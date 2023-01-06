@@ -152,16 +152,16 @@
               placeholder=" "
               required
             />
-            <span class="error-password"
+            <span class="error error-password"
               >Must contain 8 characters one lowercase, and one number.</span
             >
-            <span class="error-password"
+            <span class="error error-password"
               >Must contain one uppercase, one lowercase, and one number.</span
             >
-            <span class="error-password"
+            <span class="error error-password"
               >Must contain one lowercase and one number.</span
             >
-            <span class="error-password">Must contain one number.</span>
+            <span class="error error-password">Must contain one number.</span>
           </div>
           <div class="confirmpassword">
             <label for="password-confirm"
@@ -183,5 +183,25 @@
         <span>Already have an account? <a href="#">Log in</a></span>
       </div>
     </form>
+
+    <script>
+        const passWord = document.querySelector("#password-input");
+            const passWordConfirm = document.querySelector("#password-confirm");
+            const passCError = document.querySelector("#password-confirm + .error");
+
+            passWordConfirm.addEventListener("input", checkPassword)
+            passWord.addEventListener("input", checkPassword)
+            /* checks if password input and confiramtion are equal*/
+            function checkPassword() {
+                if (passWord.value != passWordConfirm.value) {
+                    passWordConfirm.setCustomValidity("Invalid field.");
+                    passCError.textContent = "Passwords don't match.";
+                }
+                else {
+                    passWordConfirm.setCustomValidity("");
+                    passCError.textContent = " ";
+                }
+            }
+    </script>
   </body>
 </html>
