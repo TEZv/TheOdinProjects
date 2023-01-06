@@ -14,7 +14,13 @@
 }
 
 body {
-    display: flex;
+    display: grid;
+    grid-template-areas: "image main"
+                        "image main"
+                        "image middle"
+                        "image middle"
+                        "image middle"
+    ;
     align-items: stretch;
     width: 100vw;
     height: 100vh;
@@ -38,6 +44,7 @@ abbr[title="required"] {
     width: 100%;
     height: inherit;
     image-rendering: optimizeQuality;
+    grid-area: image;
 }
 
 .side-image img {
@@ -52,7 +59,8 @@ abbr[title="required"] {
     align-items: center;
     padding: 5px 0;
     width: 100%;
-    height: 7vw;
+    height: 1000px;
+    opacity: 0.5;
     position: absolute;
     top: 11vw;
     background-color: rgba(255, 255, 255, 0.068);
@@ -66,6 +74,7 @@ abbr[title="required"] {
     font-family: "Unbounded", cursive;
     font-size: 68px;
     color: white;
+    transform: rotate(-90deg);
 }
 
 .side-copy {
@@ -90,6 +99,7 @@ abbr[title="required"] {
     width: 70%;
     height: 100%;
     background-color: rgba(167, 164, 164, 0.2);
+    grid-area: main;
 }
 
 .top {
@@ -104,6 +114,7 @@ abbr[title="required"] {
     box-shadow: 3px 3px 2px rgb(128, 128, 128, 0.2);
     margin: 0;
     background-color: white;
+    grid-area: middle;
 }
 
 .legend {
