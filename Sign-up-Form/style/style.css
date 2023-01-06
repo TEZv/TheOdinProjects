@@ -1,9 +1,9 @@
 :root {
     --white-color: #fff;
-    --black-color: #000;
+    --black-color: rgb(17, 5, 5);
     --dark-black-color: #333;
     --green-color: #c0f55ec4;
-    --light-green-color: rgba(87, 252, 101, 0.548);
+    --light-green-color: rgba(24, 13, 46, 0.548);
     --dark-green-color: rgb(55, 150, 0);
     --red-color: rgb(255, 0, 0);
     --dark-purple: #333555;
@@ -22,8 +22,8 @@ body {
                         "image middle"
     ;
     align-items: stretch;
-    width: 120vw;
-    height: 120vh;
+    width: 90vw;
+    height: 100vh;
     font-family: "Unbounded", cursive;
 }
 
@@ -45,50 +45,52 @@ abbr[title="required"] {
     height: inherit;
     image-rendering: optimizeQuality;
     grid-area: image;
+    background-color: var(--light-green-color);
+    padding: 40px 40px;
 }
 
 .side-image img {
-    width: inherit;
-    height: inherit;
     object-fit: cover;
+    filter: blur(1px) brightness(95%) contrast(130%) grayscale(20%);
 }
 
 .side-logo {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 5px 0;
     width: 100%;
     height: 4vw;
     opacity: 0.9;
     position: absolute;
-    top: 11vw;
-    background-color: rgba(255, 255, 255, 0.068);
+    top: 10vw;
+    
 }
 
 .side-logo img {
     height: 100%;
-    position: absolute;
-    top: 200px;
+    position: relative;
+    top: 130px;
+    right: 348px;
+    opacity: 0.9;
 }
 
 .side-logo span {
     font-family: "Unbounded", cursive;
-    font-size: 68px;
-    color: white;
+    font-size: 66px;
+    color: var(--white-color);
     transform: rotate(-90deg);
     background-color: var(--dark-purple);
-    padding: 0 100px 0 700px;
+    opacity: 0.5;
     position: absolute;
-    top: 180px;
-    right: 280px;
+    top: -10px;
+    left: -70px;
 }
 
 .side-copy {
     color: white;
     position: absolute;
     bottom: 4px;
-    width: 100%;
+    width: 70%;
     text-align: center;
     font-size: 12px;
 }
@@ -103,7 +105,8 @@ abbr[title="required"] {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 70%;
+    margin-left: 100px;
+    width: 100%;
     height: 100%;
     background-color: rgba(167, 164, 164, 0.2);
     grid-area: main;
@@ -113,6 +116,7 @@ abbr[title="required"] {
     font-weight: 550;
     font-size: 20px;
     margin: 3vh;
+    text-align: center;
 }
 
 /****** middle-form *******/
