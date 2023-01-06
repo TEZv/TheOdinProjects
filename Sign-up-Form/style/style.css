@@ -5,7 +5,7 @@
     --green-color: #c0f55ec4;
     --light-green-color: rgba(87, 252, 101, 0.548);
     --dark-green-color: rgb(55, 150, 0);
-    --red-color: rgb(129, 22, 22);
+    --red-color: rgb(255, 0, 0);
     --dark-purple: #333555;
     --purple-color: rgb(105, 105, 255);
     --grey-color: #4c5340c4;
@@ -23,7 +23,8 @@ body {
 
 abbr[title="required"] {
     text-decoration: none;
-    color: red;
+    color: var(--red-color);
+    font-size: 15px;
 }
 
 /***********sidebar of site*********/
@@ -151,6 +152,71 @@ abbr[title="required"] {
     border: 1px solid #008000;
 }
 
+.inputs input:invalid:not(:focus):not(:placeholder-shown) {
+    background: url(images/xmark.svg);
+    background-repeat: no-repeat;
+    background-position: 2px;
+    background-size: 12px;
+    border: 1px solid #ff0000;
+}
+
+.inputs input:invalid:focus:not(:placeholder-shown) {
+    background: url(images/xmark.svg);
+    background-repeat: no-repeat;
+    background-position: 2px;
+    background-size: 12px;
+    border: 1px solid #ff0000;
+}
+
+.inputs input:invalid:focus:not(:placeholder-shown)~.error {
+    max-height: 50px;
+}
+
+.inputs .error {
+    max-height: 0;
+    transition: 0.28s;
+    overflow: hidden;
+    color: red;
+    font-style: italic;
+    font-size: 10px;
+}
+
+/*********** submit button *******/
+.bottom {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    font-size: 14px;
+    margin: 30px 0px 0px 30px;
+}
+
+.bottom button {
+    border: none;
+    background-color: rgb(35 43 71);
+    color: #E5E7EB;
+    font-weight: 800;
+    border-radius: 5px;
+    width: 150px;
+    height: 40px;
+    margin: 0px 0px 20px 0px;
+}
+
+.bottom button:hover {
+    background-color: rgb(42, 47, 66);
+    box-shadow: 3px 3px 2px rgb(0, 0, 255, 0.2);
+}
+
+.bottom span {
+    font-size: smaller;
+}
+
+.bottom a,
+.bottom a:visited,
+.bottom a:hover {
+    text-decoration: none;
+    color: rgb(35 43 71);
+    font-weight: 900;
+}
 
 label {
     text-transform: uppercase;
