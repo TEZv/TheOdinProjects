@@ -5,3 +5,9 @@ This is a <i>simple</i> project which provides a sign-up form <b>without</b> a b
 ## Requirements to using this project:
 - Users are <b><i>English</i></b> speaking &&| writing
 
+## Project Stack
+
+
+# P.S.
+## The inspiration to create the webpage in that design has came from:
+--Good-Looking-Design-For-The-Business-- 
