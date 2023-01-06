@@ -9,5 +9,5 @@ This is a <i>simple</i> project which provides a sign-up form <b>without</b> a b
 
 
 
-## <hr>`The inspiration to create the webpage in that view has came from:`<hr>
+# <hr>`The inspiration to create the webpage in that view has came from:`<hr>
 --Good-Looking-Design-For-The-Business-- 
