@@ -1,5 +1,4 @@
-# Sign-up-Form
-<hr>
-## What This All About?
+# Sign-up-Form<hr>
+# What This All About?
 
 
