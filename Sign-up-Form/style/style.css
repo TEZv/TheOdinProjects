@@ -26,25 +26,26 @@ abbr[title="required"] {
     color: red;
 }
 
-/***********left side of site*********/
-.leftside {
+/***********sidebar of site*********/
+.sidebar {
     width: 30%;
     height: 100%;
     position: relative;
 }
 
-.sideimage {
+.side-image {
     width: 100%;
     height: inherit;
+    image-rendering: optimizeQuality;
 }
 
-.sideimage img {
+.side-image img {
     width: inherit;
     height: inherit;
     object-fit: cover;
 }
 
-.logo {
+.side-logo {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -56,17 +57,17 @@ abbr[title="required"] {
     background-color: rgba(255, 255, 255, 0.068);
 }
 
-.logo img {
+.side-logo img {
     height: 100%;
 }
 
-.logo span {
-    font-family: "Norse-bold";
+.side-logo span {
+    font-family: "Unbounded", cursive;
     font-size: 68px;
     color: white;
 }
 
-.credit {
+.side-copy {
     color: white;
     position: absolute;
     bottom: 4px;
@@ -75,13 +76,13 @@ abbr[title="required"] {
     font-size: 12px;
 }
 
-.credit a:visited,
-.credit a:hover {
+.side-copy a:visited,
+.side-copy a:hover {
     color: white;
 }
 
 /**************right side of site*********/
-.rigthside {
+.main {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -159,6 +160,3 @@ label {
     image-rendering: crisp-edges;
 }
 
-.side-image {
-    image-rendering: optimizeQuality;
-}
