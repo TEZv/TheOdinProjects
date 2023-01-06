@@ -1,3 +1,156 @@
+:root {
+    --white-color: #fff;
+    --black-color: #000;
+    --dark-black-color: #333;
+    --green-color: #c0f55ec4;
+    --light-green-color: rgba(87, 252, 101, 0.548);
+    --dark-green-color: rgb(55, 150, 0);
+    --red-color: rgb(129, 22, 22);
+    --dark-purple: #333555;
+    --purple-color: rgb(105, 105, 255);
+    --grey-color: #4c5340c4;
+    --dark-grey-color: rgba(36, 30, 30, 0.938);
+    --blue-color: rgba(17, 171, 243, 0.74);
+}
+
+body {
+    display: flex;
+    align-items: stretch;
+    width: 100vw;
+    height: 100vh;
+    font-family: "Unbounded", cursive;
+}
+
+abbr[title="required"] {
+    text-decoration: none;
+    color: red;
+}
+
+/***********left side of site*********/
+.leftside {
+    width: 30%;
+    height: 100%;
+    position: relative;
+}
+
+.sideimage {
+    width: 100%;
+    height: inherit;
+}
+
+.sideimage img {
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 0;
+    width: 100%;
+    height: 7vw;
+    position: absolute;
+    top: 11vw;
+    background-color: rgba(255, 255, 255, 0.068);
+}
+
+.logo img {
+    height: 100%;
+}
+
+.logo span {
+    font-family: "Norse-bold";
+    font-size: 68px;
+    color: white;
+}
+
+.credit {
+    color: white;
+    position: absolute;
+    bottom: 4px;
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+}
+
+.credit a:visited,
+.credit a:hover {
+    color: white;
+}
+
+/**************right side of site*********/
+.rigthside {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 70%;
+    height: 100%;
+    background-color: rgba(167, 164, 164, 0.2);
+}
+
+.top {
+    font-weight: 550;
+    font-size: 20px;
+    margin: 3vh;
+}
+
+/****** middle-form *******/
+.middle {
+    padding: 30px;
+    box-shadow: 3px 3px 2px rgb(128, 128, 128, 0.2);
+    margin: 0;
+    background-color: white;
+}
+
+.legend {
+    padding: 20px 0;
+}
+
+.inputs {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: calc(2*200px + 50px);
+}
+
+.inputs>div {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    margin: 3px 0;
+}
+
+.inputs label {
+    font-size: 10px;
+    font-weight: 400;
+}
+
+.inputs input {
+    height: 30px;
+    padding: 1px 1px 1px 16px;
+    font-size: 14px;
+
+    border: 1px solid #E5E7EB;
+    border-radius: 3px;
+}
+
+.inputs input:focus {
+    outline: none;
+    border: 1px solid blue;
+    box-shadow: 2px 2px 2px rgb(0, 0, 255, 0.2);
+}
+
+.inputs input:valid {
+    background: url(images/check.svg);
+    background-repeat: no-repeat;
+    background-position: 2px;
+    background-size: 12px;
+    border: 1px solid #008000;
+}
+
+
 label {
     text-transform: uppercase;
 }
