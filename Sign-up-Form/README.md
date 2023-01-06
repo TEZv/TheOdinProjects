@@ -1,5 +1,5 @@
 # <hr>`Sign-up-Form`<hr>
 ## What Is This All About?
-This is a ~~simple~~ project - sign-up form without a backend.
+This is a <i>simple</i> project which provides a sign-up form <b>without</b> a backend.
 
 
