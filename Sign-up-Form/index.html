@@ -38,11 +38,63 @@
     </sidebar>
     </section>
     <section>
-       <div class="top">The health body makes the health <b>mind</b>. Keep training with the fitness-club
+       <div class="top">The health body makes the health <b>mind</b>. Keep training with the Fitness-club
         "AT-TZ". It's funny, you won't be disappointed. You Know What <span class="tag">#</span>TODO.
         <i>Let's join us</i>. Happy coding, don't forget to do exersices:)
        </div> 
     </section>
     
+    <form action="" method="post">
+        <div class="middle">
+            <div class="legend">Fill the Form Below to Continue with "AT-TZ"
+            </div>
+            <div class="inputs">
+                <div class="firstname">
+                    <label for="first-name">first name <abbr title="required">*</abbr></label>
+                    <input type="text" name="firstName" id="first-name" pattern="^[A-Za-z]{2,15}$" placeholder="Anthony"
+                        required>
+                    <span class="error">Should have 2 through 15 letters:) Too short or too long, try again.</span>
+                </div>
+                <div class="lastname">
+                    <label for="last-name">last name <abbr title="required">*</abbr></label>
+                    <input type="text" name="lastName" id="last-name" pattern="^[A-Za-z]{2,15}$" placeholder="Kipchuk"
+                        required>
+                    <span class="error">Should have 2 through 15 letters:) Too short or too long, try again.</span>
+                </div>
+                <div class="email">
+                    <label for="email-input">email <abbr title="required">*</abbr></label>
+                    <input type="email" name="emailInput" id="email-input" placeholder="example@sample.com" required>
+                    <span class="error">Should have an email @ and respectively extension.</span>
+                </div>
+                <div class="phone">
+                    <label for="phone-number">phone number <abbr title="required">*</abbr></label>
+                    <input type="tel" name="phoneNumber" id="phone-number"
+                        pattern="^(?:0|\(?\+380\)?\s?|00380\s?)[1-79](?:[\.\-\s]?\d\d){4}$" placeholder="(+XXX)XX-XXX-XXXX"
+                        required>
+                    <span class="error">Should have a valid Ukrainian phone code, check again.</span>
+                </div>
+                <div class="password">
+                    <label for="password-input">password <abbr title="required">*</abbr></label>
+                    <input type="password" name="passwordInput" id="password-input"
+                        pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" placeholder=" "
+                        required>
+                    <span class="error-password">Must contain 8 characters one lowercase, and one number.</span>
+                    <span class="error-password">Must contain one uppercase, one lowercase, and one number.</span>
+                    <span class="error-password">Must contain one lowercase and one number.</span>
+                    <span class="error-password">Must contain one number.</span>
+                </div>
+                <div class="confirmpassword">
+                    <label for="password-confirm">confirm password <abbr title="required">*</abbr></label>
+                    <input type="password" name="passwordConfirm" id="password-confirm" placeholder=" " required>
+                    <span class="error"></span>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <button type="submit">Create account</button>
+            <span>Already have an account? <a href="#">Log in</a></span>
+        </div>
+    </form>
+
 </body>
 </html>
