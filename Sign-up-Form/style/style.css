@@ -1,3 +1,11 @@
 label {
     text-transform: uppercase;
 }
+
+.side-logo {
+    image-rendering: crisp-edges;
+}
+
+.side-image {
+    image-rendering: optimizeQuality;
+}
