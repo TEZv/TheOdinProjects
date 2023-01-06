@@ -6,8 +6,8 @@ This is a <i>simple</i> project which provides a sign-up form <b>without</b> a b
 - Users are <b><i>English</i></b> speaking &&| writing
 
 ## Project Stack
-
+<img src="https://www.1training.org/blog/html-css-javascript-web-development" />
 
 
 # <hr>`The inspiration to create the webpage in that view has came from:`<hr>
---Good-Looking-Design-For-The-Business-- 
+<i>--Good-Looking-Design-For-The-Business--</i>
