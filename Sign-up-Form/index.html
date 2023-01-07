@@ -7,7 +7,7 @@
 
     <link rel="stylesheet" href="./style/normalize.css" />
     <link rel="stylesheet" href="./style/style.css" />
-<link rel="shortcut icon" href="./favicon.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="./favicon.svg" type="image/x-icon" />
 
     <link
       href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"
@@ -29,13 +29,32 @@
     />
     <title>SignUP~AT-TZ</title>
     <style>
+      :root {
+        --dark-green-color: rgb(55, 150, 0);
+        --red-color: rgb(255, 0, 0);
+      }
       .inputs input:valid {
         background: url(img/check.svg);
         background-repeat: no-repeat;
         background-position: 270px;
         background-size: 18px;
         border: 1px solid var(--dark-green-color);
-}
+      }
+      .inputs input:invalid:not(:focus):not(:placeholder-shown) {
+        background: url(img/uncheck.svg);
+        background-repeat: no-repeat;
+        background-position: 270px;
+        background-size: 18px;
+        border: 1px solid var(--red-color);
+      }
+
+      .inputs input:invalid:focus:not(:placeholder-shown) {
+        background: url(img/uncheck.svg);
+        background-repeat: no-repeat;
+        background-position: 270px;
+        background-size: 18px;
+        border: 1px solid var(--red-color);
+      }
     </style>
   </head>
   <body>
@@ -50,11 +69,9 @@
           />
         </div>
         <div class="side-logo">
-          <img
-            src="./img/logo.svg"
-            alt="the Unsplash Logo"
-            width="70px"
-          /><span>~AT-TZ~</span>
+          <img src="./img/logo.svg" alt="the Unsplash Logo" width="70px" /><span
+            >~AT-TZ~</span
+          >
         </div>
         <p class="side-copy">
           Photo: in help with Anthony Kipchuk on
@@ -71,143 +88,144 @@
       <div class="top">
         The healthy body makes the health <b>mind</b>. Keep training with the
         Fitness-club "AT-TZ". It's funny, you won't be disappointed. You Know
-        What <span class="tag">#</span>TODO.<br><br> <i><b>Let's join us</b></i>. Happy coding,
-        don't forget to do exercises:)
+        What <span class="tag">#</span>TODO.<br /><br />
+        <i><b>Let's join us</b></i
+        >. Happy coding, don't forget to do exercises:)
       </div>
       <form action="" method="post">
-      <div class="middle">
-        <div class="legend">Fill the Form Below to Continue with <span><b>"AT-TZ"</b></span></div>
-        <div class="inputs">
-          <div class="firstname">
-            <label for="first-name"
-              >first name <abbr title="required">*</abbr></label
-            >
-            <input
-              type="text"
-              name="firstName"
-              id="first-name"
-              pattern="^[A-Za-z]{2,15}$"
-              placeholder="Anthony"
-              required
-            />
-            <span class="error"
-              >Should have 2 through 15 letters:) Too short or too long, try
-              again.</span
-            >
+        <div class="middle">
+          <div class="legend">
+            Fill the Form Below to Continue with <span><b>"AT-TZ"</b></span>
           </div>
-          <div class="lastname">
-            <label for="last-name"
-              >last name <abbr title="required">*</abbr></label
-            >
-            <input
-              type="text"
-              name="lastName"
-              id="last-name"
-              pattern="^[A-Za-z]{2,15}$"
-              placeholder="Kipchuk"
-              required
-            />
-            <span class="error"
-              >Should have 2 through 15 letters:) Too short or too long, try
-              again.</span
-            >
-          </div>
-          <div class="email">
-            <label for="email-input"
-              >email <abbr title="required">*</abbr></label
-            >
-            <input
-              type="email"
-              name="emailInput"
-              id="email-input"
-              placeholder="example@sample.com"
-              required
-            />
-            <span class="error"
-              >Should have an email @ and respectively extension.</span
-            >
-          </div>
-          <div class="phone">
-            <label for="phone-number"
-              >phone number <abbr title="required">*</abbr></label
-            >
-            <input
-              type="tel"
-              name="phoneNumber"
-              id="phone-number"
-              pattern="^(?:0|\(?\+380\)?\s?|00380\s?)[1-79](?:[\.\-\s]?\d\d){4}$"
-              placeholder="(+XXX)XX-XXX-XXXX"
-              required
-            />
-            <span class="error"
-              >Should have a valid Ukrainian phone code, check again.</span
-            >
-          </div>
-          <div class="password">
-            <label for="password-input"
-              >password <abbr title="required">*</abbr></label
-            >
-            <input
-              type="password"
-              name="passwordInput"
-              id="password-input"
-              pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
-              placeholder=" "
-              required
-            />
-            <span class="error error-password"
-              >Must contain 8 characters one lowercase, and one number.</span
-            >
-            <span class="error error-password"
-              >Must contain one uppercase, one lowercase, and one number.</span
-            >
-            <span class="error error-password"
-              >Must contain one lowercase and one number.</span
-            >
-            <span class="error error-password">Must contain one number.</span>
-          </div>
-          <div class="confirmpassword">
-            <label for="password-confirm"
-              >confirm password <abbr title="required">*</abbr></label
-            >
-            <input
-              type="password"
-              name="passwordConfirm"
-              id="password-confirm"
-              placeholder=" "
-              required
-            />
-            <span class="error"></span>
+          <div class="inputs">
+            <div class="firstname">
+              <label for="first-name"
+                >first name <abbr title="required">*</abbr></label
+              >
+              <input
+                type="text"
+                name="firstName"
+                id="first-name"
+                pattern="^[A-Za-z]{2,15}$"
+                placeholder="Anthony"
+                required
+              />
+              <span class="error"
+                >Should have 2 through 15 letters:) Too short or too long, try
+                again.</span
+              >
+            </div>
+            <div class="lastname">
+              <label for="last-name"
+                >last name <abbr title="required">*</abbr></label
+              >
+              <input
+                type="text"
+                name="lastName"
+                id="last-name"
+                pattern="^[A-Za-z]{2,15}$"
+                placeholder="Kipchuk"
+                required
+              />
+              <span class="error"
+                >Should have 2 through 15 letters:) Too short or too long, try
+                again.</span
+              >
+            </div>
+            <div class="email">
+              <label for="email-input"
+                >email <abbr title="required">*</abbr></label
+              >
+              <input
+                type="email"
+                name="emailInput"
+                id="email-input"
+                placeholder="example@sample.com"
+                required
+              />
+              <span class="error"
+                >Should have an email @ and respectively extension.</span
+              >
+            </div>
+            <div class="phone">
+              <label for="phone-number"
+                >phone number <abbr title="required">*</abbr></label
+              >
+              <input
+                type="tel"
+                name="phoneNumber"
+                id="phone-number"
+                pattern="^(?:0|\(?\+380\)?\s?|00380\s?)[1-79](?:[\.\-\s]?\d\d){4}$"
+                placeholder="(+XXX)XX-XXX-XXXX"
+                required
+              />
+              <span class="error"
+                >Should have a valid Ukrainian phone code, check again.</span
+              >
+            </div>
+            <div class="password">
+              <label for="password-input"
+                >password <abbr title="required">*</abbr></label
+              >
+              <input
+                type="password"
+                name="passwordInput"
+                id="password-input"
+                pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
+                placeholder=" "
+                required
+              />
+              <span class="error error-password"
+                >Must contain 8 characters one lowercase, and one number.</span
+              >
+              <span class="error error-password"
+                >Must contain one uppercase, one lowercase, and one
+                number.</span
+              >
+              <span class="error error-password"
+                >Must contain one lowercase and one number.</span
+              >
+              <span class="error error-password">Must contain one number.</span>
+            </div>
+            <div class="confirmpassword">
+              <label for="password-confirm"
+                >confirm password <abbr title="required">*</abbr></label
+              >
+              <input
+                type="password"
+                name="passwordConfirm"
+                id="password-confirm"
+                placeholder=" "
+                required
+              />
+              <span class="error"></span>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="bottom">
-        <button type="submit">Create account</button>
-        <span>Already have an account? <a href="#">Log in</a></span>
-      </div>
-    </form>
+        <div class="bottom">
+          <button type="submit">Create account</button>
+          <span>Already have an account? <a href="#">Log in</a></span>
+        </div>
+      </form>
     </section>
 
-    
-
     <script>
-        const passWord = document.querySelector("#password-input");
-            const passWordConfirm = document.querySelector("#password-confirm");
-            const passCError = document.querySelector("#password-confirm + .error");
+      const passWord = document.querySelector("#password-input");
+      const passWordConfirm = document.querySelector("#password-confirm");
+      const passCError = document.querySelector("#password-confirm + .error");
 
-            passWordConfirm.addEventListener("input", checkPassword)
-            passWord.addEventListener("input", checkPassword)
-            /* checks if password input and confiramtion are equal*/
-            function checkPassword() {
-                if (passWord.value != passWordConfirm.value) {
-                    passWordConfirm.setCustomValidity("Invalid field.");
-                    passCError.textContent = "Passwords don't match.";
-                }
-                else {
-                    passWordConfirm.setCustomValidity("");
-                    passCError.textContent = " ";
-                }
-            }
+      passWordConfirm.addEventListener("input", checkPassword);
+      passWord.addEventListener("input", checkPassword);
+      /* checks if password input and confiramtion are equal*/
+      function checkPassword() {
+        if (passWord.value != passWordConfirm.value) {
+          passWordConfirm.setCustomValidity("Invalid field.");
+          passCError.textContent = "Passwords don't match.";
+        } else {
+          passWordConfirm.setCustomValidity("");
+          passCError.textContent = " ";
+        }
+      }
     </script>
   </body>
 </html>
