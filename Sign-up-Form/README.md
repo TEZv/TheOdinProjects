@@ -4,6 +4,7 @@ This is a <i>simple</i> project which provides a sign-up form <b>without</b> a b
 
 ## <hr>Requirements to using this project:<hr>
 - Users are <b><i>English</i></b> speaking &&| writing
+- Users from Ukraine and have Ukrainian phone number.
 
 ## Project Stack
 <img src="https://www.1training.org/wp-content/uploads/2017/10/6.png" />
