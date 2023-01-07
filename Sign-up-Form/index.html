@@ -21,25 +21,21 @@
     rel="stylesheet" />
   <title>SignUP-TZ-AT</title>
   <style>
-    .inputs input:valid {
+    .valid {
       background: url(img/check.svg);
       background-repeat: no-repeat;
       background-position: 270px;
       background-size: 18px;
-      border: 1px solid var(--dark-green-color);
-      background-color: var(--light-green-color);
     }
   
-    .inputs input:invalid:not(:focus):not(:placeholder-shown) {
+     .invalid:not(:focus):not(:placeholder-shown) {
       background: url(img/uncheck.svg);
       background-repeat: no-repeat;
       background-position: 270px;
       background-size: 18px;
-      border: 1px solid var(--red-color);
-      background-color: var(--light-red-color);
     }
   
-    .inputs input:invalid:focus:not(:placeholder-shown) {
+    .invalid:focus:not(:placeholder-shown) {
       background: url(img/uncheck.svg);
       background-repeat: no-repeat;
       background-position: 270px;
@@ -54,11 +50,11 @@
   <div class="content">
     <div class="photo-container">
       <img src="./img/back_photo.jpg" alt="Blockchain NFT" width="550px">
+      <p>Photo thanks to: <a href="https://unsplash.com/photos/yscrM1AOEKI">Unsplash</a></p>
       <div class="photo-text-overlay">
         <img src="./img/logo.svg" alt="Bitcoin logo" width="50px">
         <span class="photo-text">sign up</span>
       </div>
-      Photo thank to: <a href="https://unsplash.com/photos/yscrM1AOEKI">Unsplash</a>
     </div>
     <div class="form-container">
       <form class="form-wrapper">
