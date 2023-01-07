@@ -12,7 +12,26 @@
     --black-color: rgba(10, 10, 10, 0);
     --dark-black-color: rgb(43, 29, 56);
     --light-black-color: rgb(252, 248, 255);
-    
+    --photo-text-size: 24px;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    max-width: 900px;
+    gap: 30px;
+    border: 3px solid var(--brown-color);
+    border-radius: 25px;
+    padding: 30px;
+}
+
+img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
 }
 
 .content {
@@ -31,22 +50,18 @@
     max-width: 50vw;
 }
 
-img {
-    object-fit: cover;
-    height: 100%;
-    width: 100%;
-}
-
 .photo-text-overlay {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     position: relative;
     bottom: 101vh;
     background-color: var(--green-color);
     width: 100%;
     height: 15vh;
     transition: 1s;
+    cursor: pointer;
 }
 
 .photo-text-overlay:hover {
@@ -57,7 +72,7 @@ img {
 
 .photo-text {
     font-size: var(--photo-text-size);
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Unbounded", cursive;
     line-height: 50px;
     color: white;
     white-space: nowrap;
@@ -92,17 +107,68 @@ img {
     background-color: var(--accent-color-2);
 }
 
-fieldset {
+.account-details-row {
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 90%;
-    max-width: 900px;
+    justify-content: space-between;
     gap: 30px;
-    border: 3px solid var(--accent-color-1);
-    border-radius: 25px;
-    padding: 30px;
+}
+
+.personal-information-row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.form-element {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 45%;
+}
+
+legend {
+    text-align: center;
+    color: rgb(177, 159, 129);
+}
+
+input,
+select {
+    max-height: 20px;
+    border: 2px solid var(--accent-color-1);
+    background-color: white;
+    outline: none;
+}
+
+.invalid {
+    border: 2px solid var(--invalid-color);
+}
+
+.valid {
+    border: 2px solid var(--valid-color);
+}
+
+button {
+    border: 3px solid var(--second-color);
+    width: 100px;
+    height: 45px;
+    border-radius: 35px;
+    transition: 0.5s;
+    background-color: var(--main-color);
+    color: var(--accent-color-2);
+    font-weight: 600;
+    box-shadow: 3px 3px 0px 0px #18978F;
+}
+
+button:hover {
+    border-radius: 0px;
+    border: none;
+    width: calc(100% + 100px);
+    background-color: var(--accent-color-1);
+    color: var(--second-color);
+    cursor: pointer;
+    box-shadow: none;
 }
 
 label,
