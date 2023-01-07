@@ -7,14 +7,103 @@
     --yellow-color: rgb(73, 75, 70);
     --brown-color: rgb(32, 12, 12);
     --light-brown-color: #3a1919;
-    --green-color: rgba(49, 7, 27, 0.959);
+    --green-color: rgba(54, 117, 97, 0.856);
     --white-color: rgb(28, 44, 134);
     --black-color: rgba(10, 10, 10, 0);
     --dark-black-color: rgb(43, 29, 56);
     --light-black-color: rgb(252, 248, 255);
+    
+}
+
+.content {
+    display: flex;
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 2px;
+    line-height: 20px;
+}
+
+.photo-container {
+    flex: 1 1 0;
+    height: 100vh;
+    max-width: 50vw;
+}
+
+img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.photo-text-overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: 101vh;
+    background-color: var(--green-color);
+    width: 100%;
+    height: 15vh;
+    transition: 1s;
+}
+
+.photo-text-overlay:hover {
+    height: 50vh;
+    background-color: var(--blue-color);
+    --photo-text-size: 62px;
+}
+
+.photo-text {
+    font-size: var(--photo-text-size);
+    font-family: 'Montserrat', sans-serif;
+    line-height: 50px;
+    color: white;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    transition: 0.5s;
 }
 
 
+.form-container {
+    flex: 1.8 1 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-color);
+    transition: 0.25s;
+}
+
+.form-wrapper {
+    height: auto;
+    padding: 50px;
+    width: auto;
+    min-width: 800px;
+    border-radius: 50px;
+    box-shadow: 10px 10px var(--accent-color-1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    background-color: var(--accent-color-2);
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    max-width: 900px;
+    gap: 30px;
+    border: 3px solid var(--accent-color-1);
+    border-radius: 25px;
+    padding: 30px;
+}
 
 label,
 legend,
