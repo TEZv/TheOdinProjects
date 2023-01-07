@@ -139,6 +139,10 @@ abbr[title="required"] {
     font-size: 20px;
 }
 
+.legend > span {
+    color: var(--purple-color);
+}
+
 .inputs {
     display: flex;
     justify-content: space-between;
@@ -174,9 +178,9 @@ abbr[title="required"] {
 }
 
 .inputs input:valid {
-    background: url(imag/check.svg);
+    background: url(img/check.svg);
     background-repeat: no-repeat;
-    background-position: 2px;
+    background-position: -12px;
     background-size: 12px;
     border: 1px solid var(--dark-green-color);
 }
