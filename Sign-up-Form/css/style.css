@@ -223,7 +223,7 @@ select {
 
 .invalid {
     border: 2px solid var(--red-color);
-    background-color: var(--light-red-color);
+    background-color: var(--light-black-color);
 }
 
 .valid {
