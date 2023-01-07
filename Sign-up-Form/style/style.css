@@ -105,24 +105,27 @@ abbr[title="required"] {
 .main {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    padding-top: 40px;
     margin-left: 150px;
     width: 100%;
-    height: 106%;
+    height: 102%;
     background-color: rgba(167, 164, 164, 0.2);
     grid-area: main;
 }
 
 .top {
-    font-weight: 550;
-    font-size: 20px;
+    font-weight: 500;
+    font-size: 22px;
     margin: 3vh;
+    padding-bottom: 30px;
     text-align: center;
 }
 
 /****** middle-form *******/
 .middle {
-    padding: 30px;
+    padding-bottom: 150px;
+    padding-left: 120px;
+    padding-top: 20px;
     box-shadow: 3px 3px 2px rgb(128, 128, 128, 0.2);
     margin: 0;
     background-color: white;
@@ -131,19 +134,22 @@ abbr[title="required"] {
 
 .legend {
     padding: 20px 0;
+    text-align: center;
+    font-size: 20px;
 }
 
 .inputs {
     display: flex;
     justify-content: space-between;
+    align-content: flex-start;
     flex-wrap: wrap;
-    max-width: calc(2*200px + 50px);
+    max-width: calc(2*300px + 50px);
 }
 
 .inputs>div {
     display: flex;
     flex-direction: column;
-    width: 200px;
+    width: 300px;
     margin: 3px 0;
 }
 
@@ -156,7 +162,7 @@ abbr[title="required"] {
     height: 30px;
     padding: 1px 1px 1px 16px;
     font-size: 14px;
-
+    
     border: 1px solid #E5E7EB;
     border-radius: 3px;
 }
