@@ -5,8 +5,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="./style/normalize.css" />
-  <link rel="stylesheet" href="./style/style.css" />
+  <link rel="stylesheet" href="./css/normalize.css" />
+  <link rel="stylesheet" href="./css/style.css" />
   <link rel="shortcut icon" href="./favicon.svg" type="image/x-icon" />
 
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet"
@@ -53,8 +53,9 @@
   
   <div class="content">
     <div class="photo-container">
-      <img src="./images/pexels-nataliya-vaitkevich-8927456.jpg" alt="Airplane">
+      <img src="./img/back_photo.jpg" alt="Blockchain NFT" width="550px">
       <div class="photo-text-overlay">
+        <img src="./img/logo.svg" alt="Bitcoin logo" width="50px">
         <span class="photo-text">sign up</span>
       </div>
     </div>
@@ -90,6 +91,10 @@
         <fieldset class="account-details">
           <legend>account details</legend>
           <div class="account-details-row">
+            <div class="form-element">
+              <label for="first-name">pseudo name:</label>
+              <input placeholder="Avatar" type="text" minlength="2" maxlength="100" id="first-name" required>
+            </div>
             <div class="form-element">
               <label for="email">email:</label>
               <input placeholder="john.doe@email.com" type="email" id="email" required>
