@@ -29,16 +29,13 @@
     />
     <title>SignUP~AT-TZ</title>
     <style>
-      :root {
-        --dark-green-color: rgb(55, 150, 0);
-        --red-color: rgb(255, 0, 0);
-      }
       .inputs input:valid {
         background: url(img/check.svg);
         background-repeat: no-repeat;
         background-position: 270px;
         background-size: 18px;
         border: 1px solid var(--dark-green-color);
+        background-color: var(--light-green-color);
       }
       .inputs input:invalid:not(:focus):not(:placeholder-shown) {
         background: url(img/uncheck.svg);
@@ -46,6 +43,7 @@
         background-position: 270px;
         background-size: 18px;
         border: 1px solid var(--red-color);
+        background-color: var(--light-red-color);
       }
 
       .inputs input:invalid:focus:not(:placeholder-shown) {
@@ -54,6 +52,7 @@
         background-position: 270px;
         background-size: 18px;
         border: 1px solid var(--red-color);
+        background-color: var(--light-red-color);
       }
     </style>
   </head>
@@ -87,8 +86,8 @@
     <section class="main">
       <div class="top">
         The healthy body makes the health <b>mind</b>. Keep training with the
-        Fitness-club "AT-TZ". It's funny, you won't be disappointed. You Know
-        What <span class="tag">#</span>TODO.<br /><br />
+        Fitness-club <span class="tag-not-bold">"A<span class="tag">T</span>-T<span class="tag">Z</span>"</span>. It's funny, you won't be disappointed. You Know
+        What <span class="tag-bold">#</span>TODO.<br /><br />
         <i><b>Let's join us</b></i
         >. Happy coding, don't forget to do exercises:)
       </div>
@@ -176,16 +175,16 @@
                 required
               />
               <span class="error error-password"
-                >Must contain 8 characters one lowercase, and one number.</span
+                ><b>✖</b> Must contain 8 characters one lowercase, and one number.</span
               >
               <span class="error error-password"
-                >Must contain one uppercase, one lowercase, and one
+                ><b>✖</b> Must contain one uppercase, one lowercase, and one
                 number.</span
               >
               <span class="error error-password"
-                >Must contain one lowercase and one number.</span
+                ><b>✖</b> Must contain one lowercase and one number.</span
               >
-              <span class="error error-password">Must contain one number.</span>
+              <span class="error error-password"><b>✖</b> Must contain one number.</span>
             </div>
             <div class="confirmpassword">
               <label for="password-confirm"
@@ -219,8 +218,8 @@
       /* checks if password input and confiramtion are equal*/
       function checkPassword() {
         if (passWord.value != passWordConfirm.value) {
-          passWordConfirm.setCustomValidity("Invalid field.");
-          passCError.textContent = "Passwords don't match.";
+          passWordConfirm.setCustomValidity("This is Invalid field.");
+          passCError.textContent = "Passwords must be equal.";
         } else {
           passWordConfirm.setCustomValidity("");
           passCError.textContent = " ";
