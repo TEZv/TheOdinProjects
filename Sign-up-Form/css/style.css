@@ -1,18 +1,35 @@
 :root {
-    --bg-color: #ffcece;
+    --bg-color: #ffd5d5;
     --blue-color: rgb(40, 25, 49);
     --dark-blue-color: rgb(22, 14, 43);
     --red-color: rgb(204, 3, 3);
     --light-red-color: rgb(241, 66, 66);
+    --light-yellow-color: rgba(217, 226, 93, 0.596);
     --yellow-color: rgb(73, 75, 70);
     --brown-color: rgb(32, 12, 12);
     --light-brown-color: #3a1919;
-    --green-color: rgba(54, 117, 97, 0.856);
-    --white-color: rgb(28, 44, 134);
+    --green-color: rgba(54, 117, 97, 0.568);
+    --light-blue-color: rgb(28, 44, 134);
     --black-color: rgba(10, 10, 10, 0);
     --dark-black-color: rgb(43, 29, 56);
     --light-black-color: rgb(252, 248, 255);
     --photo-text-size: 24px;
+}
+
+body {
+    background: linear-gradient(-200deg, var(--green-color), var(--light-yellow-color));
+
+}
+
+body > p {
+    position: absolute;
+    bottom: 110px;
+    right: 500px;
+    font-size: large;
+}
+
+body > p > b > a:hover {
+    color: var(--red-color);
 }
 
 fieldset {
@@ -34,10 +51,49 @@ img {
     width: 100%;
 }
 
+a {
+    text-decoration: none;
+}
+
+button {
+    border: 3px solid var(--black-color);
+    width: 100px;
+    height: 45px;
+    border-radius: 35px;
+    transition: 0.5s;
+    background-color: var(--blue-color);
+    color: var(--light-black-color);
+    font-weight: 600;
+    box-shadow: 3px 3px 0px 0px var(--light-blue-color);
+}
+
+button:hover {
+    border-radius: 0px;
+    border: none;
+    width: calc(50% + 110px);
+    background-color: var(--green-color);
+    color: var(--dark-black-color);
+    cursor: pointer;
+    box-shadow: none;
+    border-radius: 50px;
+}
+
+label,
+legend,
+button,
+.photo-text {
+    text-transform: uppercase;
+}
+
+label {
+    text-transform: uppercase;
+    font-family: "Karla", sans-serif;
+}
+
 .content {
     display: flex;
     height: 100vh;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Unbounded', cursive;
     font-weight: bold;
     font-size: 14px;
     letter-spacing: 2px;
@@ -48,6 +104,16 @@ img {
     flex: 1 1 0;
     height: 100vh;
     max-width: 50vw;
+}
+
+.photo-container > img {
+   filter: blur(1px);
+}
+
+.photo-container > p {
+    position: absolute;
+    bottom: 40px;
+    left: 200px;
 }
 
 .photo-text-overlay {
@@ -81,15 +147,14 @@ img {
     transition: 0.5s;
 }
 
-
 .form-container {
     flex: 1.8 1 0;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--main-color);
     transition: 0.25s;
+    
 }
 
 .form-wrapper {
@@ -98,13 +163,14 @@ img {
     width: auto;
     min-width: 800px;
     border-radius: 50px;
-    box-shadow: 10px 10px var(--accent-color-1);
+    box-shadow: 10px 10px var(--bg-color);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 30px;
-    background-color: var(--accent-color-2);
+    background-color: var(--bg-color);
+    margin-bottom: 70px;
 }
 
 .account-details-row {
@@ -126,54 +192,28 @@ img {
     justify-content: space-between;
     align-items: center;
     width: 45%;
+    height: 40px;
 }
 
 legend {
     text-align: center;
-    color: rgb(177, 159, 129);
+    color: var(--brown-color);
 }
 
 input,
 select {
     max-height: 20px;
-    border: 2px solid var(--accent-color-1);
-    background-color: white;
+    border: 2px solid var(--green-color);
+    background-color: var(--light-black-color);
     outline: none;
 }
 
 .invalid {
-    border: 2px solid var(--invalid-color);
+    border: 2px solid var(--red-color);
+    background-color: var(--light-red-color);
 }
 
 .valid {
-    border: 2px solid var(--valid-color);
-}
-
-button {
-    border: 3px solid var(--second-color);
-    width: 100px;
-    height: 45px;
-    border-radius: 35px;
-    transition: 0.5s;
-    background-color: var(--main-color);
-    color: var(--accent-color-2);
-    font-weight: 600;
-    box-shadow: 3px 3px 0px 0px #18978F;
-}
-
-button:hover {
-    border-radius: 0px;
-    border: none;
-    width: calc(100% + 100px);
-    background-color: var(--accent-color-1);
-    color: var(--second-color);
-    cursor: pointer;
-    box-shadow: none;
-}
-
-label,
-legend,
-button,
-.photo-text {
-    text-transform: uppercase;
+    border: 2px solid var(--green-color);
+    background-color: var(--light-yellow-color);
 }
