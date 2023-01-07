@@ -1,3 +1,18 @@
+:root {
+    --bg-color: #ffcece;
+    --blue-color: rgb(40, 25, 49);
+    --dark-blue-color: rgb(22, 14, 43);
+    --red-color: rgb(204, 3, 3);
+    --light-red-color: rgb(241, 66, 66);
+    --yellow-color: rgb(73, 75, 70);
+    --brown-color: rgb(32, 12, 12);
+    --light-brown-color: #3a1919;
+    --green-color: rgba(49, 7, 27, 0.959);
+    --white-color: rgb(28, 44, 134);
+    --black-color: rgba(10, 10, 10, 0);
+    --dark-black-color: rgb(43, 29, 56);
+    --light-black-color: rgb(252, 248, 255);
+}
 
 
 
