@@ -55,12 +55,47 @@
     <header class="header">
       <div class="logo-bg">
         <img src="./img/logo.svg" class="logo" height="40px" width="40px">
-        <h1>BlockChain</h1>
+        <h1>BlockChain "TZ-AT"</h1>
       </div>
     </header>
     
     <main class="main">
+      <div class="info">
+        <p>We buy and sell Tranding Cryptocurrencies<br> <br>Be in time with the "TZ-AT" BlockChain. We have a lot of bonuses and discounts for YOU</p>
+        <div>
       
+          <form action="index.html" method="post">
+            <fieldset>
+              <p><b>Sign-UP now to get 0.001 BTC for free!</b></p>
+              <p class="required">Fields with <span>*</span> are required</p>
+
+              <label for="first_name">pse name<span> *</span></label>
+              <input required type="text" id="first_name" name="first_name" pattern="[a-zA-Z ]+" minlength="2"
+                autocomplete="given-name">
+
+              <label for="first_name">first name<span> *</span></label>
+              <input required type="text" id="first_name" name="first_name" pattern="[a-zA-Z ]+" minlength="2"
+                autocomplete="given-name">
+      
+              <label for="last_name">last name (Optional)</label>
+              <input type="text" id="last_name" name="last_name" pattern="[a-zA-Z ]+" autocomplete="family-name">
+      
+              <label for="email">EMAIL<span> *</span></label>
+              <input required type="email" id="email" name="email" placeholder="example@email.com" autocomplete="email">
+      
+              <label for="phone_number">PHONE NUMBER (11-digit number)<span> *</span></label>
+              <input required type="text" id="phone_number" name="phone_number" pattern="[+0-9]{11}" placeholder="09XXXXXXXXX"
+                autocomplete="mobile">
+      
+              <label for="password">PASSWORD (At least 8 characters)<span> *</span></label>
+              <input required type="password" id="password" name="password" pattern=".{8,}">
+      
+              <label for="confirm_password">CONFIRM PASSWORD<span> *</span></label>
+              <input required type="password" id="confirm_password" name="confirm_password" pattern=".{8,}">
+            </fieldset>
+            <button>Create Account</button>
+          </form>
+          <p class="login">Already have an account? <b><a href="index.html">Log in</a></b></p>
     </main>
 
   </div>
