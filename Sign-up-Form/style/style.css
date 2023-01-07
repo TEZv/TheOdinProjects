@@ -37,6 +37,27 @@ abbr[title="required"] {
   font-size: 15px;
 }
 
+a {
+  text-decoration: none;
+  color: var(--purple-color);
+}
+
+a:hover {
+  color: var(--red-color);
+}
+
+/*.bottom a,
+.bottom a:visited,
+.bottom a:hover {
+    text-decoration: none;
+    color: var(--red-color);
+    font-weight: 900;
+}*/
+
+label {
+  text-transform: uppercase;
+}
+
 /***********sidebar of site*********/
 .sidebar {
   width: 30%;
@@ -68,6 +89,7 @@ abbr[title="required"] {
   opacity: 0.9;
   position: absolute;
   top: 10vw;
+  image-rendering: crisp-edges;
 }
 
 .side-logo img {
@@ -265,29 +287,4 @@ abbr[title="required"] {
 
 .bottom span {
   margin-left: 266px;
-}
-
-a {
-  text-decoration: none;
-  color: var(--purple-color);
-}
-
-a:hover {
-  color: var(--red-color);
-}
-
-/*.bottom a,
-.bottom a:visited,
-.bottom a:hover {
-    text-decoration: none;
-    color: var(--red-color);
-    font-weight: 900;
-}*/
-
-label {
-  text-transform: uppercase;
-}
-
-.side-logo {
-  image-rendering: crisp-edges;
 }
