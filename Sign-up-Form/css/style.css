@@ -53,6 +53,7 @@ img {
 
 a {
     text-decoration: none;
+    color: var(--light-blue-color);
 }
 
 button {
@@ -140,8 +141,8 @@ label {
     font-size: var(--photo-text-size);
     font-family: "Unbounded", cursive;
     line-height: 50px;
-    color: white;
-    white-space: nowrap;
+    color: var(--light-black-color);
+    white-space: wrap;
     text-overflow: ellipsis;
     overflow: hidden;
     transition: 0.5s;
@@ -178,6 +179,7 @@ label {
     display: flex;
     justify-content: space-between;
     gap: 30px;
+    flex-wrap: wrap;
 }
 
 .personal-information-row {
@@ -192,7 +194,18 @@ label {
     justify-content: space-between;
     align-items: center;
     width: 45%;
-    height: 40px;
+}
+
+.tos-checkbox {
+    margin-bottom: -25px;
+}
+
+.tos-checkbox > label > a:hover {
+    color: var(--red-color);
+}
+
+label[for*="phone"] {
+    margin-left: 310px;
 }
 
 legend {
@@ -202,7 +215,7 @@ legend {
 
 input,
 select {
-    max-height: 20px;
+    max-height: 30px;
     border: 2px solid var(--green-color);
     background-color: var(--light-black-color);
     outline: none;
