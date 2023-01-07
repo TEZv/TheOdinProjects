@@ -177,30 +177,6 @@ abbr[title="required"] {
     box-shadow: 2px 2px 1px var(--light-white-color);
 }
 
-.inputs input:valid {
-    background: url(img/check.svg);
-    background-repeat: no-repeat;
-    background-position: -12px;
-    background-size: 12px;
-    border: 1px solid var(--dark-green-color);
-}
-
-.inputs input:invalid:not(:focus):not(:placeholder-shown) {
-    background: url(images/xmark.svg);
-    background-repeat: no-repeat;
-    background-position: 2px;
-    background-size: 12px;
-    border: 1px solid #ff0000;
-}
-
-.inputs input:invalid:focus:not(:placeholder-shown) {
-    background: url(images/xmark.svg);
-    background-repeat: no-repeat;
-    background-position: 2px;
-    background-size: 12px;
-    border: 1px solid #ff0000;
-}
-
 .inputs input:invalid:focus:not(:placeholder-shown)~.error {
     max-height: 50px;
 }
@@ -209,7 +185,7 @@ abbr[title="required"] {
     max-height: 0;
     transition: 0.28s;
     overflow: hidden;
-    color: red;
+    color: var(--red-color);
     font-style: italic;
     font-size: 10px;
 }
