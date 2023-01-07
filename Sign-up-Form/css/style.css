@@ -91,6 +91,23 @@ label {
     font-family: "Karla", sans-serif;
 }
 
+label[for*="phone"] {
+    margin-left: 310px;
+}
+
+legend {
+    text-align: center;
+    color: var(--brown-color);
+}
+
+input,
+select {
+    max-height: 30px;
+    border: 2px solid var(--green-color);
+    background-color: var(--light-black-color);
+    outline: none;
+}
+
 .content {
     display: flex;
     height: 100vh;
@@ -202,23 +219,6 @@ label {
 
 .tos-checkbox > label > a:hover {
     color: var(--red-color);
-}
-
-label[for*="phone"] {
-    margin-left: 310px;
-}
-
-legend {
-    text-align: center;
-    color: var(--brown-color);
-}
-
-input,
-select {
-    max-height: 30px;
-    border: 2px solid var(--green-color);
-    background-color: var(--light-black-color);
-    outline: none;
 }
 
 .invalid {
