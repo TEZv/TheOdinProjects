@@ -27,7 +27,7 @@ body {
     ;
     align-items: stretch;
     width: 90vw;
-    height: 100vh;
+    height: 94vh;
     font-family: "Unbounded", cursive;
 }
 
@@ -40,7 +40,7 @@ abbr[title="required"] {
 /***********sidebar of site*********/
 .sidebar {
     width: 30%;
-    height: 100%;
+    height: 99%;
     position: relative;
 }
 
@@ -51,6 +51,7 @@ abbr[title="required"] {
     grid-area: image;
     background-color: var(--purple-color);
     padding: 40px 40px;
+    box-shadow: 1px 3px 5px 3px var(--purple-color);
 }
 
 .side-image img {
@@ -75,7 +76,7 @@ abbr[title="required"] {
     width: auto;
     position: relative;
     top: 180px;
-    right: 348px;
+    right: 108px;
     transform: rotate(-90deg);
 }
 
@@ -91,18 +92,26 @@ abbr[title="required"] {
     left: -70px;
 }
 
-.side-copy {
+.side-copy-telegram {
     color: var(--white-color);
-    position: absolute;
-    bottom: 4px;
+    position: relative;
+    bottom: 92px;
+    left: 410px;
     width: 100%;
     text-align: center;
     font-size: 12px;
+    margin-bottom: 30px;
+    display: inline;
 }
 
-.side-copy a:visited,
-.side-copy a:hover {
+.side-copy-github {
     color: var(--white-color);
+    position: absolute;
+    bottom: 64px;
+    left: 100px;
+    width: 100%;
+    font-size: 12px;
+    margin-bottom: 30px;
 }
 
 /**************right side of site*********/
@@ -112,8 +121,9 @@ abbr[title="required"] {
     padding-top: 30px;
     margin-left: 125px;
     width: 100%;
-    height: 103%;
+    height: 104%;
     background-color: var(--light-white-color);
+    box-shadow: 1px 3px 40px 3px var(--purple-color);
     grid-area: main;
 }
 
