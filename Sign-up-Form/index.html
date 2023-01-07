@@ -20,6 +20,34 @@
     href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,300;0,400;1,400&family=Unbounded:wght@300;400&display=swap"
     rel="stylesheet" />
   <title>SignUP-TZ-AT</title>
+  <style>
+    .inputs input:valid {
+      background: url(img/check.svg);
+      background-repeat: no-repeat;
+      background-position: 270px;
+      background-size: 18px;
+      border: 1px solid var(--dark-green-color);
+      background-color: var(--light-green-color);
+    }
+  
+    .inputs input:invalid:not(:focus):not(:placeholder-shown) {
+      background: url(img/uncheck.svg);
+      background-repeat: no-repeat;
+      background-position: 270px;
+      background-size: 18px;
+      border: 1px solid var(--red-color);
+      background-color: var(--light-red-color);
+    }
+  
+    .inputs input:invalid:focus:not(:placeholder-shown) {
+      background: url(img/uncheck.svg);
+      background-repeat: no-repeat;
+      background-position: 270px;
+      background-size: 18px;
+      border: 1px solid var(--red-color);
+      background-color: var(--light-red-color);
+    }
+  </style>
 </head>
 <body>
   
