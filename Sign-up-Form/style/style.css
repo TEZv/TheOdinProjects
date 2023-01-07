@@ -95,7 +95,7 @@ abbr[title="required"] {
     color: var(--white-color);
     position: absolute;
     bottom: 4px;
-    width: 70%;
+    width: 100%;
     text-align: center;
     font-size: 12px;
 }
