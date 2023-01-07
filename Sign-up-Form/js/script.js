@@ -6,7 +6,7 @@ function checkFirstName(element) {
         if(!element.classList.contains('invalid')) {
             element.classList.add('invalid');
         };
-        element.setCustomValidity("Enter your first name.");
+        element.setCustomValidity("Minimum - 2 letters");
         element.reportValidity();
         return false;
     }else if(element.validity.tooShort) {
@@ -16,7 +16,7 @@ function checkFirstName(element) {
         if(!element.classList.contains('invalid')) {
             element.classList.add('invalid');
         };
-        element.setCustomValidity("Enter your full first name.");
+        element.setCustomValidity("Should have 2 through 15 letters:) Too short or too long, try again.");
         element.reportValidity();
         return false;
     }else if(element.validity.tooLong) {
@@ -26,7 +26,7 @@ function checkFirstName(element) {
         if(!element.classList.contains('invalid')) {
             element.classList.add('invalid');
         };
-        element.setCustomValidity("I know your name isn't that long.");
+        element.setCustomValidity("Maximum - 15 letters long.");
         element.reportValidity();
         return false;
     }else if(/\d/.test(element.value)) {
@@ -36,7 +36,7 @@ function checkFirstName(element) {
         if(!element.classList.contains('invalid')) {
             element.classList.add('invalid');
         };
-        element.setCustomValidity("I know your name doesn't have numbers in it.");
+        element.setCustomValidity("The numbers aren't allowed.");
         element.reportValidity();
         return false;
     }else {
@@ -57,7 +57,7 @@ function checkLastName(element) {
         if(!element.classList.contains('invalid')) {
             element.classList.add('invalid');
         };
-        element.setCustomValidity("Enter your last name.");
+        element.setCustomValidity("Minimum - 2 letters");
         element.reportValidity();
         return false;
     }else if(element.validity.tooShort) {
@@ -67,7 +67,7 @@ function checkLastName(element) {
         if(!element.classList.contains('invalid')) {
             element.classList.add('invalid');
         };
-        element.setCustomValidity("Enter your full last name.");
+        element.setCustomValidity("Should have 2 through 15 letters:) Too short or too long, try again.");
         element.reportValidity();
         return false;
     }else if(element.validity.tooLong) {
@@ -77,7 +77,7 @@ function checkLastName(element) {
         if(!element.classList.contains('invalid')) {
             element.classList.add('invalid');
         };
-        element.setCustomValidity("I know your name isn't that long.");
+        element.setCustomValidity("Maximum - 15 letters");
         element.reportValidity();
         return false;
     }else if(/\d/.test(element.value)) {
@@ -87,7 +87,7 @@ function checkLastName(element) {
         if(!element.classList.contains('invalid')) {
             element.classList.add('invalid');
         };
-        element.setCustomValidity("I know your name doesn't have numbers in it.");
+        element.setCustomValidity("The numbers aren't allowed.");
         element.reportValidity();
         return false;
     }else {
@@ -129,7 +129,7 @@ function checkAge(element) {
         if(!element.classList.contains('invalid')) {
             element.classList.add('invalid');
         };
-        element.setCustomValidity("Enter your age.");
+        element.setCustomValidity("Please enter your age.");
         element.reportValidity();
         return false;
     }else if(element.validity.rangeUnderflow){
@@ -139,7 +139,7 @@ function checkAge(element) {
         if(!element.classList.contains('invalid')) {
             element.classList.add('invalid');
         };
-        element.setCustomValidity("You might be too young for this.");
+        element.setCustomValidity("You might be too young for the registration.");
         element.reportValidity();
         return false;
     }else if(element.validity.rangeOverflow){
@@ -149,7 +149,7 @@ function checkAge(element) {
         if(!element.classList.contains('invalid')) {
             element.classList.add('invalid');
         };
-        element.setCustomValidity(`Be honest with me, you're not ${element.value}`);
+        element.setCustomValidity(`The age ${element.value} is too big`);
         element.reportValidity();
         return false;
     }else {
@@ -170,7 +170,7 @@ function checkEmail(element) {
         if(!element.classList.contains('invalid')) {
             element.classList.add('invalid');
         };
-        element.setCustomValidity("Enter your e-mail address.");
+        element.setCustomValidity("PLease enter your e-mail address.");
         element.reportValidity();
         return false;
     }else if(element.validity.typeMismatch) {
@@ -200,7 +200,7 @@ function checkPhone(element) {
         if(!element.classList.contains('invalid')) {
             element.classList.add('invalid');
         };
-        element.setCustomValidity("Enter your phone number.");
+        element.setCustomValidity("Please enter your phone number.");
         element.reportValidity();
         return false;
     }else if(element.validity.patternMismatch) {
@@ -210,7 +210,7 @@ function checkPhone(element) {
         if(!element.classList.contains('invalid')) {
             element.classList.add('invalid');
         };
-        element.setCustomValidity("Wrong format (include country code).");
+        element.setCustomValidity("Wrong format (include Ukrainian country code).");
         element.reportValidity();
         return false;
     }else {
@@ -231,7 +231,7 @@ function checkPassword(element) {
         if(!element.classList.contains('invalid')) {
             element.classList.add('invalid');
         };
-        element.setCustomValidity("Enter a password.");
+        element.setCustomValidity("Please enter a password.");
         element.reportValidity();
         return false;
     }else {
@@ -253,7 +253,7 @@ function checkConfirmPassword(element) {
         if(!element.classList.contains('invalid')) {
             element.classList.add('invalid');
         };
-        element.setCustomValidity("Enter a password first.");
+        element.setCustomValidity("Please enter a password first.");
         element.reportValidity();
         return false;
     }else if(element.value != password){
@@ -295,7 +295,7 @@ inputElementArray.forEach(i => i.addEventListener('input', (e) => validityCheckA
 
 const submitFeedback = document.createElement('p');
 submitFeedback.textContent = "Your form was submitted successfully.";
-submitFeedback.style.color = "#68b654c0";
+submitFeedback.style.color = "rgba(54, 117, 97, 0.568)";
 
 const submitButton = document.querySelector('button');
 const form = document.querySelector('form');
