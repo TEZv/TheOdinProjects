@@ -3,12 +3,12 @@
     --light-white-color: rgba(173, 169, 169, 0.2);
     --black-color: rgb(17, 5, 5);
     --dark-black-color: #333;
-    --light-green-color: rgb(204, 255, 204);
+    --light-green-color: rgba(206, 255, 206, 0.548);
     --green-color: #c0f55ec4;
     --violet-color: rgba(24, 13, 46, 0.548);
     --dark-green-color: rgb(55, 150, 0);
     --red-color: rgb(255, 0, 0);
-    --light-red-color: rgba(255, 0, 0, 0.493);
+    --light-red-color: rgba(255, 163, 163, 0.493);
     --dark-purple: #333555;
     --purple-color: rgba(105, 105, 255, 0.63); 
     --light-purple-color: rgba(193, 193, 255, 0.788);
@@ -125,9 +125,23 @@ abbr[title="required"] {
     text-align: center;
 }
 
+.tag {
+    color: var(--dark-purple);
+    font-weight: 600;
+}
+
+.tag-bold {
+    color: var(--purple-color);
+    font-weight: 600;
+}
+
+.tag-not-bold {
+    color: var(--purple-color);
+}
+
 /****** middle-form *******/
 .middle {
-    padding-bottom: 150px;
+    padding-bottom: 100px;
     padding-left: 120px;
     padding-top: 20px;
     box-shadow: 3px 3px 2px var(--light-white-color);
@@ -154,7 +168,7 @@ abbr[title="required"] {
     max-width: calc(2*300px + 50px);
 }
 
-.inputs>div {
+.inputs > div {
     display: flex;
     flex-direction: column;
     width: 300px;
@@ -167,7 +181,7 @@ abbr[title="required"] {
 }
 
 .inputs input {
-    height: 30px;
+    height: 32px;
     padding: 1px 1px 1px 16px;
     font-size: 14px;
     border: 1px solid var(--violet-color);
@@ -192,7 +206,7 @@ abbr[title="required"] {
     overflow: hidden;
     color: var(--red-color);
     font-style: italic;
-    font-size: 10px;
+    font-size: 11px;
 }
 
 /*********** submit button *******/
