@@ -162,6 +162,47 @@ function checkAge(element) {
     };
 };
 
+function checkPseudoName(element) {
+    if(element.validity.valueMissing){
+        if(element.classList.contains('valid')) {
+            element.classList.remove('valid');
+        };
+        if(!element.classList.contains('invalid')) {
+            element.classList.add('invalid');
+        };
+        element.setCustomValidity("Minimum - 2 letters");
+        element.reportValidity();
+        return false;
+    }else if(element.validity.tooShort) {
+        if(element.classList.contains('valid')) {
+            element.classList.remove('valid');
+        };
+        if(!element.classList.contains('invalid')) {
+            element.classList.add('invalid');
+        };
+        element.setCustomValidity("Should have 2 through 15 letters:) Too short or too long, try again.");
+        element.reportValidity();
+        return false;
+    }else if(element.validity.tooLong) {
+        if(element.classList.contains('valid')) {
+            element.classList.remove('valid');
+        };
+        if(!element.classList.contains('invalid')) {
+            element.classList.add('invalid');
+        };
+        element.setCustomValidity("Maximum - 15 letters long.");
+        element.reportValidity();
+        return false;
+    } else {
+        if(!element.classList.contains('valid')) {
+            element.classList.remove('invalid');
+            element.classList.add('valid');
+        };
+        element.setCustomValidity("");
+        return true;
+    };
+};
+
 function checkEmail(element) {
     if(element.value == "") {
         if(element.classList.contains('valid')) {
@@ -231,7 +272,7 @@ function checkPassword(element) {
         if(!element.classList.contains('invalid')) {
             element.classList.add('invalid');
         };
-        element.setCustomValidity("Please enter a password.");
+        element.setCustomValidity("Must contain 8 characters one uppercase, lowercase, and one number.");
         element.reportValidity();
         return false;
     }else {
@@ -283,6 +324,7 @@ const validityCheckArray = {
     "last-name": checkLastName,
     "gender": checkGender,
     "age": checkAge,
+    "pseudo-name": checkPseudoName,
     "email": checkEmail,
     "phone": checkPhone,
     "password": checkPassword,
