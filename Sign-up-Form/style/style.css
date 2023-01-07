@@ -51,7 +51,7 @@ abbr[title="required"] {
 
 .side-image img {
     object-fit: cover;
-    filter: blur(1px) brightness(95%) contrast(130%) grayscale(20%);
+    filter: blur(1px) brightness(95%) contrast(140%) grayscale(20%);
 }
 
 .side-logo {
@@ -67,11 +67,12 @@ abbr[title="required"] {
 }
 
 .side-logo img {
-    height: 100%;
+    height: 90%;
+    width: auto;
     position: relative;
     top: 180px;
     right: 348px;
-    opacity: 0.9;
+    transform: rotate(-90deg);
 }
 
 .side-logo span {
@@ -105,7 +106,7 @@ abbr[title="required"] {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-left: 160px;
+    margin-left: 150px;
     width: 100%;
     height: 106%;
     background-color: rgba(167, 164, 164, 0.2);
