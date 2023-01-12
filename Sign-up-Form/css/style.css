@@ -31,9 +31,7 @@ body > p {
   font-size: large;
 }
 
-body > p > b > a:hover {
-  color: var(--red-color);
-}
+
 
 fieldset {
   display: flex;
@@ -239,7 +237,10 @@ select {
 }
 
 .fa.fa-github:hover {
-  font-size: 18px;
+  font-size: 22px;
   padding-right: 2px;
   color: var(--dark-blue-color);
+}
+.login > a:hover {
+  color: var(--red-color);
 }
