@@ -8,13 +8,13 @@ part of the [The Odin Project (TOP)](https://www.theodinproject.com/).
 
 ## The Overview
   - [Links](#links)
-- [My process](#main-part)
+- [Main process](#main-process)
   - [Project Stack](#project-stack)
 
 ### Links
 Live Site URL: [Live site is posted here](futureURL)
 
-## Main part
+## Main process
 This is my project here in The Odin Project. It's a little complex structured Admin-DashBoard page. Here's the use case of the CSS-Grid which serves for the Layout-Overall-Design.<br> 
 The purpose of this project was practicing Grid and FlexBox.
 
