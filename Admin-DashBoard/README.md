@@ -29,5 +29,5 @@ The purpose of this project was practicing Grid and FlexBox.
 - [x] Step 2: Layout;
 - [x] Step 3: Nesting;
 - [x] Step 4: Gather Assets;
-- [x] Step 5: Apply background colors or borders to help with visualizing the grid.
+- [x] Step 5: Apply background colors or borders to help with visualizing the grid;
 - [x] Step 6: Git push origin main to GitHub.
