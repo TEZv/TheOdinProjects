@@ -232,3 +232,14 @@ select {
   border: 2px solid var(--green-color);
   background-color: var(--light-yellow-color);
 }
+
+.fa.fa-github {
+  font-size: 20px;
+  padding-right: 2px;
+}
+
+.fa.fa-github:hover {
+  font-size: 18px;
+  padding-right: 2px;
+  color: var(--dark-blue-color);
+}
