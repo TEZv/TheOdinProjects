@@ -7,9 +7,9 @@ from the [Intermediate HTML and CSS](https://www.theodinproject.com/paths/full-s
 part of the [The Odin Project (TOP)](https://www.theodinproject.com/).
 
 ## The Overview
-- [Links](#links)
 - [Main process](#main-process)
-- [Project Stack](#project-stack)
+  - [Links](#links)
+  - [Project Stack](#project-stack)
 
 ### Links
 Live Site URL: [Live site is posted here](futureURL)
