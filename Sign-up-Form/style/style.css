@@ -288,3 +288,14 @@ label {
 .bottom span {
   margin-left: 306px;
 }
+
+.fa.fa-github {
+  font-size: 18px;
+  padding-right: 2px;
+}
+
+.fa.fa-github:hover {
+  font-size: 20px;
+  padding-right: 2px;
+  color: var(--black-color);
+}
