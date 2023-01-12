@@ -2,8 +2,8 @@
 A simple Admin-DashBoard page using CSS-Grid and HTML5.
 
 # Solution for the 
-[PROJECT: ADMIN DASHBOARD](https://www.theodinproject.com/paths/full-stack-javascript/courses/intermediate-html-and-css/lessons/admin-dashboard) 
-from the [Intermediate HTML and CSS](https://www.theodinproject.com/paths/full-stack-javascript/courses/intermediate-html-and-css#intermediate-html-concepts) 
+[PROJECT: ADMIN DASHBOARD](https://www.theodinproject.com/paths/full-stack-javascript/courses/intermediate-html-and-css/lessons/admin-dashboard)<br>
+from the [Intermediate HTML and CSS](https://www.theodinproject.com/paths/full-stack-javascript/courses/intermediate-html-and-css#intermediate-html-concepts)<br>
 part of the [The Odin Project (TOP)](https://www.theodinproject.com/).
 
 ## The Overview
