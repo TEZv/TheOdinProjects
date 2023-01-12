@@ -8,8 +8,7 @@ part of the [The Odin Project (TOP)](https://www.theodinproject.com/).
 
 ## The Overview
 - [Main process](#main-process)
-<br>
-  - [Links](#links)
+  - [Links](#links)
   - [Project Stack](#project-stack)
 
 ### Links
