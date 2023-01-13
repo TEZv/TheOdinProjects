@@ -5,7 +5,7 @@
     --dark-black-color: #333;
     --light-green-color: rgba(176, 253, 176, 0.685);
     --green-color: #c0f55ec4;
-    --violet-color: rgb(99, 26, 95);
+    --violet-color: rgb(92, 25, 87);
     --dark-green-color: rgb(55, 150, 0);
     --red-color: rgb(255, 0, 0);
     --light-red-color: rgba(255, 163, 163, 0.493);
@@ -15,7 +15,7 @@
     --grey-color: #4c5340c4;
     --dark-grey-color: rgba(36, 30, 30, 0.938);
     --blue-color: rgba(17, 171, 243, 0.74);
-    --dark-blue-color: rgba(22, 120, 165, 0.74);
+    --dark-blue-color: rgba(116, 162, 184, 0.74);
 }
 
 body {
@@ -33,8 +33,8 @@ nav {
     flex-direction: column;
     gap: 1.8rem;
     padding: 1.5rem;
-    box-shadow: var(--dark-blue-color);
-    z-index: 10;
+    /*box-shadow: var(--dark-blue-color);*/
+    /*z-index: 10;*/
 }
 
 main {
@@ -111,7 +111,7 @@ h4 {
 }
 
 p {
-    color: var(--darkgrey);
+    color: var(--grey-color);
 }
 
 button {
@@ -120,7 +120,7 @@ button {
     height: 36px;
     width: 100px;
     border-width: 1px;
-    color: white;
+    color: var(--dark-blue-color);
     cursor: pointer;
     font-family: inherit;
     box-shadow: var(--boxshadow);
@@ -149,7 +149,13 @@ button:hover {
 }
 
 .nav-links a:hover {
-    color: white;
+    color: var(--light-green-color);
+    box-shadow: 1px 3px 5px 3px var(--green-color);
+}
+
+.nav-links a {
+    color: var(--light-green-color);
+    box-shadow: 1px 3px 1px 3px var(--dark-blue-color);
 }
 
 .nav-section {
