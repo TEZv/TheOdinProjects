@@ -3,11 +3,12 @@
     --light-white-color: rgba(173, 169, 169, 0.2);
     --black-color: rgb(17, 5, 5);
     --dark-black-color: #333;
-    --light-green-color: rgba(176, 253, 176, 0.685);
+    --light-green-color: rgba(194, 248, 194, 0.76);
     --green-color: #c0f55ec4;
     --violet-color: rgb(92, 25, 87);
     --dark-green-color: rgb(55, 150, 0);
     --red-color: rgb(255, 0, 0);
+    --dark-red-color: #922e2e;
     --light-red-color: rgba(255, 163, 163, 0.493);
     --dark-purple: #333555;
     --purple-color: rgba(105, 105, 255, 0.63);
@@ -28,7 +29,7 @@ body {
 nav {
     background-color: var(--violet-color);
     grid-row: 1/3;
-    color: var(--light-green-color);
+    color: var(--white-color);
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -75,9 +76,7 @@ a:hover,
 
 .card:hover {
     transform: scale(1.03);
-}
-.nav-current {
-    color: rgb(19, 17, 17);
+    border-left: solid 0.6rem;
 }
 
 header {
@@ -158,7 +157,7 @@ button:hover {
 .nav-links a + a,
 .nav-links a {
     color: var(--light-green-color);
-    box-shadow: 1px 3px 1px 3px var(--dark-blue-color);
+    
 }
 
 .nav-section {
@@ -259,8 +258,8 @@ button:hover {
 }
 
 .card-section {
-    grid-template-columns: repeat(auto-fill, minmax(310px, 30%));
-    grid-template-rows: repeat(auto-fill, minmax(310px, 30%));
+    /*grid-template-columns: repeat(auto-fill, minmax(310px, 30%));
+    grid-template-rows: repeat(auto-fill, minmax(310px, 30%));*/
     display: grid;
     gap: 1rem;
     grid-auto-rows: 1fr;
@@ -268,16 +267,16 @@ button:hover {
 
 .card-section-long {
     grid-template-columns: repeat(1fr, minmax(310px, 30%));
+    
     display: grid;
     gap: 1rem;
 }
 
 .card {
-    background-color: #ffffff;
-    color: black;
+    background-color: var(--white-color);
+    color: var(--black-color);
     padding: 0 2rem;
-    border-left: solid 0.6rem;
-    border-left-color: #ef4444;
+    border-left: 3px solid var(--dark-red-color);
     border-radius: 1rem;
     display: flex;
     flex-direction: column;
