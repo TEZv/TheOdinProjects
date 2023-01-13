@@ -64,23 +64,25 @@ a,
 .announcement-content,
 .announcement-card,
 .trending-users {
-    transition: all 0.2s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
 
 a:hover,
-.card:hover,
 .announcement-content:hover,
 .trending-users:hover {
     transform: scale(1.1);
 }
 
+.card:hover {
+    transform: scale(1.03);
+}
 .nav-current {
     color: rgb(19, 17, 17);
 }
 
 header {
     background-color: var(--light-green-color);
-    max-height: 150px;
+    max-height: 130px;
     box-shadow: 1px 3px 5px 3px var(--violet-color);
     /*z-index: 10;*/
 }
@@ -129,7 +131,7 @@ button {
 button:hover {
     background-color: #ef4444;
     box-shadow: 0px 15px 20px rgba(239, 68, 68, 0.4);
-    transform: translateY(-7px);
+    transform: translateY(-6px);
 }
 
 .nav-title {
@@ -153,6 +155,7 @@ button:hover {
     box-shadow: 1px 3px 5px 3px var(--green-color);
 }
 
+.nav-links a + a,
 .nav-links a {
     color: var(--light-green-color);
     box-shadow: 1px 3px 1px 3px var(--dark-blue-color);
@@ -202,19 +205,28 @@ button:hover {
     background-color: var(--grey);
     padding: 5px;
     box-shadow: var(--boxshadow);
+    border: 1px solid var(--black-color);
 }
 
 .header-bottom {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
+    padding: 0 0 1rem 4rem;
 }
 
 .user-info {
     display: flex;
     align-items: center;
     gap: 1rem;
+}
+
+.projects {
+    margin-top: -20px;
+}
+
+.projects h2 {
+    text-align: center;
 }
 
 .profile-pic img {
@@ -247,17 +259,23 @@ button:hover {
 }
 
 .card-section {
-    grid-template-columns: repeat(auto-fit, minmax(310px, 30%));
-    grid-template-rows: repeat(auto-fit, minmax(310px, 30%));
+    grid-template-columns: repeat(auto-fill, minmax(310px, 30%));
+    grid-template-rows: repeat(auto-fill, minmax(310px, 30%));
     display: grid;
     gap: 1rem;
     grid-auto-rows: 1fr;
 }
 
+.card-section-long {
+    grid-template-columns: repeat(1fr, minmax(310px, 30%));
+    display: grid;
+    gap: 1rem;
+}
+
 .card {
     background-color: #ffffff;
     color: black;
-    padding: 1rem;
+    padding: 0 2rem;
     border-left: solid 0.6rem;
     border-left-color: #ef4444;
     border-radius: 1rem;
