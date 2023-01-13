@@ -33,7 +33,7 @@ nav {
     flex-direction: column;
     gap: 1.8rem;
     padding: 1.5rem;
-    box-shadow: var(--red-color);
+    box-shadow: var(--dark-blue-color);
     z-index: 10;
 }
 
