@@ -1,13 +1,13 @@
 :root {
     --white-color: #fff;
-    --light-white-color: rgba(173, 169, 169, 0.2);
+    --light-white-color: hsl(0, 0%, 50%);
     --black-color: rgb(17, 5, 5);
     --dark-black-color: #333;
     --light-green-color: rgba(194, 248, 194, 0.76);
     --green-color: #c0f55ec4;
     --violet-color: rgb(92, 25, 87);
     --dark-green-color: rgb(55, 150, 0);
-    --red-color: rgb(255, 0, 0);
+    --red-color: hsl(0, 64%, 39%);
     --dark-red-color: #922e2e;
     --light-red-color: rgba(255, 163, 163, 0.493);
     --dark-purple: #333555;
@@ -113,7 +113,8 @@ img {
 }
 
 .search-bar img {
-    height: 8px;
+    height: 2rem;
+    padding-right: 10px;
 }
 
 .search-bar input {
@@ -231,26 +232,50 @@ img {
 .project-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-template-rows: 220px;
-    gap: 25px;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
     overflow-y: scroll;
 }
 
 .project-card {
-    height: 220px;
-    border-left: 10px solid var(--orange);
+    height: 360px;
+    border-left: 2px solid var(--violet-color);
     display: grid;
-    grid-template-rows: 30px 1fr 60px;
+    grid-template-rows: 1frpx 1fr 60px;
 }
 
 .project-card .project-title {
-    font-size: 20px;
+    font-size: 16px;
     margin-bottom: 5px;
+    font-weight: 800;
+}
+
+.project-title .red {
+    color: var(--dark-red-color);
+    font-size: 1.4em;
+}
+
+input {
+    height: 50px;
+    width: 300px;
+}
+
+div > h3 > span + span.y-project,
+.y-project {
+    font-size: 10px;
+    color: var(--black-color);
+    font-style: italic;
 }
 
 .project-card .project-details {
-    font-size: 17px;
-    color: gray
+    margin-top: -20px;
+    font-size: 16px;
+    color: var(--white-color);
+}
+
+.project-details.gray {
+    color: var(--light-white-color);
+    /* margin-bottom: 10px; */
 }
 
 .card-footer {
@@ -276,7 +301,7 @@ img {
 
 .announcement {
     padding: 20px 10px;
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid var(--light-white-color);
 }
 
 .announcement:last-child {
@@ -288,8 +313,17 @@ img {
 }
 
 .announcement p {
-    color: gray;
-    
+    color: var(--dark-black-color);
+    /* margin-bottom: 10px; */
+}
+
+.project-details.gray  > span {
+    color: var(--dark-black-color);
+    /* margin-bottom: 10px; */
+}
+
+.announcement p span {
+    color: var(--red-color);
     /* margin-bottom: 10px; */
 }
 
@@ -314,6 +348,19 @@ img {
 .trend-topic p {
     color: var(--dark-grey-color);
 }
+
+ul {
+    list-style-type: none;
+    padding-left: 10px;
+}
+
 li {
-    font-size: 4px;
+    font-size: 14px;
+    background: linear-gradient(55deg, var(--black-color), var(--blue-color));
+    padding-top: 4px;
+}
+
+ul li:before {
+    content: "\1F44D";
+    /* Add content: \2022 is the CSS Code/unicode for a bullet */
 }
