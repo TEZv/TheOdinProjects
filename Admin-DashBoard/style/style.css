@@ -254,8 +254,8 @@ button:hover {
 }
 
 .card-section {
-    grid-template-columns: repeat(auto-fill, minmax(310px, 30%));
-    grid-template-rows: repeat(auto-fill, minmax(310px, 30%));
+    grid-template-columns: repeat(auto-fit, minmax(310px, 30%));
+    grid-template-rows: repeat(auto-fit, minmax(310px, 30%));
     display: grid;
     gap: 3rem;
     grid-auto-rows: 1fr;
