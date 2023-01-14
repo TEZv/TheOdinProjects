@@ -1,545 +1,415 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-    <link rel="stylesheet" href="./style/normalize.css" />
-    <link rel="stylesheet" href="./style/style.css" />
-    <link rel="shortcut icon" href="./favicon.svg" type="image/x-icon" />
-  
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet"
-      integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;500;800&display=swap" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,300;0,400;1,400&family=Unbounded:wght@300;400&display=swap"
-      rel="stylesheet" />
-    <title>(:Admin-DB:)</title>
-  </head>
 
-  <body>
-    <div class="container">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-      <!-- Sidebar -->
-      <div class="sideBar">
-        <a class="logo" href="#">
-          <img
-            src="./assets/icons/y_dashboard_layout.svg"
-            alt="Dashboard icon"
-          />
-          y&DashB
-        </a>
-        <div class="nav-top">
-          <div class="navItem">
-            <a href="#"
-              ><img src="./assets/icons/y_home.svg" alt="Home icon" /> </a
-            >
-            <a href="#">y*Home</a>
+  <link rel="stylesheet" href="./style/normalize.css" />
+  <link rel="stylesheet" href="./style/style.css" />
+  <link rel="shortcut icon" href="./favicon.svg" type="image/x-icon" />
+
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;500;800&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,300;0,400;1,400&family=Unbounded:wght@300;400&display=swap"
+    rel="stylesheet" />
+  <title>(:Admin-DB:)</title>
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- Sidebar -->
+    <div class="sideBar">
+      <a class="logo" href="#">
+        <img src="./assets/icons/y_dashboard_layout.svg" alt="Dashboard icon" />
+        y&DashB
+      </a>
+      <div class="nav-top">
+        <div class="navItem">
+          <a href="#"><img src="./assets/icons/y_home.svg" alt="Home icon" /> </a>
+          <a href="#">y*Home</a>
+        </div>
+        <div class="navItem">
+          <a href="#">
+            <img src="./assets/icons/y_profile.svg" alt="User icon" />
+          </a>
+          <a href="#">y*Profile</a>
+        </div>
+        <div class="navItem">
+          <a href="#"><img src="./assets/icons/y_messages.svg" alt="Messages Icon" />
+          </a>
+          <a href="#">y*Message</a>
+        </div>
+        <div class="navItem">
+          <a href="#">
+            <img src="./assets/icons/y_clock.svg" alt="History icon" />
+          </a>
+          <a href="#">y*History</a>
+        </div>
+        <div class="navItem">
+          <a href="#">
+            <img src="./assets/icons/y_notebook.svg" alt="Tasks icon" />
+          </a>
+          <a href="#">y*Tasks</a>
+        </div>
+        <div class="navItem">
+          <a href="#"><img src="./assets/icons/y_community.svg" alt="Communities icon" />
+          </a>
+          <a href="#">y*Communities</a>
+        </div>
+      </div>
+      <div class="nav-bottom">
+        <div class="navItem">
+          <a href="#"><img src="./assets/icons/y_settings.svg" alt="Settings icon" />
+          </a>
+          <a href="#">a*Settings</a>
+        </div>
+        <div class="navItem">
+          <a href="#"><img src="./assets/icons/y_support.svg" alt="Support icon" />
+          </a>
+          <a href="#">a*Support</a>
+        </div>
+        <div class="navItem">
+          <a href="#"><img src="./assets/icons/y_privacy_hand.svg" alt="Lock icon" />
+          </a>
+          <a href="#">a*Privacy</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Header -->
+    <div class="header">
+      <div class="header-top">
+        <div class="search-bar">
+          <img src="./assets/icons/y_search.svg" alt="Search Icon" />
+          <input type="search" name="" id="" placeholder="Admin schedule..." />
+        </div>
+        <div class="profile">
+          <a href="#"><img src="./assets/icons/y_notification_bell.svg" alt="Notificaiton Icon" /></a>
+          <img src="./assets/img/profile_header.jpg" alt="Profile icon" width="50px" height="50px" />
+          <h3>Oksana Kolisnyk</h3>
+        </div>
+      </div>
+      <div class="header-bottom">
+        <div class="user-details">
+          <div>
+            <img src="./assets/icons/y_avatar_avocado.svg" alt="Profile Icon" width="80px" height="80px" />
           </div>
-          <div class="navItem">
-            <a href="#">
-              <img src="./assets/icons/y_profile.svg" alt="User icon" />
-            </a>
-            <a href="#">y*Profile</a>
-          </div>
-          <div class="navItem">
-            <a href="#"
-              ><img src="./assets/icons/y_messages.svg" alt="Messages Icon" />
-              </a>
-              <a href="#">y*Message</a>
-          </div>
-          <div class="navItem">
-            <a href="#">
-              <img src="./assets/icons/y_clock.svg" alt="History icon" />
-            </a>
-            <a href="#">y*History</a>
-          </div>
-          <div class="navItem">
-            <a href="#">
-              <img src="./assets/icons/y_notebook.svg" alt="Tasks icon" />
-            </a>
-            <a href="#">y*Tasks</a>
-          </div>
-          <div class="navItem">
-            <a href="#"
-              ><img
-                src="./assets/icons/y_community.svg"
-                alt="Communities icon"
-              />
-            </a>
-            <a href="#">y*Communities</a>
+          <div>
+            <h5>You are greeted by: Admin</h5>
+            <h2>Oksana Kolisnyk (@tezv_official)</h2>
           </div>
         </div>
-        <div class="nav-bottom">
-          <div class="navItem">
-            <a href="#"
-              ><img src="./assets/icons/y_settings.svg" alt="Settings icon" />
-            </a>
-            <a href="#">a*Settings</a>
+        <div class="header-nav">
+          <button>New</button><button>Upload</button><button>Share</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="main">
+      <!-- projects section -->
+      <!-- <h2 class="title">Your y*Projects</h2> -->
+      <div class="project-container">
+        <div class="projects">
+          <div class="project-card">
+            <h3 class="project-title"><span class="red">Main Admin</span> <span class="y-project">y*Project</span></h3>
+            <p class="project-details gray">Need #TODO:</p>
+            <ul class="project-details big">
+              <li>
+                to learn
+                <a href="https://www.theodinproject.com/paths/full-stack-javascript?"><b>The Odin Project</b></a>
+                JS-PATH;
+              </li>
+              <li>
+                to learn
+                <a href="https://www.freecodecamp.org/learn/"><b>freeCodeCamp</b></a>
+                Full-Stack.
+              </li>
+            </ul>
+            <div class="card-footer">
+              <a href="#"><img src="./assets/icons/y_star.svg" alt="Star Icon" /></a>
+              <a href="#"><img src="./assets/icons/y_eye.svg" alt="Eye Icon" /></a>
+              <a href="#"><img src="./assets/icons/y_share.svg" alt="Share Icon" /></a>
+            </div>
           </div>
-          <div class="navItem">
-            <a href="#"
-              ><img src="./assets/icons/y_support.svg" alt="Support icon" />
-            </a>
-            <a href="#">a*Support</a>
+        </div>
+
+        <div class="projects">
+          <div class="project-card">
+            <h3 class="project-title">
+              <span class="red">Secondary Admin</span> <span class="y-project">y*Project</span>
+            </h3>
+            <p class="project-details gray">Need #TODO:</p>
+            <ul class="project-details big">
+              <li>
+                to play <a href="https://getmimo.com/"><b>Mimo</b></a> Game;
+              </li>
+              <li>
+                to play
+                <a href="https://dev.to/selawsky/8-coding-games-to-improve-and-level-up-your-programming-skills-3fc0"><b>Desktop
+                    Study</b></a>
+                Games.
+              </li>
+            </ul>
+            <div class="card-footer">
+              <a href="#"><img src="./assets/icons/y_star.svg" alt="Star Icon" /></a>
+              <a href="#"><img src="./assets/icons/y_eye.svg" alt="Eye Icon" /></a>
+              <a href="#"><img src="./assets/icons/y_share.svg" alt="Share Icon" /></a>
+            </div>
           </div>
-          <div class="navItem">
-            <a href="#"
-              ><img src="./assets/icons/y_privacy_hand.svg" alt="Lock icon" />
-            </a>
-            <a href="#">a*Privacy</a>
+        </div>
+
+        <div class="projects">
+          <div class="project-card">
+            <h3 class="project-title"><i>Android Studio App</i> <span class="y-project">y*Project</span></h3>
+            <p class="project-details gray">Need #TODO:</p>
+            <ul class="project-details big">
+              <li>
+                to watch
+                <a
+                  href="https://www.youtube.com/watch?v=5YZcojJqlZQ&list=PLUr2W9J4oXgjGaMJQbd6wOR84mOCrDWmF&index=4&t=65s"><b>AS</b></a>
+                Tutorial;
+              </li>
+              <li>
+                to watch another
+                <a
+                  href="https://www.youtube.com/watch?v=9CjxFd3LgLE&list=PLUr2W9J4oXgjGaMJQbd6wOR84mOCrDWmF&index=5&t=6s"><b>AS</b></a>
+                Tutorial.
+              </li>
+            </ul>
+            <div class="card-footer">
+              <a href="#"><img src="./assets/icons/y_star.svg" alt="Star Icon" /></a>
+              <a href="#"><img src="./assets/icons/y_eye.svg" alt="Eye Icon" /></a>
+              <a href="#"><img src="./assets/icons/y_share.svg" alt="Share Icon" /></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="projects">
+          <div class="project-card">
+            <h3 class="project-title"><i>Flutter UI App </i> <span class="y-project">y*Project</span></h3>
+            <p class="project-details gray">Need #TODO:</p>
+            <ul class="project-details big">
+              <li>
+                to watch
+                <a href="https://www.youtube.com/watch?v=uydBHliNXwE&list=PLtIU0BH0pkKrgqaT-9JSrRRyetkVEkDn6"><b>Flutter
+                    UI</b></a>
+                Tutorial;
+              </li>
+              <li>
+                to watch another
+                <a href="https://www.youtube.com/watch?v=7AsHNDb0Vdo"><b>Flutter UI</b></a>
+                Tutorial.
+              </li>
+            </ul>
+            <div class="card-footer">
+              <a href="#"><img src="./assets/icons/y_star.svg" alt="Star Icon" /></a>
+              <a href="#"><img src="./assets/icons/y_eye.svg" alt="Eye Icon" /></a>
+              <a href="#"><img src="./assets/icons/y_share.svg" alt="Share Icon" /></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="projects">
+          <div class="project-card">
+            <h3 class="project-title"><i>Ad Blocker</i><span class="y-project"> y*Project</span></h3>
+            <p class="project-details gray">Need #TODO:</p>
+            <ul class="project-details big">
+              <li>to learn Front-End and Back-End Basics, DataBases;</li>
+              <li>to learn Ads in browsers and its Blockers;</li>
+              <li>to learn Cybersecurity.</li>
+            </ul>
+            <div class="card-footer">
+              <a href="#"><img src="./assets/icons/y_star.svg" alt="Star Icon" /></a>
+              <a href="#"><img src="./assets/icons/y_eye.svg" alt="Eye Icon" /></a>
+              <a href="#"><img src="./assets/icons/y_share.svg" alt="Share Icon" /></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="projects">
+          <div class="project-card">
+            <h3 class="project-title"><i>Money Maker </i><span class="y-project">y*Project</span></h3>
+            <p class="project-details gray">Need #TODO:</p>
+            <ul class="project-details big">
+              <li>to build the month budget for the salary: 400$;</li>
+              <li>to build the yearth budget for the salary: 7000$.</li>
+            </ul>
+            <div class="card-footer">
+              <a href="#"><img src="./assets/icons/y_star.svg" alt="Star Icon" /></a>
+              <a href="#"><img src="./assets/icons/y_eye.svg" alt="Eye Icon" /></a>
+              <a href="#"><img src="./assets/icons/y_share.svg" alt="Share Icon" /></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="projects">
+          <div class="project-card">
+            <h3 class="project-title"><i>CRYPTOBlockChain</i> <span class="y-project">y*Project</span></h3>
+            <p class="project-details gray">Need #TODO:</p>
+            <ul class="project-details big">
+              <li>to learn Cryptomarket;</li>
+              <li>to participate into the CryptoMarket;</li>
+              <li>to create the CryptoSite;</li>
+              <li>to look for the CRYPTOprojects.</li>
+            </ul>
+            <div class="card-footer">
+              <a href="#"><img src="./assets/icons/y_star.svg" alt="Star Icon" /></a>
+              <a href="#"><img src="./assets/icons/y_eye.svg" alt="Eye Icon" /></a>
+              <a href="#"><img src="./assets/icons/y_share.svg" alt="Share Icon" /></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="projects">
+          <div class="project-card">
+            <h3 class="project-title"><i>ECOLOGY</i> <span class="y-project">y*Project</span></h3>
+            <p class="project-details gray">Need #TODO:</p>
+            <ul class="project-details big">
+              <li>to learn ecology and ecology problems;</li>
+              <li>to learn the impact of ecology on human lives;</li>
+              <li>to create the #EcologySave Website;</li>
+              <li>to look for the ECOLOGYprojects.</li>
+            </ul>
+            <div class="card-footer">
+              <a href="#"><img src="./assets/icons/y_star.svg" alt="Star Icon" /></a>
+              <a href="#"><img src="./assets/icons/y_eye.svg" alt="Eye Icon" /></a>
+              <a href="#"><img src="./assets/icons/y_share.svg" alt="Share Icon" /></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="projects">
+          <div class="project-card">
+            <h3 class="project-title"><i>ECONOMIC</i> <span class="y-project">y*Project</span></h3>
+            <p class="project-details gray">Need #TODO:</p>
+            <ul class="project-details big">
+              <li class="big">to learn economic and economic problems;</li>
+              <li>to learn the impact of economic on human lives;</li>
+              <li>to create the #WorldEconomy Website;</li>
+              <li>to look for the ECONOMYprojects.</li>
+            </ul>
+            <div class="card-footer">
+              <a href="#"><img src="./assets/icons/y_star.svg" alt="Star Icon" /></a>
+              <a href="#"><img src="./assets/icons/y_eye.svg" alt="Eye Icon" /></a>
+              <a href="#"><img src="./assets/icons/y_share.svg" alt="Share Icon" /></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="projects">
+          <div class="project-card">
+            <h3 class="project-title"><i>POLITIC</i> <span class="y-project">y*Project</span></h3>
+            <p class="project-details gray">Need #TODO:</p>
+            <ul class="project-details">
+              <li>to learn politic and politic problems;</li>
+              <li>to learn the impact of politics on human lives;</li>
+              <li>to create the #WorldPolitics Website;</li>
+              <li>to look for the POLITICSprojects.</li>
+            </ul>
+            <div class="card-footer">
+              <a href="#"><img src="./assets/icons/y_star.svg" alt="Star Icon" /></a>
+              <a href="#"><img src="./assets/icons/y_eye.svg" alt="Eye Icon" /></a>
+              <a href="#"><img src="./assets/icons/y_share.svg" alt="Share Icon" /></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="projects">
+          <div class="project-card">
+            <h3 class="project-title">
+              <i>PROGRAMMING-INNOVATION</i> <span class="y-project">y*Project</span>
+            </h3>
+            <p class="project-details gray">Need #TODO:</p>
+            <ul class="project-details">
+              <li>
+                to learn programming: DevOps, Full-Stack and innovations;
+              </li>
+              <li>to pay interest into the innovation projects;</li>
+              <li>
+                to create the #ProgrammingInnovationSite using ChatGTP, GTP-3
+                Technologies [or App];
+              </li>
+              <li>
+                to look for the PROGRAMMINGprojects in AI, Full-Stack, DevOps
+                fields.
+              </li>
+            </ul>
+            <div class="card-footer">
+              <a href="#"><img src="./assets/icons/y_star.svg" alt="Star Icon" /></a>
+              <a href="#"><img src="./assets/icons/y_eye.svg" alt="Eye Icon" /></a>
+              <a href="#"><img src="./assets/icons/y_share.svg" alt="Share Icon" /></a>
+            </div>
+          </div>
+        </div>
+        <div class="projects">
+          <div class="project-card">
+            <h3 class="project-title"><i>PREDICTION</i> <span class="y-project">y*Project</span></h3>
+            <p class="project-details gray">
+              What #ISGOINGTOBE #MyPredictionin5years #SMARTgoals:
+            </p>
+            <ul class="project-details">
+              <li>I see myself the programmer (Python, JS) in 5-10 years;</li>
+              <li>
+                I like listening Twenty-One Pilots and will love in 5 years;
+              </li>
+              <li>I'm going to create the CryptoSite;</li>
+              <li>I'm going to be a responsible human in Ecology field;</li>
+              <li>I'm going to be a SMART human.</li>
+            </ul>
+            <div class="card-footer">
+              <a href="#"><img src="./assets/icons/y_star.svg" alt="Star Icon" /></a>
+              <a href="#"><img src="./assets/icons/y_eye.svg" alt="Eye Icon" /></a>
+              <a href="#"><img src="./assets/icons/y_share.svg" alt="Share Icon" /></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="projects">
+          <div class="project-card">
+            <h3 class="project-title"><i>YOUR</i> <span class="y-project">y*Project</span></h3>
+            <p class="project-details gray">
+              Need #TODO:
+              <span>
+                <input type="text"><br>
+                Tap to write here something... Tap to create your y*List...
+              </span>
+            </p>
+            <div class="card-footer">
+              <a href="#"><img src="./assets/icons/y_star.svg" alt="Star Icon" /></a>
+              <a href="#"><img src="./assets/icons/y_eye.svg" alt="Eye Icon" /></a>
+              <a href="#"><img src="./assets/icons/y_share.svg" alt="Share Icon" /></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="projects">
+          <div class="project-card">
+            <h3 class="project-title"><i>YOUR</i> <span class="y-project">y*Project</span></h3>
+            <p class="project-details gray">
+              Need #TODO:
+              <span>
+                <input type="text"><br>
+                Tap to write here something... Tap to create your y*List...
+              </span>
+
+            </p>
+            <div class="card-footer">
+              <a href="#"><img src="./assets/icons/y_star.svg" alt="Star Icon" /></a>
+              <a href="#"><img src="./assets/icons/y_eye.svg" alt="Eye Icon" /></a>
+              <a href="#"><img src="./assets/icons/y_share.svg" alt="Share Icon" /></a>
+            </div>
           </div>
         </div>
       </div>
-
-      <!-- Header -->
-      <div class="header">
-        <div class="header-top">
-          <div class="search-bar">
-            <img src="./assets/icons/y_search.svg" alt="Search Icon" />
-            <input
-              type="search"
-              name=""
-              id=""
-              placeholder="Admin schedule..."
-            />
-          </div>
-          <div class="profile">
-            <a href="#"
-              ><img
-                src="./assets/icons/y_notification_bell.svg"
-                alt="Notificaiton Icon"
-            /></a>
-            <img
-              src="./assets/img/profile_header.jpg"
-              alt="Profile icon"
-              width="50px"
-              height="50px"
-            />
-            <h3>Oksana Kolisnyk</h3>
-          </div>
-        </div>
-        <div class="header-bottom">
-          <div class="user-details">
-            <div>
-              <img
-                src="./assets/icons/y_avatar_avocado.svg"
-                alt="Profile Icon"
-                width="80px"
-                height="80px"
-              />
-            </div>
-            <div>
-              <h5>You are greeted by: Admin</h5>
-              <h2>Oksana Kolisnyk (@tezv_official)</h2>
-            </div>
-          </div>
-          <div class="header-nav">
-            <button>New</button><button>Upload</button><button>Share</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="main">
-        <!-- projects section -->
-        <!-- <h2 class="title">Your y*Projects</h2> -->
-        <div class="project-container">
-          <div class="projects">
-            <div class="project-card">
-              <h3 class="project-title"><span class="red">Main Admin</span> <span class="y-project">y*Project</span></h3>
-              <p class="project-details gray">Need #TODO:</p>
-              <ul class="project-details">
-                <li>
-                  to learn
-                  <a
-                    href="https://www.theodinproject.com/paths/full-stack-javascript?"
-                    ><b>The Odin Project</b></a
-                  >
-                  JS-PATH;
-                </li>
-                <li>
-                  to learn
-                  <a href="https://www.freecodecamp.org/learn/"
-                    ><b>freeCodeCamp</b></a
-                  >
-                  Full-Stack.
-                </li>
-              </ul>
-              <div class="card-footer">
-                <a href="#"
-                  ><img src="./assets/icons/y_star.svg" alt="Star Icon"
-                /></a>
-                <a href="#"
-                  ><img src="./assets/icons/y_eye.svg" alt="Eye Icon"
-                /></a>
-                <a href="#"
-                  ><img src="./assets/icons/y_share.svg" alt="Share Icon"
-                /></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="projects">
-            <div class="project-card">
-              <h3 class="project-title">
-                <span class="red">Secondary Admin</span> <span class="y-project">y*Project</span>
-              </h3>
-              <p class="project-details gray">Need #TODO:</p>
-              <ul class="project-details">
-                <li>
-                  to play <a href="https://getmimo.com/"><b>Mimo</b></a> Game;
-                </li>
-                <li>
-                  to play
-                  <a
-                    href="https://dev.to/selawsky/8-coding-games-to-improve-and-level-up-your-programming-skills-3fc0"
-                    ><b>Desktop Study</b></a
-                  >
-                  Games.
-                </li>
-              </ul>
-              <div class="card-footer">
-                <a href="#"
-                  ><img src="./assets/icons/y_star.svg" alt="Star Icon"
-                /></a>
-                <a href="#"
-                  ><img src="./assets/icons/y_eye.svg" alt="Eye Icon"
-                /></a>
-                <a href="#"
-                  ><img src="./assets/icons/y_share.svg" alt="Share Icon"
-                /></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="projects">
-            <div class="project-card">
-              <h3 class="project-title"><i>Android Studio App</i> <span class="y-project">y*Project</span></h3>
-              <p class="project-details gray">Need #TODO:</p>
-              <ul class="project-details">
-                <li>
-                  to watch
-                  <a
-                    href="https://www.youtube.com/watch?v=5YZcojJqlZQ&list=PLUr2W9J4oXgjGaMJQbd6wOR84mOCrDWmF&index=4&t=65s"
-                    ><b>AS</b></a
-                  >
-                  Tutorial;
-                </li>
-                <li>
-                  to watch another
-                  <a
-                    href="https://www.youtube.com/watch?v=9CjxFd3LgLE&list=PLUr2W9J4oXgjGaMJQbd6wOR84mOCrDWmF&index=5&t=6s"
-                    ><b>AS</b></a
-                  >
-                  Tutorial.
-                </li>
-              </ul>
-              <div class="card-footer">
-                <a href="#"
-                  ><img src="./assets/icons/y_star.svg" alt="Star Icon"
-                /></a>
-                <a href="#"
-                  ><img src="./assets/icons/y_eye.svg" alt="Eye Icon"
-                /></a>
-                <a href="#"
-                  ><img src="./assets/icons/y_share.svg" alt="Share Icon"
-                /></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="projects">
-            <div class="project-card">
-              <h3 class="project-title"><i>Flutter UI App </i> <span class="y-project">y*Project</span></h3>
-              <p class="project-details gray">Need #TODO:</p>
-              <ul class="project-details">
-                <li>
-                  to watch
-                  <a
-                    href="https://www.youtube.com/watch?v=uydBHliNXwE&list=PLtIU0BH0pkKrgqaT-9JSrRRyetkVEkDn6"
-                    ><b>Flutter UI</b></a
-                  >
-                  Tutorial;
-                </li>
-                <li>
-                  to watch another
-                  <a href="https://www.youtube.com/watch?v=7AsHNDb0Vdo"
-                    ><b>Flutter UI</b></a
-                  >
-                  Tutorial.
-                </li>
-              </ul>
-              <div class="card-footer">
-                <a href="#"
-                  ><img src="./assets/icons/y_star.svg" alt="Star Icon"
-                /></a>
-                <a href="#"
-                  ><img src="./assets/icons/y_eye.svg" alt="Eye Icon"
-                /></a>
-                <a href="#"
-                  ><img src="./assets/icons/y_share.svg" alt="Share Icon"
-                /></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="projects">
-            <div class="project-card">
-              <h3 class="project-title"><i>Ad Blocker</i><span class="y-project"> y*Project</span></h3>
-              <p class="project-details gray">Need #TODO:</p>
-              <ul class="project-details">
-                <li>to learn Front-End and Back-End Basics, DataBases;</li>
-                <li>to learn Ads in browsers and its Blockers;</li>
-                <li>to learn Cybersecurity.</li>
-              </ul>
-              <div class="card-footer">
-                <a href="#"
-                  ><img src="./assets/icons/y_star.svg" alt="Star Icon"
-                /></a>
-                <a href="#"
-                  ><img src="./assets/icons/y_eye.svg" alt="Eye Icon"
-                /></a>
-                <a href="#"
-                  ><img src="./assets/icons/y_share.svg" alt="Share Icon"
-                /></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="projects">
-            <div class="project-card">
-              <h3 class="project-title"><i>Money Maker </i><span class="y-project">y*Project</span></h3>
-              <p class="project-details gray">Need #TODO:</p>
-              <ul class="project-details">
-                <li>to build the month budget for the salary: 400$;</li>
-                <li>to build the yearth budget for the salary: 7000$.</li>
-              </ul>
-              <div class="card-footer">
-                <a href="#"
-                  ><img src="./assets/icons/y_star.svg" alt="Star Icon"
-                /></a>
-                <a href="#"
-                  ><img src="./assets/icons/y_eye.svg" alt="Eye Icon"
-                /></a>
-                <a href="#"
-                  ><img src="./assets/icons/y_share.svg" alt="Share Icon"
-                /></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="projects">
-            <div class="project-card">
-              <h3 class="project-title"><i>CRYPTOBlockChain</i> <span class="y-project">y*Project</span></h3>
-              <p class="project-details gray">Need #TODO:</p>
-              <ul class="project-details">
-                <li>to learn Cryptomarket;</li>
-                <li>to participate into the CryptoMarket;</li>
-                <li>to create the CryptoSite;</li>
-                <li>to look for the CRYPTOprojects.</li>
-              </ul>
-              <div class="card-footer">
-                <a href="#"
-                  ><img src="./assets/icons/y_star.svg" alt="Star Icon"
-                /></a>
-                <a href="#"
-                  ><img src="./assets/icons/y_eye.svg" alt="Eye Icon"
-                /></a>
-                <a href="#"
-                  ><img src="./assets/icons/y_share.svg" alt="Share Icon"
-                /></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="projects">
-            <div class="project-card">
-              <h3 class="project-title"><i>ECOLOGY</i> <span class="y-project">y*Project</span></h3>
-              <p class="project-details gray">Need #TODO:</p>
-              <ul class="project-details">
-                <li>to learn ecology and ecology problems;</li>
-                <li>to learn the impact of ecology on human lives;</li>
-                <li>to create the #EcologySave Website;</li>
-                <li>to look for the ECOLOGYprojects.</li>
-              </ul>
-              <div class="card-footer">
-                <a href="#"
-                  ><img src="./assets/icons/y_star.svg" alt="Star Icon"
-                /></a>
-                <a href="#"
-                  ><img src="./assets/icons/y_eye.svg" alt="Eye Icon"
-                /></a>
-                <a href="#"
-                  ><img src="./assets/icons/y_share.svg" alt="Share Icon"
-                /></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="projects">
-            <div class="project-card">
-              <h3 class="project-title"><i>ECONOMIC</i> <span class="y-project">y*Project</span></h3>
-              <p class="project-details gray">Need #TODO:</p>
-              <ul class="project-details">
-                <li>to learn economic and economic problems;</li>
-                <li>to learn the impact of economic on human lives;</li>
-                <li>to create the #WorldEconomy Website;</li>
-                <li>to look for the ECONOMYprojects.</li>
-              </ul>
-              <div class="card-footer">
-                <a href="#"
-                  ><img src="./assets/icons/y_star.svg" alt="Star Icon"
-                /></a>
-                <a href="#"
-                  ><img src="./assets/icons/y_eye.svg" alt="Eye Icon"
-                /></a>
-                <a href="#"
-                  ><img src="./assets/icons/y_share.svg" alt="Share Icon"
-                /></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="projects">
-            <div class="project-card">
-              <h3 class="project-title"><i>POLITIC</i> <span class="y-project">y*Project</span></h3>
-              <p class="project-details gray">Need #TODO:</p>
-              <ul class="project-details">
-                <li>to learn politic and politic problems;</li>
-                <li>to learn the impact of politics on human lives;</li>
-                <li>to create the #WorldPolitics Website;</li>
-                <li>to look for the POLITICSprojects.</li>
-              </ul>
-              <div class="card-footer">
-                <a href="#"
-                  ><img src="./assets/icons/y_star.svg" alt="Star Icon"
-                /></a>
-                <a href="#"
-                  ><img src="./assets/icons/y_eye.svg" alt="Eye Icon"
-                /></a>
-                <a href="#"
-                  ><img src="./assets/icons/y_share.svg" alt="Share Icon"
-                /></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="projects">
-            <div class="project-card">
-              <h3 class="project-title">
-                <i>PROGRAMMING-INNOVATION</i> <span class="y-project">y*Project</span>
-              </h3>
-              <p class="project-details gray">Need #TODO:</p>
-              <ul class="project-details">
-                <li>
-                  to learn programming: DevOps, Full-Stack and innovations;
-                </li>
-                <li>to pay interest into the innovation projects;</li>
-                <li>
-                  to create the #ProgrammingInnovationSite using ChatGTP, GTP-3
-                  Technologies [or App];
-                </li>
-                <li>
-                  to look for the PROGRAMMINGprojects in AI, Full-Stack, DevOps
-                  fields.
-                </li>
-              </ul>
-              <div class="card-footer">
-                <a href="#"
-                  ><img src="./assets/icons/y_star.svg" alt="Star Icon"
-                /></a>
-                <a href="#"
-                  ><img src="./assets/icons/y_eye.svg" alt="Eye Icon"
-                /></a>
-                <a href="#"
-                  ><img src="./assets/icons/y_share.svg" alt="Share Icon"
-                /></a>
-              </div>
-            </div>
-          </div>
-          <div class="projects">
-            <div class="project-card">
-              <h3 class="project-title"><i>PREDICTION</i> <span class="y-project">y*Project</span></h3>
-              <p class="project-details gray">
-                What #ISGOINGTOBE #MyPredictionin5years #SMARTgoals:
-              </p>
-              <ul class="project-details">
-                <li>I see myself the programmer (Python, JS) in 5-10 years;</li>
-                <li>
-                  I like listening Twenty-One Pilots and will love in 5 years;
-                </li>
-                <li>I'm going to create the CryptoSite;</li>
-                <li>I'm going to be a responsible human in Ecology field;</li>
-                <li>I'm going to be a SMART human.</li>
-              </ul>
-              <div class="card-footer">
-                <a href="#"
-                  ><img src="./assets/icons/y_star.svg" alt="Star Icon"
-                /></a>
-                <a href="#"
-                  ><img src="./assets/icons/y_eye.svg" alt="Eye Icon"
-                /></a>
-                <a href="#"
-                  ><img src="./assets/icons/y_share.svg" alt="Share Icon"
-                /></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="projects">
-            <div class="project-card">
-              <h3 class="project-title"><i>YOUR</i> <span class="y-project">y*Project</span></h3>
-              <p class="project-details gray">
-                Need #TODO:
-                <span>
-                  <input type="text"><br>
-                  Tap to write here something... Tap to create your y*List...
-                </span>
-              </p>
-              <div class="card-footer">
-                <a href="#"
-                  ><img src="./assets/icons/y_star.svg" alt="Star Icon"
-                /></a>
-                <a href="#"
-                  ><img src="./assets/icons/y_eye.svg" alt="Eye Icon"
-                /></a>
-                <a href="#"
-                  ><img src="./assets/icons/y_share.svg" alt="Share Icon"
-                /></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="projects">
-            <div class="project-card">
-              <h3 class="project-title"><i>YOUR</i> <span class="y-project">y*Project</span></h3>
-              <p class="project-details gray">
-                Need #TODO:
-                <span>
-                  <input type="text"><br>
-                  Tap to write here something... Tap to create your y*List...
-                </span>
-                
-              </p>
-              <div class="card-footer">
-                <a href="#"
-                  ><img src="./assets/icons/y_star.svg" alt="Star Icon"
-                /></a>
-                <a href="#"
-                  ><img src="./assets/icons/y_eye.svg" alt="Eye Icon"
-                /></a>
-                <a href="#"
-                  ><img src="./assets/icons/y_share.svg" alt="Share Icon"
-                /></a>
-              </div>
-            </div>
-          </div>
-        </div>
 
       <!-- Right Side Bar -->
       <div class="sidebar-right">
@@ -583,12 +453,8 @@
           <div class="trending">
             <div class="trend-item">
               <div class="trend-img">
-                <img
-                  src="./assets/icons/y_avatar_lazybones.svg"
-                  alt="Profile Picture of Trending User"
-                  width="50px"
-                  height="50px"
-                />
+                <img src="./assets/icons/y_avatar_lazybones.svg" alt="Profile Picture of Trending User" width="50px"
+                  height="50px" />
               </div>
               <div class="trend-topic">
                 <h4>@iwillsavetheworld</h4>
@@ -597,12 +463,8 @@
             </div>
             <div class="trend-item">
               <div class="trend-img">
-                <img
-                  src="./assets/icons/y_addicted_draw_love.svg"
-                  alt="Profile Picture of Trending User"
-                  width="50px"
-                  height="50px"
-                />
+                <img src="./assets/icons/y_addicted_draw_love.svg" alt="Profile Picture of Trending User" width="50px"
+                  height="50px" />
               </div>
               <div class="trend-topic">
                 <h4>@cryptochain</h4>
@@ -611,10 +473,7 @@
             </div>
             <div class="trend-item">
               <div class="trend-img">
-                <img
-                  src="./assets/icons/y_avatar_cacti.svg"
-                  alt="Profile Picture of Trending User"
-                />
+                <img src="./assets/icons/y_avatar_cacti.svg" alt="Profile Picture of Trending User" />
               </div>
               <div class="trend-topic">
                 <h4>@saveecologytogether</h4>
@@ -623,10 +482,7 @@
             </div>
             <div class="trend-item">
               <div class="trend-img">
-                <img
-                  src="./assets/icons/y_avatar_coffee.svg"
-                  alt="Profile Picture of Trending User"
-                />
+                <img src="./assets/icons/y_avatar_coffee.svg" alt="Profile Picture of Trending User" />
               </div>
               <div class="trend-topic">
                 <h4>@softeconomy</h4>
@@ -637,5 +493,7 @@
         </div>
       </div>
     </div>
-  </body>
+
+</body>
+
 </html>
