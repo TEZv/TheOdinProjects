@@ -19,6 +19,117 @@
     --dark-blue-color: rgba(116, 162, 184, 0.74);
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Unbounded', cursive;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 100vw;
+    height: 100vh;
+    background-color: var(--light-green-color);
+    display: grid;
+    grid-template-columns: minmax(200px, 1fr) 4fr;
+    grid-template-rows: 150px 1fr;
+    grid-template-areas: "sidebar header"
+        "sidebar main";
+    overflow: auto;
+}
+
+/* Projects, Announcements and Trending Title's Common Style */
+.title {
+    margin-bottom: 15px;
+}
+
+/* Common Style */
+.trending,
+.announcements,
+.project-card {
+    background-color: var(--white-color);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: var(--black-color) 1.95px 1.95px 2.6px;
+}
+
+
+
+/* Header Style */
+.header {
+    grid-area: header;
+    background-color: var(--white-color);
+    box-shadow: var(--black-color) 0px 25px 20px -20px;
+    padding: 10px 70px 20px 40px;
+    position: sticky;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 body {
     grid-template-columns: 1fr 5fr;
     display: grid;
