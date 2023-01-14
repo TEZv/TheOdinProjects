@@ -61,9 +61,9 @@ button:hover {
 .container {
     max-width: 100vw;
     height: 100vh;
-    background: linear-gradient(45deg, var(--light-green-color), var(--dark-blue-color));
+    background: linear-gradient(45deg, var(--blue-color), var(--dark-blue-color));
     display: grid;
-    grid-template-columns: minmax(200px, 1fr) 4fr;
+    grid-template-columns: minmax(200px, 1fr) 5fr;
     grid-template-rows: 150px 1fr;
     grid-template-areas: "sidebar header"
         "sidebar main";
@@ -93,7 +93,7 @@ img {
 /* Header Style */
 .header {
     grid-area: header;
-    background-color: var(--white-color);
+    background-color: var(--light-green-color);
     box-shadow: var(--black-color) 0px 25px 20px -20px;
     padding: 10px 20px 20px 40px;
     position: sticky;
@@ -157,9 +157,8 @@ img {
 .sideBar {
     grid-area: sidebar;
     background-color: var(--violet-color);
-    color: var(--white);
     padding: 20px;
-
+    box-shadow: var(--black-color) 1.95px 1.95px 2.6px;
 }
 
 .sideBar a {
@@ -179,28 +178,34 @@ img {
 .sideBar .logo img {
     width: 50px;
     height: 50px;
-    margin-top: 10px;
+    margin-top: 4px;
     justify-self: center;
 }
 
 .sideBar img {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
 }
 
 .nav-top {
-    margin-top: 50px;
-    
+    margin-top: -10px;
+}
+
+.nav-bottom {
+    margin-top: 280px;
 }
 
 .navItem {
     display: flex;
     align-items: center;
     gap: 1.2em;
-    font-size: 1rem;
     margin-top: 20px;
     color: var(--white-color);
-    margin-left: 20px;
+    margin-left: 4px;
+}
+
+.navItem a + a {
+    font-size: 0.9rem;
 }
 
 .navItem a:hover {
@@ -284,7 +289,7 @@ img {
 
 .announcement p {
     color: gray;
-    font-size: 10px;
+    
     /* margin-bottom: 10px; */
 }
 
