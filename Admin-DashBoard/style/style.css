@@ -346,6 +346,23 @@ div > h3 > span + span.y-project,
     overflow-y: scroll;
 }
 
+/* Common Style */
+.trending,
+.announcements,
+.project-card {
+    background-color: var(--white-color);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: var(--black-color) 1.95px 1.95px 2.6px;
+}
+
+.announcements:hover,
+.card-footer img:hover,
+.trending:hover {
+  transform: scale(1.07);
+  transition: all 2s ease-in-out;  
+}
+
 /* Announcements Style */
 .announcements {
     background-color: var(--blue-color);
@@ -415,21 +432,4 @@ div > h3 > span + span.y-project,
 /* Projects, Announcements and Trending Title's Common Style */
 .title {
     margin-bottom: 15px;
-}
-
-/* Common Style */
-.trending,
-.announcements,
-.project-card {
-    background-color: var(--white-color);
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: var(--black-color) 1.95px 1.95px 2.6px;
-}
-
-.announcements:hover,
-.card-footer img:hover,
-.trending:hover {
-  transform: scale(1.07);
-  transition: all 2s ease-in-out;  
 }
