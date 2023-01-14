@@ -34,6 +34,7 @@
 
 a {
     text-decoration: none;
+    display: inline-block;
 }
 
 input:focus {
@@ -189,26 +190,26 @@ img {
 
 .nav-top {
     margin-top: 50px;
+    
 }
 
 .navItem {
-    margin-top: 20px;
-    color: var(--white-color);
-    margin-left: 40px;
-}
-
-.navItem a {
     display: flex;
     align-items: center;
+    gap: 1.2em;
+    font-size: 1rem;
+    margin-top: 20px;
+    color: var(--white-color);
+    margin-left: 20px;
 }
 
 .navItem a:hover {
     transform: scale(1.03);
 }
 
-.navItem a img {
-    margin-right: 20px;
-}
+/*.navItem a img {
+    
+}*/
 
 /* Main Content Style */
 
