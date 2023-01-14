@@ -162,21 +162,23 @@ img {
 }
 
 .sideBar a {
-    color: var(--white);
+    color: var(--white-color);
     font-size: var(--sideBar-font-size);
 
 }
 
 .sideBar .logo {
     font-size: 32px;
-    align-items: center;
+    align-items: end;
     margin-bottom: 50px;
     color: var(--green-color);
+    display: flex;
 }
 
 .sideBar .logo img {
     width: 50px;
     height: 50px;
+    margin-top: 10px;
     justify-self: center;
 }
 
@@ -192,11 +194,11 @@ img {
 .navItem {
     margin-top: 20px;
     color: var(--white-color);
+    margin-left: 40px;
 }
 
 .navItem a {
-    display: grid;
-    grid-template-columns: 60px 1fr;
+    display: flex;
     align-items: center;
 }
 
@@ -205,7 +207,7 @@ img {
 }
 
 .navItem a img {
-    justify-self: center;
+    margin-right: 20px;
 }
 
 /* Main Content Style */
