@@ -85,6 +85,13 @@ button:hover {
     box-shadow: var(--black-color) 1.95px 1.95px 2.6px;
 }
 
+.announcements:hover,
+.trending:hover {
+  transform: scale(1.07);
+  transition: all 2s ease-in-out;  
+}
+
+
 img {
     width: 50px;
     height:  50px;
@@ -220,7 +227,7 @@ img {
 .navItem a:hover,
 .navItem a img:hover,
 .announcement p > .karla a :hover,
-.card-footer img,
+.card-footer img:hover,
 .trend-img:hover {
     transform: scale(1.03);
     transition: all 0.5s ease-in-out;
@@ -258,7 +265,6 @@ img {
     transition: all 0.5s ease-in-out;
     transform: scale(1.03);
     border-left: 10px solid var(--dark-black-color);
-    border-bottom: 5px solid var(--dark-black-color);
 }
 
 .project-card .project-title {
@@ -320,7 +326,7 @@ div > h3 > span + span.y-project,
 .card-footer img {
     width: 40px;
     background-color: var(--violet-color);
-    border: 1px dashed var(--dark-black-color);
+    border: 1px dashed var(--white-color);
     margin-left: 4px;
     height: 32px;
 }
