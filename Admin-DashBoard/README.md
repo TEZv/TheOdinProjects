@@ -12,7 +12,7 @@ A simple Admin-DashBoard page using CSS-Grid and HTML5.
   - [Project Stack](#project-stack)
 
 ### Links
-Live Site URL: [Click on here](futureURL)
+Live Site URL: [Click on here](https://tezv-admin-dashboard.netlify.app/)
 
 ## Main process
 This is my project here in The Odin Project. It's a little complex structured Admin-DashBoard page. Here's the use case of the CSS-Grid which serves for the Layout-Overall-Design.<br> 
