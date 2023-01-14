@@ -200,7 +200,7 @@ img {
     display: flex;
     align-items: center;
     gap: 1.2em;
-    margin-top: 20px;
+    margin-top: 10px;
     color: var(--white-color);
     margin-left: 4px;
 }
@@ -255,6 +255,8 @@ img {
     font-size: 1.4em;
 }
 
+
+
 input {
     height: 50px;
     width: 300px;
@@ -273,9 +275,17 @@ div > h3 > span + span.y-project,
     color: var(--white-color);
 }
 
+ul li .big {
+    font-size: 26px;
+}
+
 .project-details.gray {
     color: var(--light-white-color);
     /* margin-bottom: 10px; */
+}
+
+ul {
+    font-size: 26px;
 }
 
 .card-footer {
