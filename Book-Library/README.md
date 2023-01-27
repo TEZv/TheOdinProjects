@@ -7,7 +7,7 @@ Here's a project about simple Book library:)<br>
 # Technologies Used (TECH Stack)
 
 - [x] HTML `(wz Prettier)`;
-- [x] CSS;
+- [x] CSS `(wz Prettier)`;
 - [x] JavaScript.
 
 ## Thanks for your attention.

@@ -1,275 +1,286 @@
 :root {
-    --light-pink-color: rgba(59, 14, 14, 0.514);
-    --brown-color: #221818;
-    --pink-color: rgb(255, 96, 96);
-    --dark-green-color: rgb(31, 75, 75);
-    --light-green-color: rgba(83, 155, 155, 0.795);
-    --black-color: #000000;
-    --light-red-color: rgba(212, 59, 12, 0.815);
-    --light-pink-b-color: #ee447d;
-    --pink-b-color: #ff3377;
-    --light-blue-color: #2d68c7;
-    --dark-blue-color: #3882f6;
-    --soft-blue-color: #5b97f8;
-    --red-color: rgba(255, 25, 25, 0.87);
-    --white-color: rgb(255, 248, 248);
-    --light-white-color: rgba(255, 196, 196, 0.664);
+  --light-pink-color: rgba(59, 14, 14, 0.514);
+  --brown-color: #221818;
+  --pink-color: rgb(255, 96, 96);
+  --dark-green-color: rgb(31, 75, 75);
+  --light-green-color: rgba(83, 155, 155, 0.795);
+  --black-color: #000000;
+  --light-red-color: rgba(212, 59, 12, 0.815);
+  --light-pink-b-color: #ee447d;
+  --pink-b-color: #ff3377;
+  --light-blue-color: #2d68c7;
+  --dark-blue-color: #3882f6;
+  --soft-blue-color: #5b97f8;
+  --red-color: rgba(255, 25, 25, 0.87);
+  --white-color: rgb(255, 248, 248);
+  --light-white-color: rgba(255, 196, 196, 0.664);
 }
 
 body {
-    background: linear-gradient(-185deg, var(--dark-green-color), var(--white-color));
-    font-family: 'Unbounded', cursive;
+  background: linear-gradient(
+    -185deg,
+    var(--dark-green-color),
+    var(--white-color)
+  );
+  font-family: "Unbounded", cursive;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
-h3, h4 {
-    margin: 5px;
-    font-family: 'Karla', sans-serif;
+h3,
+h4 {
+  margin: 5px;
+  font-family: "Karla", sans-serif;
 }
 
-input[type=text], select, input[type=number] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid var(--light-blue-color);
-    border-radius: 4px;
-    box-sizing: border-box;
-    font-size: 16px;
+input[type="text"],
+select,
+input[type="number"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid var(--light-blue-color);
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
 }
-
 
 footer {
-    padding: 40px;
-    text-align: center;
-    padding-bottom: 1px;
+  padding: 40px;
+  text-align: center;
+  padding-bottom: 1px;
 }
 
 #library {
-    margin:auto;
-    width: 80%;
-    display:flex;
-    flex-flow: row wrap;
+  margin: auto;
+  width: 80%;
+  display: flex;
+  flex-flow: row wrap;
 }
 
 #main-title {
-    text-align: center;
-    margin: 0 0 20px 0;
-    padding: 30px;
-    background-color: var(--light-blue-color);
-    color: var(--black-color);
-    font-size: 40px;
-    border-radius: 5px;
+  text-align: center;
+  margin: 0 0 20px 0;
+  padding: 30px;
+  background-color: var(--light-blue-color);
+  color: var(--black-color);
+  font-size: 40px;
+  border-radius: 5px;
 }
 
 #newBook {
-    font-family: 'Unbounded', cursive;
-    margin-left: 1500px;
-    margin-bottom: 40px;
-    cursor: pointer;
-    font-size: 20px;
-    padding: 7px;
-    border-radius: 5px;
-    background-color: var(--pink-color);
-    border: solid 2px var(--light-blue-color);
-    color: var(--brown-color);
-    box-shadow: 1px 3px 3px var(--dark-green-color);
+  font-family: "Unbounded", cursive;
+  margin-left: 1500px;
+  margin-bottom: 40px;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 7px;
+  border-radius: 5px;
+  background-color: var(--pink-color);
+  border: solid 2px var(--light-blue-color);
+  color: var(--brown-color);
+  box-shadow: 1px 3px 3px var(--dark-green-color);
 }
 
 #newBook:hover {
-    background-color: var(--light-red-color);
-    border: solid 2px var(--red-color);
-    /*color: var(--white-color);*/
+  background-color: var(--light-red-color);
+  border: solid 2px var(--red-color);
+  /*color: var(--white-color);*/
 }
 
 #submit {
-    width: 100%;
-    background-color: var(--light-blue-color);
-    color: var(--white-color);
-    padding: 14px 20px;
-    margin: 25px 0 10px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 20px;
-  }
+  width: 100%;
+  background-color: var(--light-blue-color);
+  color: var(--white-color);
+  padding: 14px 20px;
+  margin: 25px 0 10px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 20px;
+}
 
 #submit:hover {
-    background: linear-gradient(45deg, var(--pink-color), var(--light-pink-color), var(--red-color));
-    color: var(--white-color);
+  background: linear-gradient(
+    45deg,
+    var(--pink-color),
+    var(--light-pink-color),
+    var(--red-color)
+  );
+  color: var(--white-color);
 }
 
 .card {
-    font-family: 'Karla', sans-serif;
-    background: linear-gradient(45deg, var(--light-red-color), var(--red-color));
-    width: 226px;
-    /* height: 350px; NO HEIGHT MEANS THEY WILL AUTOMATICALLY FIT ENTERED TEXT */
-    border-radius: 10px;
-    text-align: center;
-    margin: 0 auto;
-    margin-bottom: 30px;
-    overflow-wrap: break-word;
-    color: var(--brown-color);
-    border: 2px solid var(--dark-green-color);
-    box-shadow: 10px 10px 5px var(--light-blue-color);
-    padding-bottom: 20px;
+  font-family: "Karla", sans-serif;
+  background: linear-gradient(45deg, var(--light-red-color), var(--red-color));
+  width: 226px;
+  /* height: 350px; NO HEIGHT MEANS THEY WILL AUTOMATICALLY FIT ENTERED TEXT */
+  border-radius: 10px;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  overflow-wrap: break-word;
+  color: var(--brown-color);
+  border: 2px solid var(--dark-green-color);
+  box-shadow: 10px 10px 5px var(--light-blue-color);
+  padding-bottom: 20px;
 }
 
 .card:hover {
-    cursor: pointer;
-    transition: all 0.8s ease-in-out; 
-    transform: scale(1.2);
+  cursor: pointer;
+  transition: all 0.8s ease-in-out;
+  transform: scale(1.2);
 }
 
 .unread {
-    border-radius: 5px;
-    font-size: 16px;
-    border: 2px solid var(--light-pink-color);
-    background-color: var(--red-color);
-    color: var(--brown-color);
-    outline: none;
-    cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  border: 2px solid var(--light-pink-color);
+  background-color: var(--red-color);
+  color: var(--brown-color);
+  outline: none;
+  cursor: pointer;
 }
 
 .read {
-    font-family: 'Karla', sans-serif;
-    border-radius: 5px;
-    font-size: 16px;
-    border: 2px solid var(--light-green-color);
-    background-color: var(--dark-green-color);
-    color: var(--white-color);
-    outline: none;
-    cursor: pointer;
+  font-family: "Karla", sans-serif;
+  border-radius: 5px;
+  font-size: 16px;
+  border: 2px solid var(--light-green-color);
+  background-color: var(--dark-green-color);
+  color: var(--white-color);
+  outline: none;
+  cursor: pointer;
 }
 
 .cover {
-    width: 150px;
-    margin-top: 10px;
-    margin:auto;
+  width: 150px;
+  margin-top: 10px;
+  margin: auto;
 }
 
 .trash {
-    width: 23px;
-    display:block;
-    margin-left: 195px;
-    cursor: pointer;
+  width: 23px;
+  display: block;
+  margin-left: 195px;
+  cursor: pointer;
 }
 
 .readCheck {
-    width: 15px;
-    cursor: pointer;
+  width: 15px;
+  cursor: pointer;
 }
 
 .bookTitle {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 .readText {
-    display:inline;
+  display: inline;
 }
 
 /* The Modal (background) */
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: var(--black-color); /* Fallback color */
-    background-color: var(--light-white-color); /* Black w/ opacity */
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: var(--black-color); /* Fallback color */
+  background-color: var(--light-white-color); /* Black w/ opacity */
 }
-  
+
 /* Modal Content/Box */
 .modal-content {
-    background-color: var(--white-color);
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 15px 20px 20px 20px;
-    border: 1px solid var(--brown-color);
-    width: 30%;
-    border-radius: 10px;
+  background-color: var(--white-color);
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 15px 20px 20px 20px;
+  border: 1px solid var(--brown-color);
+  width: 30%;
+  border-radius: 10px;
 }
-  
+
 /* The Close Button */
 .close {
-    color: var(--pink-b-color);
-    margin-left: 95%;
-    font-size: 28px;
-    font-weight: bold;
+  color: var(--pink-b-color);
+  margin-left: 95%;
+  font-size: 28px;
+  font-weight: bold;
 }
-  
+
 .close:hover,
 .close:focus {
-    color: var(--brown-color);
-    text-decoration: none;
-    cursor: pointer;
+  color: var(--brown-color);
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .modal-text {
-    font-family: monospace, monospace;
+  font-family: monospace, monospace;
 }
 
 .radioText {
-    margin: 10px 0;
+  margin: 10px 0;
 }
 
 .radioBtn {
-    margin-top: 15px;
+  margin-top: 15px;
 }
 
 .placeholdRed::placeholder {
-    color: var(--red-color);
-    opacity: 1; /* Firefox */
+  color: var(--red-color);
+  opacity: 1; /* Firefox */
 }
-  
-.placeholdRed:-ms-input-placeholder { 
-    /* for Internet Explorer 10-11 */
-   color: var(--red-color);
+
+.placeholdRed:-ms-input-placeholder {
+  /* for Internet Explorer 10-11 */
+  color: var(--red-color);
 }
-  
-.placeholdRed::-ms-input-placeholder { 
-    /* for Microsoft Edge */
-   color: var(--red-color);
+
+.placeholdRed::-ms-input-placeholder {
+  /* for Microsoft Edge */
+  color: var(--red-color);
 }
 
 .footer-text {
-    color: var(--black-color);
-    margin-top: -30px;
-    padding-bottom: 0px;
+  color: var(--black-color);
+  margin-top: -30px;
+  padding-bottom: 0px;
 }
-  
+
 .span-name {
-    color: var(--pink-b-color);
+  color: var(--pink-b-color);
 }
-  
+
 .span-name:hover {
-    color: var(--light-blue-color);
-    cursor: pointer;
+  color: var(--light-blue-color);
+  cursor: pointer;
 }
-  
+
 .span-name-odin {
-    color: var(--dark-green-color);
+  color: var(--dark-green-color);
 }
-  
+
 .span-name-odin:hover {
-    color: var(--black-color);
+  color: var(--black-color);
 }
 
 .fa.fa-github,
 .fa.fa-github ~ span {
-    font-size: 18px;
-    padding-right: 2px;
-    color: #072863;
+  font-size: 18px;
+  padding-right: 2px;
+  color: #072863;
 }
-  
+
 a .fa.fa-github:hover,
-  .fa.fa-github ~ span:hover {
-    font-size: 20px;
-    padding-right: 2px;
-    color: var(--black-color);
+.fa.fa-github ~ span:hover {
+  font-size: 20px;
+  padding-right: 2px;
+  color: var(--black-color);
 }
