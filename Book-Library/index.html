@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>~Your yB*Library~</title>
-    <meta name="author" content="">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
       href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"
       rel="stylesheet"
@@ -24,81 +24,128 @@
       href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,300;0,400;1,400&family=Unbounded:wght@300;400&display=swap"
       rel="stylesheet"
     />
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" />
   </head>
-<body>
+  <body>
     <h1 id="main-title">YOUR yB*Library</h1>
-<button id="newBook">+ ADD y*Book</button>
+    <button id="newBook">+ ADD y*Book</button>
 
-<!-- The Modal -->
-<div id="bookForm" class="modal">
+    <!-- The Modal -->
+    <main>
+      <div id="bookForm" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <form id="form">
+            <label for="title" class="modal-text">y*Book Title:</label><br />
+            <input
+              type="text"
+              id="title"
+              name="title"
+              placeholder="UNIX and Linux System Administration Handbook"
+              required
+            /><br />
+            <label for="author" class="modal-text">b*Author:</label><br />
+            <input
+              type="text"
+              id="author"
+              name="author"
+              placeholder="Evi Nemeth"
+            /><br />
+            <label for="cover" class="modal-text"
+              >b*Link to Cover [optional]:</label
+            ><br />
+            <input
+              type="text"
+              id="cover"
+              name="cover"
+              placeholder="https://m.media-amazon.com/images/I/61ydSUheYOL._SX383_BO1,204,203,200_.jpg"
+            /><br />
+            <label for="pages" class="modal-text">№ of pages:</label><br />
+            <input
+              type="number"
+              id="pages"
+              name="pages"
+              placeholder="1232"
+            /><br />
+            <label class="modal-text">Have you finished y*Book?</label><br />
+            <input
+              type="radio"
+              id="read"
+              class="radioBtn"
+              name="read"
+              value="Read"
+            />
+            <label for="read" class="modal-text radioText radioBtn">+ Yes</label
+            ><br />
+            <input
+              type="radio"
+              id="unread"
+              class="radioBtn"
+              name="read"
+              value="Unfinished"
+              checked="checked"
+            />
+            <label for="unread" class="modal-text radioText"
+              >- No, not yet</label
+            ><br />
+            <input
+              type="button"
+              id="submit"
+              name="submit"
+              value="ADD y*Book"
+              onclick="addBookToLibrary()"
+            />
+          </form>
+        </div>
+      </div>
+      <section>
+        <div id="library">
+          <!-- Here Must Be The ORIGINAL `card templates` for READ & UNREAD y*Library Books -->
+          <!--<div id="card" class="card">
+            <img class="trash" src="./assets/icons/.." />
+            <img class="cover" src="https://" />
 
-  <!-- Modal content -->
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <form id="form">
-      <label for="title" class='modal-text'>y*Book Title:</label><br>
-      <input type="text" id="title" name="title" placeholder="UNIX and Linux System Administration Handbook" required/><br>
-      <label for="author" class='modal-text'>b*Author:</label><br>
-      <input type="text" id="author" name="author" placeholder="Evi Nemeth"><br>
-      <label for="cover" class='modal-text'>b*Link to Cover [optional]:</label><br>
-      <input type="text" id="cover" name="cover" placeholder="https://m.media-amazon.com/images/I/61ydSUheYOL._SX383_BO1,204,203,200_.jpg"><br>
-      <label for="pages" class='modal-text'>№ of pages:</label><br>
-      <input type="number" id="pages" name="pages" placeholder="1232"><br>
-      <label class='modal-text'>Have you finished y*Book?</label><br>
-      <input type="radio" id="read" class='radioBtn' name="read" value="Read">
-      <label for="read" class='modal-text radioText radioBtn'>+ Yes</label><br>
-      <input type="radio" id="unread" class='radioBtn' name="read" value="Unfinished" checked='checked'>
-      <label for="unread" class='modal-text radioText'>- No, not yet</label><br>
-      <input type="button" id="submit" name="submit" value="ADD y*Book" onclick="addBookToLibrary()">
-    </form>
-  </div>
-
-</div>
-<div id="library">
-
-  <!-- Here Must Be The ORIGINAL `card templates` for READ & UNREAD y*Library Books -->
-  <!-- <div id="card" class="card">
-    <img class="trash" src="./assets/icons/..">
-    <img class="cover" src="https://">
-    
-      <h3 class="bookTitle">Title</h3>
-      <h4>Author</h4>
-      <h4>Pages</h4>
-      <button class='unread'>
-      <h4 class="readText">Unfinished</h4><img class="readCheck" src="./assets/icons/..">
-      </button>
-  </div>
-<div id="card" class="card">
-  <img class="trash" src="./assets/icons/..">
-  <img class="cover" src="https://">
-  <h3 class="bookTitle">Title</h3>
-  <h4>Author</h4>
-  <h4>Pages</h4>
-  <button class='read'>
-  <h4 class="readText">Read </h4><img class="readCheck" src="tick-icon.png">
-  </button>
-</div> -->
-
-</div>
-<footer>
-    <p class="footer-text">Copyright © TEZv 2023</p>
-    <br />
-    <p class="footer-text">
-      Made special for
-      <a
-        class="span-name-odin"
-        href="https://www.theodinproject.com/lessons/node-path-javascript-library"
-      >
-        The Odin Project
-      </a>
-      by
-      <a href="https://github.com/TEZv" target="_blank">
-        <span class="fa fa-github fa-2x"></span><span>TEZv</span> 
-      </a> / Friday 27 Jan
-    </p>
-  </footer>
-</body>
-<script src="js/script.js"></script>
-</body>
+            <h3 class="bookTitle">Title</h3>
+            <h4>Author</h4>
+            <h4>Pages</h4>
+            <button class="unread">
+              <h4 class="readText">Unfinished</h4>
+              <img class="readCheck" src="./assets/icons/.." />
+            </button>
+          </div>
+          <div id="card" class="card">
+            <img class="trash" src="./assets/icons/.." />
+            <img class="cover" src="https://" />
+            <h3 class="bookTitle">Title</h3>
+            <h4>Author</h4>
+            <h4>Pages</h4>
+            <button class="read">
+              <h4 class="readText">Read</h4>
+              <img class="readCheck" src="tick-icon.png" />
+            </button>
+          </div>-->
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p class="footer-text">Copyright © TEZv 2023</p>
+      <br />
+      <p class="footer-text">
+        Made special for
+        <a
+          class="span-name-odin"
+          href="https://www.theodinproject.com/lessons/node-path-javascript-library"
+        >
+          The Odin Project
+        </a>
+        by
+        <a href="https://github.com/TEZv" target="_blank">
+          <span class="fa fa-github fa-2x"></span><span>TEZv</span>
+        </a>
+        / Friday 27 Jan
+      </p>
+    </footer>
+    <script src="js/script.js"></script>
+  </body>
 </html>
