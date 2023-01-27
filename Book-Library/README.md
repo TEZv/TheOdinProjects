@@ -12,4 +12,4 @@ Here's a project about simple Book library)
 
 ## Thanks for your attention.
 
-See live: <a href="https://tezv-book-library.netlify.app/">here:)</a>.
+See live: <a href="https://tezv-book-library.netlify.app">here:)</a>.
