@@ -1,19 +1,207 @@
 :root {
-    --light-pink-color: rgba(231, 49, 49, 0.514);
-    --pink-color: rgb(255, 204, 204);
+    --light-pink-color: rgba(59, 14, 14, 0.514);
+    --brown-color: #221818;
+    --pink-color: rgb(100, 66, 66);
     --dark-green-color: rgb(31, 75, 75);
     --light-green-color: rgba(83, 155, 155, 0.795);
     --black-color: #000000;
-    --yellow-color: rgb(190, 58, 10);
+    --red-color: rgb(128, 54, 28);
     --light-pink-b-color: #ee447d;
     --pink-b-color: #ff3377;
     --light-blue-color: #2d68c7;
     --dark-blue-color: #3882f6;
     --soft-blue-color: #75aaff;
   }
+  #library {
+    margin:auto;
+    width: 80%;
+    display:flex;
+    flex-flow: row wrap;
+}
+
+.card {
+    font-family: monospace, monospace;
+    background-color: var(--soft-blue-color);
+    width: 200px;
+    /* height: 350px; NO HEIGHT MEANS THEY WILL AUTOMATICALLY FIT ENTERED TEXT */
+    border-radius: 10px;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    overflow-wrap: break-word;
+    color: var(--brown-color);
+    border: 2px solid var(--dark-green-color);
+    box-shadow: 10px 10px 5px var(--pink-b-color);
+    padding-bottom: 20px;
+}
+
+#main-title {
+    text-align: center;
+    font-family: monospace, monospace;
+    margin: 0 0 20px 0;
+    padding: 30px;
+    background-color: var(--light-blue-color);
+    color: var(--black-color);
+    font-size: 40px;
+    border-radius: 5px;
+}
+
+.unread {
+    border-radius: 5px;
+    font-family: monospace;
+    font-size: 16px;
+    border: 2px solid var(--soft-blue-color);
+    background-color: var(--light-blue-color);
+    color: darkgray;
+    outline: none;
+    cursor: pointer;
+}
+
+.read {
+    border-radius: 5px;
+    font-family: monospace;
+    font-size: 16px;
+    border: 2px solid grey;
+    background-color: #dcdcdd;
+    color: #363535;
+    outline: none;
+    cursor: pointer;
+}
+
+#newBook {
+    margin: auto;
+    display: flex;
+    margin-bottom: 40px;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 7px;
+    border-radius: 5px;
+    border: solid 2px #1c77c3;
+    color: rgb(44, 42, 42);
+    box-shadow: 1px 3px 3px #aaaaaa;
+}
+
+.cover {
+    width: 150px;
+    margin-top: 10px;
+    margin:auto;
+}
+
+.trash {
+    width: 23px;
+    display:block;
+    margin-left: 175px;
+    cursor: pointer;
+}
+
+.readCheck {
+    width: 15px;
+    cursor: pointer;
+}
+
+h3, h4 {
+    margin: 5px;
+}
+
+.bookTitle {
+    margin-top: 0;
+}
+
+.readText {
+    display:inline;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
   
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 15px 20px 20px 20px;
+    border: 1px solid #888;
+    width: 30%;
+    border-radius: 10px;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    margin-left: 95%;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .modal-text {
+    font-family: monospace, monospace;
+  }
+
+  input[type=text], select, input[type=number] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+
+  #submit {
+    width: 100%;
+    background-color: #1c77c3;
+    color: white;
+    padding: 14px 20px;
+    margin: 25px 0 10px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 20px;
+  }
+
+  .radioText {
+      margin: 10px 0;
+  }
+
+  .radioBtn {
+      margin-top: 15px;
+  }
+
+  .placeholdRed::placeholder {
+    color: red;
+    opacity: 1; /* Firefox */
+  }
+  
+  .placeholdRed:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: red;
+  }
+  
+  .placeholdRed::-ms-input-placeholder { /* Microsoft Edge */
+   color: red;
+  }
+
+
+
   body {
-    background: linear-gradient(to bottom, var(--pink-color), var(--light-pink-color));
+    background: linear-gradient(45deg, var(--pink-color), var(--light-pink-color), var(--red-color));
   }
   a {
     text-decoration: none;
@@ -41,20 +229,22 @@
   }
   
   .span-name-odin {
-    color: var(--soft-blue-color);
+    color: var(--dark-green-color);
   }
   
   .span-name-odin:hover {
-    color: var(--pink-b-color);
+    color: var(--black-color);
   }
 
-  .fa.fa-github {
+  .fa.fa-github,
+  .fa.fa-github ~ span {
     font-size: 18px;
     padding-right: 2px;
+    color: #072863;
   }
   
   a .fa.fa-github:hover,
- .fa.fa-github ~ span:hover {
+  .fa.fa-github ~ span:hover {
     font-size: 20px;
     padding-right: 2px;
     color: var(--black-color);
