@@ -1,0 +1,59 @@
+:root {
+    --light-pink-color: rgba(255, 152, 152, 0.514);
+    --pink-color: rgb(255, 204, 204);
+    --dark-green-color: rgb(31, 75, 75);
+    --light-green-color: rgba(83, 155, 155, 0.795);
+    --black-color: #000000;
+    --yellow-color: rgb(190, 58, 10);
+    --light-pink-b-color: #ee447d;
+    --pink-b-color: #ff3377;
+    --light-blue-color: #2d68c7;
+    --dark-blue-color: #3882f6;
+    --soft-blue-color: #75aaff;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+
+  footer {
+    padding: 40px;
+    background-color: var(--dark-green-color);
+    text-align: center;
+    padding-bottom: 1px;
+  }
+  
+  .footer-text {
+    color: var(--black-color);
+    margin-top: -30px;
+    padding-bottom: 0px;
+  }
+  
+  .span-name {
+    color: var(--pink-b-color);
+  }
+  
+  .span-name:hover {
+    color: var(--light-blue-color);
+    cursor: pointer;
+  }
+  
+  .span-name-odin {
+    color: var(--soft-blue-color);
+  }
+  
+  .span-name-odin:hover {
+    color: var(--pink-b-color);
+  }
+
+  .fa.fa-github {
+    font-size: 18px;
+    padding-right: 2px;
+  }
+  
+  a .fa.fa-github:hover,
+ .fa.fa-github ~ span:hover {
+    font-size: 20px;
+    padding-right: 2px;
+    color: var(--black-color);
+  }
