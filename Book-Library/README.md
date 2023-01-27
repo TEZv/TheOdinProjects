@@ -1,8 +1,8 @@
 ## TheOdinProject-Book-Library
 
-Here's a project about simple book library)
+Here's a project about simple Book library)
 <b>yB*Library </b> - is your Virtual Book LocalStorage.
-`Feel free to Use`
+`Feel free to Use as you Wish`
 
 # Technologies Used (TECH Stack)
 
