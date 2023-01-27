@@ -1,5 +1,5 @@
 :root {
-    --light-pink-color: rgba(255, 152, 152, 0.514);
+    --light-pink-color: rgba(231, 49, 49, 0.514);
     --pink-color: rgb(255, 204, 204);
     --dark-green-color: rgb(31, 75, 75);
     --light-green-color: rgba(83, 155, 155, 0.795);
@@ -12,13 +12,15 @@
     --soft-blue-color: #75aaff;
   }
   
+  body {
+    background: linear-gradient(to bottom, var(--pink-color), var(--light-pink-color));
+  }
   a {
     text-decoration: none;
   }
 
   footer {
     padding: 40px;
-    background-color: var(--dark-green-color);
     text-align: center;
     padding-bottom: 1px;
   }
