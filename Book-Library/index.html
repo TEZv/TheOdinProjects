@@ -27,6 +27,61 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
 <body>
+    <h1 id="main-title">YOUR yB*Library</h1>
+<button id="newBook">+ ADD y*Book</button>
+
+<!-- The Modal -->
+<div id="bookForm" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <form id="form">
+      <label for="title" class='modal-text'>y*Book Title:</label><br>
+      <input type="text" id="title" name="title" placeholder="The Linux" required/><br>
+      <label for="author" class='modal-text'>b*Author:</label><br>
+      <input type="text" id="author" name="author" placeholder="J.R.R.Tolkein"><br>
+      <label for="cover" class='modal-text'>b*Link to Cover [optional]:</label><br>
+      <input type="text" id="cover" name="cover" placeholder="https://www.cover-art.com"><br>
+      <label for="pages" class='modal-text'>№ of pages:</label><br>
+      <input type="number" id="pages" name="pages" placeholder="42"><br>
+      <label class='modal-text'>Have you finished y*Book?</label><br>
+      <input type="radio" id="read" class='radioBtn' name="read" value="Read">
+      <label for="read" class='modal-text radioText radioBtn'>+ Yes</label><br>
+      <input type="radio" id="unread" class='radioBtn' name="read" value="Unfinished" checked='checked'>
+      <label for="unread" class='modal-text radioText'>- No, not yet</label><br>
+      <input type="button" id="submit" name="submit" value="Add Book" onclick="addBookToLibrary()">
+    </form>
+  </div>
+
+</div>
+<div id="library">
+
+  <!-- Here Must Be The ORIGINAL `card templates` for READ & UNREAD y*Library Books -->
+  <!-- <div id="card" class="card">
+    <img class="trash" src="./assets/icons/..">
+    <img class="cover" src="https://">
     
+      <h3 class="bookTitle">Title</h3>
+      <h4>Author</h4>
+      <h4>Pages</h4>
+      <button class='unread'>
+      <h4 class="readText">Unfinished</h4><img class="readCheck" src="./assets/icons/..">
+      </button>
+  </div>
+<div id="card" class="card">
+  <img class="trash" src="./assets/icons/..">
+  <img class="cover" src="https://">
+  <h3 class="bookTitle">Title</h3>
+  <h4>Author</h4>
+  <h4>Pages</h4>
+  <button class='read'>
+  <h4 class="readText">Read </h4><img class="readCheck" src="tick-icon.png">
+  </button>
+</div> -->
+
+</div>
+</body>
+<script src="js/script.js"></script>
 </body>
 </html>
