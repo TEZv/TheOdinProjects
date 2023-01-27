@@ -53,20 +53,20 @@ function addBookToLibrary() {
     // display errors if user tries to submit empty entry
     if (title.value == "") 
     {
-        title.placeholder = "Please enter a title";
+        title.placeholder = "Please enter a b*Title";
         title.classList.add("placeholdRed");
         allFieldsValid = false;
     }
     if (author.value == "") 
     {
-        author.placeholder = "Please enter an author";
+        author.placeholder = "Please enter a b*Author";
         author.classList.add("placeholdRed");
         allFieldsValid = false;
     }
     if (pages.value == "" || pages.value < 0) 
     {
         pages.value = "";
-        pages.placeholder = "Please enter a positive number";
+        pages.placeholder = "Please enter a positive b*Pages number";
         pages.classList.add("placeholdRed");
         allFieldsValid = false;
     }
@@ -87,11 +87,11 @@ function addBookToLibrary() {
 }
 
 function resetPlaceholders(title, author, pages) {
-    title.placeholder = "The Hobbit";
+    title.placeholder = "UNIX and Linux System Administration Handbook";
     title.classList.remove("placeholdRed");
-    author.placeholder = "J.R.R Tolkein";
+    author.placeholder = "Evi Nemeth";
     author.classList.remove("placeholdRed");
-    pages.placeholder = "42";
+    pages.placeholder = "1232";
     pages.classList.remove("placeholdRed");
 }
 
@@ -110,13 +110,13 @@ function changeReadStatus(icon, text, button, index) {
     toggleReadStatus(myLibrary[index]);
     populateStorage();
     // update icons, text and button class of change button
-    if (icon.src.includes("/tick-icon.png")) {
-        icon.src = "delete-icon2.png";
+    if (icon.src.includes("/assets/icons/accept_mark.svg")) {
+        icon.src = "assets/icons/delete.svg";
         button.classList.remove('read');
         button.classList.add('unread');
         text.textContent = "Unfinished";
-    } else if (icon.src.includes("/delete-icon2.png")) {
-        icon.src = "tick-icon.png";
+    } else if (icon.src.includes("/assets/icons/delete.svg")) {
+        icon.src = "assets/icons/accept_mark.svg";
         button.classList.remove('unread');
         button.classList.add('read');
         text.textContent = "Read";
@@ -144,7 +144,7 @@ function createCard(book, index) {
     // add delete button
     const deleteBtn = document.createElement("img");
     deleteBtn.classList.add("trash");
-    deleteBtn.src = "delete-icon.png";
+    deleteBtn.src = "assets/icons/delete_alarm.svg";
     deleteBtn.addEventListener("click", () => deleteFromLibrary(index))
     card.appendChild(deleteBtn);
 
@@ -152,13 +152,13 @@ function createCard(book, index) {
     const cover = document.createElement("img");
     cover.classList.add("cover");
     if (!(book.cover)) {
-    cover.src = "default_book_cover.jpg";
+    cover.src = "assets/img/book_and_person_summer.svg";
     } else {
         cover.src = book.cover;
     }
     // if cover image throws an error when loading, replace with stock image
     cover.onerror = function() {
-        cover.src = "default_book_cover.jpg";
+        cover.src = "assets/img/book_and_person_winter.svg";
     }
     card.appendChild(cover);
 
@@ -188,10 +188,10 @@ function createCard(book, index) {
     const readIcon = document.createElement("img");
     readIcon.classList.add("readCheck");
     if (book.read == "Read") {
-        readIcon.src = "tick-icon.png";
+        readIcon.src = "assets/icons/accept_mark.svg";
         readButton.classList.add('read');
     } else {
-        readIcon.src = "delete-icon2.png";
+        readIcon.src = "assets/icons/delete.svg";
         readButton.classList.add('unread');
     }
     readButton.appendChild(readStatus);
