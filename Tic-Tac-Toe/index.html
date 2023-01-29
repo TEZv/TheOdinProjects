@@ -1,73 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style/style.css" />
     <title>y*T3/TIC-TAC-TOE</title>
-</head>
-<body>
-    <h1>&#60;img src="<span class="right">" alt=""&#62;</span></h1>
-        <svg viewBox="0 0 1740 600">
-            <symbol id="s-text">
-              <text text-anchor="middle" x="760px" y="84%">TIC </text>
-              <text text-anchor="middle" x="70%" y="100%">TAC </text>
-              <text text-anchor="middle" x="1580px" y="80%">TOE </text>
-              
-            </symbol>
-          
-            <g class = "g-ants">
-              <use xlink:href="#s-text" class="text-copy"></use>
-              <use xlink:href="#s-text" class="text-copy"></use>
-              <use xlink:href="#s-text" class="text-copy"></use>
-              <use xlink:href="#s-text" class="text-copy"></use>
-              <use xlink:href="#s-text" class="text-copy"></use>
-            </g>
-          </svg>
-		<div class="game-wrapper">
-			<div class="game-controls">
-				<form action="#" class="game-form" id="game-form">
-					<div class="input-wrapper">
-						<label for="player1-name">Your y*Name:</label>
-						<input
-							type="text"
-							id="player-name"
-							name="player-name"
-						/>
-					</div>
-					<div class="input-wrapper radio-wrapper">
-						<label>Your y*Symbol:</label>
-						<div class="radio">
-							<div class="pointer">
-								<input
-									type="radio"
-									id="player-radio-x"
-									name="player-symbol"
-									value="X"
-									checked
-								/>
-								<label for="player-radio-x">X</label>
-							</div>
-							<div class="pointer">
-								<input
-									type="radio"
-									id="player-radio-o"
-									name="player-symbol"
-									value="O"
-								/>
-								<label for="player-radio-o">O</label>
-							</div>
-						</div>
-					</div>
-					<div class="input-wrapper">
-						<label for="difficulty">Difficulty: </label>
-						<select name="difficulty" id="difficulty">
-							<option value="easy">Easy</option>
-							<option value="medium">Medium</option>
-							<option value="hard">Hard(unbeatable)</option>
-						</select>
-					</div>
-				</form>
-</body>
+  </head>
+
+  <body>
+    <h1 class="typed">
+      &#60;img src="<span class="right svg-anim">" alt=""&#62;</span>
+    </h1>
+    <svg viewBox="0 0 1740 600" class="svg-anim">
+      <symbol id="s-text">
+        <text text-anchor="middle" x="760px" y="84%">TIC</text>
+        <text text-anchor="middle" x="70%" y="100%">TAC</text>
+        <text text-anchor="middle" x="1580px" y="80%">TOE</text>
+      </symbol>
+
+      <g class="g-ants">
+        <use xlink:href="#s-text" class="text-copy"></use>
+        <use xlink:href="#s-text" class="text-copy"></use>
+        <use xlink:href="#s-text" class="text-copy"></use>
+        <use xlink:href="#s-text" class="text-copy"></use>
+        <use xlink:href="#s-text" class="text-copy"></use>
+      </g>
+    </svg>
+    <div class="game-wrapper">
+      <div class="game-controls">
+        <form action="#" class="game-form" id="game-form">
+          <div class="input-wrapper">
+            <label for="player1-name">Your y*Name:</label>
+            <input type="text" id="player-name" name="player-name" />
+          </div>
+          <div class="input-wrapper radio-wrapper">
+            <label>Your y*Symbol:</label>
+            <div class="radio">
+              <div class="pointer">
+                <input
+                  type="radio"
+                  id="player-radio-x"
+                  name="player-symbol"
+                  value="X"
+                  checked
+                />
+                <label for="player-radio-x">X</label>
+              </div>
+              <div class="pointer">
+                <input
+                  type="radio"
+                  id="player-radio-o"
+                  name="player-symbol"
+                  value="O"
+                />
+                <label for="player-radio-o">O</label>
+              </div>
+            </div>
+          </div>
+          <div class="input-wrapper" style="width: 200px">
+            <label for="difficulty">ChatGPT-3 Mode: </label>
+            <select name="difficulty" id="difficulty">
+              <option value="" selected disabled hidden>
+                0\1|0/1\0|1/0\1|
+              </option>
+              <option value="easy">S--m/Od\E</option>
+              <option value="medium">M--m/Od\E</option>
+              <option value="hard">L--m/Od\E</option>
+            </select>
+          </div>
+        </form>
+        <div class="game">
+          <div class="tile" data-tile-id="0"></div>
+          <div class="tile" data-tile-id="1"></div>
+          <div class="tile" data-tile-id="2"></div>
+          <div class="tile" data-tile-id="3"></div>
+          <div class="tile" data-tile-id="4"></div>
+          <div class="tile" data-tile-id="5"></div>
+          <div class="tile" data-tile-id="6"></div>
+          <div class="tile" data-tile-id="7"></div>
+          <div class="tile" data-tile-id="8"></div>
+        </div>
+      </div>
+    </div>
+    <div class="output"></div>
+    <footer>
+      <p>Less Smart [S] - random moves;</p>
+      <p>Almost Smart [M] - checks for one-move wins or loses;</p>
+      <p>
+        Smart [L] - always makes the best move based on its value (if a few
+        moves have the highest value, one of them is chosen randomly).
+      </p>
+    </footer>
+
+    <script src="./js/script.js"></script>
+  </body>
 </html>
