@@ -18,6 +18,25 @@
     --dark-blue-color: rgba(22, 120, 165, 0.74);
 }
 
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+.typed {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  animation: typing;
+  animation-duration: 1.5s;
+  animation-timing-function: steps(30, end);
+  animation-fill-mode: forwards;
+}
+
+body {
+  background: linear-gradient(145deg, var(--dark-grey-color), var(--purple-color));
+}
+
 .right {
     position: relative;
     left: 300px;
@@ -43,13 +62,13 @@ svg {
 }
 
 .text-copy:nth-child(1){
-  stroke: #4D163D;
-  animation-delay: -1;
+  stroke: var(--black-color);
+  animation-delay: -1s;
 }
 
 .text-copy:nth-child(2){
   stroke: #840037;
-  animation-delay: -2s;
+  animation-delay: -3s;
 }
 
 .text-copy:nth-child(3){
