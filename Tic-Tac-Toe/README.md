@@ -8,11 +8,11 @@ Here's a project about simple x/o game:)<br>
 
 - [x] HTML `(wz Prettier)`;
 - [x] CSS `(wz Prettier, ++Keyframes animation, ++Flex display, ++Styling)`;
-- JavaScript
-  -IIFEs, 
-  -++Minimax AI algorithm,
-  -++Module Design Pattern,
-    ++Revealing Module Pattern, ++Factory Functions, ++The for() loop and if() statements, ++DOM manipulation, ++Event handlers, ++Arrays`;
+- JavaScript:
+  - IIFEs, 
+  - Minimax AI algorithm,
+  - Module Design Pattern,
+  - Revealing Module Pattern, ++Factory Functions, ++The for() loop and if() statements, ++DOM manipulation, ++Event handlers, ++Arrays`;
 - [x] Problem Solving `(Plan and Design logic of organizing code && problems in plain English)`.
 
 # Description and Main Idea
