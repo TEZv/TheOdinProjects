@@ -10,7 +10,10 @@ Here's a project about simple x/o game:)<br>
 - [x] CSS `(wz Prettier, ++Keyframes animation, ++Flex display, ++Styling)`;
 - [x] JavaScript
    <br>
-`++IIFEs, ++Minimax AI algorithm, ++Module Design Pattern, ++Revealing Module Pattern, ++Factory Functions, ++The for() loop and if() statements, ++DOM manipulation, ++Event handlers, ++Arrays`;
+    -`++IIFEs`, 
+    -`++Minimax AI algorithm,` 
+    -`++Module Design Pattern,` 
+    ++Revealing Module Pattern, ++Factory Functions, ++The for() loop and if() statements, ++DOM manipulation, ++Event handlers, ++Arrays`;
 - [x] Problem Solving `(Plan and Design logic of organizing code && problems in plain English)`.
 
 # Description and Main Idea
