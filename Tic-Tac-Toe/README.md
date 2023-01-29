@@ -28,7 +28,6 @@ The game mechanic is controlled by the object gameBoard with:
 -- +The Smart(L), Almost Smart(M) or Less Smart(S) `ChatGPT-3` can play against Smart, Almost Smart or not-Smart `ChatGPT-3.`<br>
 <br>
 <b>P . S .</b><br>
-<br>
 
 - Less Smart (S) - random moves;
 - Almost Smart(M) - checks for one-move wins or loses;
@@ -48,10 +47,10 @@ The game mechanic is controlled by the object gameBoard with:
 5. Build the logic that checks for when the game is over! Should check for 3-in-a-row and a tie.
 6. Clean up the interface to allow players to put in their names, include a button to start/restart the game and add a display element that congratulates the winning player!
 
-## `HAPPY GAMING AND CODING.`
+## `HAPPY CODING AND GAMING.`
 
 
 # ALSO 
 
 LIVE is available: <a href="">here:)</a>, just click it.
-The ASSIGNMENT <a href="https://www.theodinproject.com/paths/full-stack-javascript/courses/javascript/lessons/tic-tac-toe">here:)</a>
+The ASSIGNMENT is <a href="https://www.theodinproject.com/paths/full-stack-javascript/courses/javascript/lessons/tic-tac-toe">here:)</a>
