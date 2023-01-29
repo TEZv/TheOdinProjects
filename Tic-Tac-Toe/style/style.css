@@ -28,9 +28,30 @@
   white-space: nowrap;
   width: 0;
   animation: typing;
-  animation-duration: 1.5s;
-  animation-timing-function: steps(30, end);
+  animation-duration: 16.5s;
+  animation-timing-function: steps(180, end);
   animation-fill-mode: forwards;
+}
+
+@keyframes anim-svg {
+  0% {
+    opacity: 0;
+    transform: rotateY(360deg);
+  }
+  50% {
+    opacity: 0.9;
+    transform: rotateY(720deg);
+  }
+  100% {
+    /* animate nothing to pause animation at the end */
+    opacity: 0.9;
+    transform: rotateX(720deg);
+  }
+}
+
+.svg-anim {
+  animation: 35s anim-svg ease-in-out;
+  
 }
 
 body {
