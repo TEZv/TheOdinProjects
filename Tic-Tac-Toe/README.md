@@ -48,6 +48,13 @@ The game mechanic is controlled by the object gameBoard with:
 <br>
 [Minimax is a function where the computer will simulate all future moves for the user and itself to determine the best possible move. The <a href="https://en.wikipedia.org/wiki/Minimax">here:)</a> wikipedia for `Minimax` contains pseudocode that took me a while to completely understand. This function is recursive and will continue to run until a winner is decided and then returns a score.]
 
+[`The function works in this perspective:` put a move down, see if it is a terminal value of a win by calling `Minimax`.<br>
+/Minimax\ has a score associated with it.<br><br>
+If it's a score, the board is marked with the move. If no score, then Minimax leaps to a section for the opposite player, where upon the board is marked, minimax is called upon itself and it's scored.<br><br>
+
+If there is no score, then it goes to a section for the current player, a mark is made and the board scored.
+
+When there is a terminal state, `it generates a score`, and the code can proceed past minimax rather than being called on itself repeatedly. Those scores are put in order to determine what is the optimal move at every step of the game.]
 
 # The Odin Project ASSIGNMENT
 
