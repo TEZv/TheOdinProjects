@@ -8,6 +8,50 @@
     <title>y*T3/TIC-TAC-TOE</title>
 </head>
 <body>
-    
+    <h1>Tic-Tac-Toe</h1>
+		<div class="game-wrapper">
+			<div class="game-controls">
+				<form action="#" class="game-form" id="game-form">
+					<div class="input-wrapper">
+						<label for="player1-name">Your y*Name:</label>
+						<input
+							type="text"
+							id="player-name"
+							name="player-name"
+						/>
+					</div>
+					<div class="input-wrapper radio-wrapper">
+						<label>Your symbol:</label>
+						<div class="radio">
+							<div class="pointer">
+								<input
+									type="radio"
+									id="player-radio-x"
+									name="player-symbol"
+									value="X"
+									checked
+								/>
+								<label for="player-radio-x">X</label>
+							</div>
+							<div class="pointer">
+								<input
+									type="radio"
+									id="player-radio-o"
+									name="player-symbol"
+									value="O"
+								/>
+								<label for="player-radio-o">O</label>
+							</div>
+						</div>
+					</div>
+					<div class="input-wrapper">
+						<label for="difficulty">Difficulty: </label>
+						<select name="difficulty" id="difficulty">
+							<option value="easy">Easy</option>
+							<option value="medium">Medium</option>
+							<option value="hard">Hard(unbeatable)</option>
+						</select>
+					</div>
+				</form>
 </body>
 </html>
