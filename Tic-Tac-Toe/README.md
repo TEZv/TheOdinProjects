@@ -26,8 +26,8 @@ The game mechanic is controlled by the object gameBoard with:
 -- +The USER can play against the Smart(L), Almost Smart(M) or Less Smart(S) `ChatGPT-3.`<br>
 -- +The Smart(L), Almost Smart(M) or Less Smart(S) `ChatGPT-3` can play against Smart, Almost Smart or not-Smart `ChatGPT-3.`
 
-## `HAPPY GAMING.`
+## `HAPPY GAMING AND CODING.`
 
 # ALSO 
 
-See live: <a href="">here:)</a>.
+LIVE is available: <a href="">here:)</a>, just click it.
