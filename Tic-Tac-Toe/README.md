@@ -11,7 +11,7 @@ Here's a project about simple x/o game:)<br>
 - [x] JavaScript
    <br>
 `++IIFEs, ++Minimax AI algorithm, ++Module Design Pattern, ++Revealing Module Pattern, ++Factory Functions, ++The for() loop and if() statements, ++DOM manipulation, ++Event handlers, ++Arrays`;
-- [x] Problem Solving `(Plan and design logic of organizing code and problems in plain English)`
+- [x] Problem Solving `(Plan and design logic of organizing code and problems in plain English)`.
 
 # Description and Main Idea
 The game mechanic is controlled by the object gameBoard with: 
