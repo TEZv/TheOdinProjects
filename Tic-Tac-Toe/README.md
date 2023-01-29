@@ -4,7 +4,7 @@ Here's a project about simple x/o game:)<br>
 # <b>y*T3</b> - is your Virtual x/o Game that you know from the childhood.<br>
 `Feel free to Use as you Wish`
 
-# Technologies Used (TECH Stack)
+# Technologies Used / Viewed (TECH Stack)
 
 - [x] HTML `(wz Prettier)`;
 - [x] CSS `(wz Prettier, ++Keyframes animation, ++Flex display, ++Styling)`;
