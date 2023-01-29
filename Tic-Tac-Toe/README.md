@@ -9,7 +9,10 @@ Here's a project about simple x/o game:)<br>
 - [x] HTML 
   - `(wz Prettier)`;
 - [x] CSS 
-  - `(wz Prettier, ++Keyframes animation, ++Flex display, ++Styling)`;
+  - `(wz Prettier)`;
+  - ++`Keyframes animation`, 
+  - ++`Flex display`, 
+  - ++`Styling`;
 - [x] JavaScript:
   - ++`IIFEs`, 
   - ++`Minimax AI algorithm`,
