@@ -9,7 +9,7 @@ Here's a project about simple x/o game:)<br>
 - [x] HTML `(wz Prettier)`;
 - [x] CSS `(wz Prettier)`;
 - [x] JavaScript
-`(*IIFEs, *Minimax AI algorithm, *Module Design Pattern, *Revealing Module Pattern, *Factory Functions, *The for() loop and if() statements)`;
+   -`(*IIFEs, *Minimax AI algorithm, *Module Design Pattern, *Revealing Module Pattern, *Factory Functions, *The for() loop and if() statements)`;
 
 # Description and Main Idea
 The game mechanic is controlled by the object gameBoard with: 
