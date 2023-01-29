@@ -28,8 +28,8 @@
   white-space: nowrap;
   width: 0;
   animation: typing;
-  animation-duration: 16.5s;
-  animation-timing-function: steps(180, end);
+  animation-duration: 26.5s;
+  animation-timing-function: steps(280, end);
   animation-fill-mode: forwards;
 }
 
@@ -56,6 +56,7 @@
 
 body {
   background: linear-gradient(145deg, var(--dark-grey-color), var(--purple-color));
+  color: #fff;
 }
 
 .right {
@@ -112,6 +113,18 @@ svg {
 }
 
 .svg-right {
-    position: relative;
-    right: 1000px;
+  position: relative;
+  right: 1000px;
+}
+
+select {
+  padding: 6px 10px;
+  background: var(--purple-color);
+  color: #fff;
+  font-size: 1rem;
+  border-radius: 20px;
+  border: solid 2px #00bfff;
+}
+option {
+  border-radius: 20px;
 }
