@@ -28,9 +28,10 @@ Here's a project about simple x/o game:)<br>
 
 # Description and Main Idea
 The game mechanic is controlled by the object gameBoard with: 
-- The Array `emptySpots = []` to keep track of the game board;
+- The `gameBoard = []` and `lanes = []` Arrays to keep track of the game board;
 - Functions which provides:
-  - players take turn to make move;
+  - 1/2 players take turn to make move;
+  - ChatGPT-3 take turn to make move;
   - update game board display;
   - check for win conditions.
 
