@@ -25,8 +25,14 @@ The game mechanic is controlled by the object gameBoard with:
 -- +It's a ~simple~ `Tic Tac Toe` game. (simple as for the /USER/ but for the developer it's really took awhile)<br>
 -- +The USER can play with `a friend;`<br>
 -- +The USER can play against the Smart(L), Almost Smart(M) or Less Smart(S) `ChatGPT-3.`<br>
--- +The Smart(L), Almost Smart(M) or Less Smart(S) `ChatGPT-3` can play against Smart, Almost Smart or not-Smart `ChatGPT-3.`
+-- +The Smart(L), Almost Smart(M) or Less Smart(S) `ChatGPT-3` can play against Smart, Almost Smart or not-Smart `ChatGPT-3.`<br>
+<br>
+<b>P.S.</b><br>
+<br>
 
+- Less Smart(S) - random moves
+- Medium - checks for one-move wins or loses
+Hard - unbeatable, always makes the best move based on its value (if a few moves have the highest value, one of them is chosen randomly)
 ## `HAPPY GAMING AND CODING.`
 
 # ALSO 
