@@ -23,7 +23,8 @@ Here's a project about simple x/o game:)<br>
   - ++`DOM manipulation`, 
   - ++`Event handlers`, 
   - ++`Arrays`;
-- [x] Problem Solving `(Plan and Design logic of organizing code && problems in plain English)`.
+- [x] Problem Solving 
+  - `(Plan and Design logic of organizing code && problems in plain English)`.
 
 # Description and Main Idea
 The game mechanic is controlled by the object gameBoard with: 
