@@ -4,11 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="style/style.css" />
     <title>y*T3/TIC-TAC-TOE</title>
 </head>
 <body>
-    <h1>Tic-Tac-Toe</h1>
+    <h1>&#60;img src="<span class="right">" alt=""&#62;</span></h1>
+        <svg viewBox="0 0 1520 600">
+            <symbol id="s-text">
+              <text text-anchor="middle" x="600px" y="80%">TIC </text>
+              <text text-anchor="middle" x="70%" y="100%">TAC </text>
+              <text text-anchor="middle" x="1360px" y="74%">TOE </text>
+              
+            </symbol>
+          
+            <g class = "g-ants">
+              <use xlink:href="#s-text" class="text-copy"></use>
+              <use xlink:href="#s-text" class="text-copy"></use>
+              <use xlink:href="#s-text" class="text-copy"></use>
+              <use xlink:href="#s-text" class="text-copy"></use>
+              <use xlink:href="#s-text" class="text-copy"></use>
+            </g>
+          </svg>
 		<div class="game-wrapper">
 			<div class="game-controls">
 				<form action="#" class="game-form" id="game-form">
@@ -21,7 +37,7 @@
 						/>
 					</div>
 					<div class="input-wrapper radio-wrapper">
-						<label>Your symbol:</label>
+						<label>Your y*Symbol:</label>
 						<div class="radio">
 							<div class="pointer">
 								<input
