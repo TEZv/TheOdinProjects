@@ -24,6 +24,7 @@
 }
 
 .typed {
+  margin-right: 1300px;
   overflow: hidden;
   white-space: nowrap;
   width: 0;
@@ -91,7 +92,7 @@ body {
 .right {
   font-family: 'Unbounded', cursive;
   position: relative;
-  left: 300px;
+  left: 320px;
   color: var(--light-red-color);
   text-shadow: 6px 0 0 var(--dark-green-color);
 }
@@ -102,8 +103,8 @@ svg {
   width: 700px;
   height: 300px;
   position: absolute;
-  bottom: 750px;
-  right: 800px;
+  bottom: 780px;
+  right: 1400px;
 }
 
 .text-copy {
@@ -323,7 +324,6 @@ select.round:focus {
 }
 
 
-
 html {
 	box-sizing: border-box;
 }
@@ -344,8 +344,14 @@ html {
 body {
 	background-color: #222;
 	color: white;
-	font-family: Arial, Helvetica, sans-serif;
-	display: flex;
+	/*display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;*/
+}
+
+.body {
+  display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
@@ -372,6 +378,7 @@ select {
 	display: flex;
 	align-items: center;
 	gap: 50px;
+  
 }
 
 .game-controls {
@@ -484,5 +491,5 @@ footer {
 }
 
 .footer-container {
-  margin-top: 60px;
+  margin-top: 20px;
 }
