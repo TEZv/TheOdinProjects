@@ -169,11 +169,11 @@ select {
 
 .select {
   width: 50%;
-  height: 1.25rem;
+  height: 1.15rem;
   min-width: 10ch;
   max-width: 20ch;
   border: solid 1px var(--blue-color);
-  border-radius: 0.25em;
+  border-radius: 0.68em;
   padding: 0.25em 0.5em;
   font-size: 1.25rem;
   cursor: pointer;
@@ -205,6 +205,4 @@ option {
   background-color: var(--black-color);
 }
 
-option:focus {
-  border-radius: 20px;
-}
+
