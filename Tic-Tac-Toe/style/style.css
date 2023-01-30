@@ -239,13 +239,6 @@ p {
   font-size: 18px;
 }
 
-.footer-position {
-  width: 300px;
-  position: absolute;
-  top: 200px;
-  right: 180px;
-}
-
 #tic {
   animation: blink 6.5s 0.5s infinite;
   background-color: transparent;
@@ -371,6 +364,13 @@ p {
   align-items: center;
   justify-content: space-evenly;
   margin-top: -50px;
+}
+
+.footer-position {
+  width: 300px;
+  position: absolute;
+  top: 200px;
+  right: 180px;
 }
 
 .gameDisplayEffects {
