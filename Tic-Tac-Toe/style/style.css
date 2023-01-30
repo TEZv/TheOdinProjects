@@ -133,6 +133,7 @@ a {
   color: var(--black-color);
   position: absolute;
   bottom: 20px;
+  text-decoration: none;
 }
 
 a:hover {
@@ -231,6 +232,16 @@ select.round:focus {
   background-repeat: no-repeat;
   border-color: var(--green-color);
   outline: 0;
+}
+
+time {
+  position: relative;
+  bottom: -20px;
+}
+
+time:hover {
+  color: var(--light-red-color);
+  cursor: pointer;
 }
 
 /*option {
@@ -514,4 +525,35 @@ select.round:focus {
   text-shadow: 6px 6px 0 var(--dark-green-color);
   font-size: 28px;
   font-weight: bold;
+}
+
+.fa.fa-github,
+.fa.fa-github ~ span {
+  position: relative;
+  font-size: 18px;
+  padding-right: 2px;
+  color: var(--red-color);
+  left: 96px;
+}
+
+a .fa.fa-github:hover,
+.fa.fa-github ~ span:hover {
+  font-size: 20px;
+  padding-right: 2px;
+  color: var(--black-color);
+}
+
+.side-copy-github {
+  font-size: 12px;
+}
+
+.tezv {
+  position: relative;
+  bottom: 30px;
+  left: 96px;
+  color: var(--red-color);
+}
+
+.tezv:hover {
+  color: var(--light-red-color);
 }
