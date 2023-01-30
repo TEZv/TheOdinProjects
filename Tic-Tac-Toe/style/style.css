@@ -483,3 +483,10 @@ footer {
   padding: 50px;
   font-size: 1.5rem;
 }
+
+a {
+  color: var(--black-color);
+}
+a:hover {
+  color: var(--light-white-color);
+}
