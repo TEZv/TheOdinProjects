@@ -259,3 +259,159 @@ const inputControl = (function () {
 
   return { addGameEvents, removeGameEvents };
 })();
+
+const gameFlow = (function () {
+  const DEFAULT_COMPUTER_NAME = "The computer";
+  const DEFAULT_PLAYER_NAME = "The player";
+  const COMPUTER_DELAY = 500; // in ms
+
+  let players;
+  let humanSymbol;
+  let difficulty;
+
+  function createPlayers(playerUsername, playerSymbol) {
+    humanSymbol = playerSymbol;
+    const username1 = playerSymbol === "X" ? playerUsername : null;
+    const username2 = playerSymbol === "O" ? playerUsername : null;
+    players = [
+      Player("X", username1, true, playerSymbol === "X" ? false : true),
+      Player("O", username2, false, playerSymbol === "O" ? false : true),
+    ];
+  }
+
+  function setDifficulty(newDifficulty) {
+    difficulty = newDifficulty;
+  }
+
+  function Player(symbol, username, isHisTurn, computer) {
+    if (computer) {
+      username = DEFAULT_COMPUTER_NAME;
+    }
+    if (username === "") {
+      username = DEFAULT_PLAYER_NAME;
+    }
+    return {
+      symbol,
+      username,
+      isHisTurn,
+      computer,
+    };
+  }
+
+  function changeTurn() {
+    if (checkResult()) {
+      return;
+    }
+    players.forEach((player) => {
+      player.isHisTurn = player.isHisTurn === true ? false : true;
+    });
+    if (checkForComputerTurn()) {
+      makeComputerMove();
+    }
+  }
+
+  function checkForComputerTurn() {
+    const currentSymbol = getCurrentSymbol();
+    if (currentSymbol !== humanSymbol) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  function makeComputerMove() {
+    const choiceId = getComputerMove();
+    setTimeout(() => {
+      gameBoard.changeTile(choiceId, getCurrentSymbol());
+      changeTurn();
+    }, COMPUTER_DELAY);
+  }
+
+  function getComputerMove() {
+    const availableTiles = gameBoard.getAvailableTiles();
+
+    if (difficulty === "easy") {
+      const numberOfMoves = availableTiles.length;
+      const randomMove = Math.floor(Math.random() * numberOfMoves);
+      return availableTiles[randomMove];
+    } else if (difficulty === "medium") {
+      const oneMoveWin = getOneMoveWin();
+      if (oneMoveWin) {
+        return oneMoveWin;
+      }
+      const numberOfMoves = availableTiles.length;
+      const randomMove = Math.floor(Math.random() * numberOfMoves);
+      return availableTiles[randomMove];
+    } else if (difficulty === "hard") {
+      const oneMoveWin = getOneMoveWin();
+      if (oneMoveWin) {
+        return oneMoveWin;
+      }
+      gameBoard.resetTileValues();
+      gameBoard.setTileValues(getCurrentSymbol(true));
+      const bestMove = gameBoard.getBestMove();
+      if (bestMove) {
+        return bestMove;
+      }
+    }
+  }
+
+  function getOneMoveWin() {
+    const winnableLanes = gameBoard.getWinnableLanes(getCurrentSymbol());
+    if (winnableLanes.length > 0) {
+      return winnableLanes[0].emptyTile;
+    }
+    const losableLanes = gameBoard.getWinnableLanes(getCurrentSymbol(true));
+    if (losableLanes.length > 0) {
+      return losableLanes[0].emptyTile;
+    }
+  }
+
+  function getCurrentSymbol(opposite = false) {
+    const currentPlayer = players.find((player) => player.isHisTurn);
+    if (opposite) {
+      oppositeSymbol = currentPlayer.symbol === "X" ? "O" : "X";
+      return oppositeSymbol;
+    }
+    return currentPlayer.symbol;
+  }
+
+  function checkResult() {
+    const wonLanes = gameBoard.getWinningLanes();
+    if (wonLanes.length > 0) {
+      declareWinner(wonLanes);
+      wonLanes.forEach((wonLane) => {
+        gameBoard.highlightLane(wonLane.lane);
+      });
+      return true;
+    } else {
+      const tie = gameBoard.checkForTie();
+      if (tie) {
+        declareWinner(null);
+        return true;
+      }
+    }
+  }
+
+  function declareWinner(lanes) {
+    const output = document.querySelector(".output");
+    inputControl.removeGameEvents();
+    if (!lanes) {
+      output.textContent = "It's a tie!";
+    } else {
+      const winner = players.find(
+        (player) => player.symbol === lanes[0].symbol
+      );
+      output.textContent = `The winner is: ${winner.username}`;
+    }
+  }
+
+  return {
+    changeTurn,
+    getCurrentSymbol,
+    createPlayers,
+    checkForComputerTurn,
+    makeComputerMove,
+    setDifficulty,
+  };
+})();
