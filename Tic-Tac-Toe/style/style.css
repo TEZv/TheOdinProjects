@@ -401,8 +401,8 @@ footer {
 .start-btn {
   padding: 10px;
   border: none;
-  background-color: var(--success);
-  color: white;
+  background-color: var(--green-color);
+  color: var(--white-color);
   cursor: pointer;
   font-size: 1rem;
   margin-top: 20px;
@@ -425,7 +425,7 @@ footer {
   gap: 15px;
   padding: 15px;
   align-items: center;
-  background-color: #222;
+  background-color: var(--dark-grey-color);
   height: 60px;
 }
 
@@ -471,7 +471,7 @@ footer {
 }
 
 .tile.highlighted {
-  color: gold;
+  color: var(--green-color);
 }
 
 .tile:nth-child(-n + 6) {
