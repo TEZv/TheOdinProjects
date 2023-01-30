@@ -229,11 +229,12 @@ select.round:focus {
 }*/
 
 p {
+  text-align: center;
   margin-bottom: 20px;
 }
 
 footer {
-  margin-top: -40px;
+  margin-top: 40px;
 }
 
 #tic {
@@ -359,7 +360,7 @@ footer {
 .footer-container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-top: 20px;
 }
 
@@ -384,9 +385,11 @@ footer {
 
 .game-wrapper {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 20px;
-  width: 400px;
+  gap: 30px;
+  width: 1000px;
+  margin-top: 40px;
 }
 
 .game-controls {
