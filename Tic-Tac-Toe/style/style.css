@@ -154,9 +154,9 @@ select {
   appearance: none;
   background-color: transparent;
   border: none;
-  padding: 0 1em 0 0;
+  padding: 0 0.5em 0 1em;
   margin: 0;
-  width: 70%;
+  width: 100%;
   font-family: inherit;
   font-size: inherit;
   cursor: inherit;
@@ -172,6 +172,7 @@ select,
 
 select:hover {
   background: transparent;
+  color: var(--light-red-color);
 }
 
 select.round {
@@ -186,7 +187,7 @@ select.round {
     calc(100% - 20px) calc(1em + 2px),
     calc(100% - 15px) calc(1em + 2px),
     calc(100% - .5em) .5em;*/
-  background-position: 114px;
+  background-position: 132px;
   background-size:
   1px 1px,
    10px 10px,
@@ -210,18 +211,18 @@ select.round:focus {
     calc(100% - 15px) 1em,
     calc(100% - 20px) 1em,
     calc(100% - .5em) .5em;*/
-  background-position: 112px;
+  background-position: 132px;
   background-size: 1px 1px, 10px 10px, 0.6em 0.6em;
   background-repeat: no-repeat;
   border-color: var(--green-color);
   outline: 0;
 }
 
-option {
+/*option {
   border-radius: 20px;
   background-color: var(--black-color);
-  /*cursor: pointer;*/
-}
+  cursor: pointer;
+}*/
 
 p {
   margin-bottom: 20px;
@@ -229,12 +230,6 @@ p {
 
 footer {
   margin-top: -40px;
-}
-
-#difficulty {
-  width: 100%;
-  margin: 0 20px;
-  cursor: pointer;
 }
 
 #tic {
