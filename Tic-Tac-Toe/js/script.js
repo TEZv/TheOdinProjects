@@ -262,7 +262,7 @@ const inputControl = (function () {
 
 const gameFlow = (function () {
   const DEFAULT_COMPUTER_NAME = "ChatGPT-3";
-  const DEFAULT_PLAYER_NAME = "TheBest U're";
+  const DEFAULT_PLAYER_NAME = "INCOGNITO U're";
   const COMPUTER_DELAY = 500; // in ms
 
   let players;
