@@ -132,6 +132,7 @@ h1 {
 svg {
   display: block;
   font: 10.5em "Unbounded", cursive;
+  font-weight: bold;
   width: 700px;
   height: 300px;
   position: absolute;
