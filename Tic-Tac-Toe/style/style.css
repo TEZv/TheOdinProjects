@@ -16,6 +16,7 @@
   --dark-grey-color: rgba(36, 30, 30, 0.938);
   --blue-color: rgba(17, 171, 243, 0.74);
   --dark-blue-color: rgba(22, 120, 165, 0.74);
+  --tile-border-style: 2px white solid;
 }
 
 @keyframes typing {
@@ -25,17 +26,6 @@
   to {
     width: 100%;
   }
-}
-
-.typed {
-  margin-right: 1300px;
-  overflow: hidden;
-  white-space: nowrap;
-  width: 0;
-  animation: typing;
-  animation-duration: 26.5s;
-  animation-timing-function: steps(280, end);
-  animation-fill-mode: forwards;
 }
 
 /*-------------- THIS ANIMATION IS TOO ANNOYING ----------------*/
@@ -81,73 +71,15 @@
   }
 }
 
-.svg-anim {
-  /*animation: 35s anim-svg ease-in-out;*/
-  animation: 15s anim-svg ease-in-out;
+html {
+  box-sizing: border-box;
 }
-
-body {
-  background: linear-gradient(
-    -115deg,
-    var(--dark-grey-color),
-    var(--black-color),
-    var(--red-color)
-  );
-  color: var(--white-color);
-  font-family: "Unbounded", cursive;
-  overflow: hidden;
-}
-
-.right {
-  font-family: "Unbounded", cursive;
-  position: relative;
-  left: 320px;
-  color: var(--violet-color);
-  text-shadow: 6px 0 0 var(--red-color);
-}
-
-svg {
-  display: block;
-  font: 10.5em "Unbounded", cursive;
-  width: 700px;
-  height: 300px;
-  position: absolute;
-  bottom: 780px;
-  right: 1400px;
-}
-
-.text-copy {
-  fill: none;
-  stroke: var(--white-color);
-  stroke-dasharray: 6% 29%;
-  stroke-width: 8px;
-  stroke-dashoffset: 0%;
-  animation: stroke-offset 5.5s infinite linear;
-}
-
-.text-copy:nth-child(1) {
-  stroke: var(--black-color);
-  animation-delay: -1s;
-}
-
-.text-copy:nth-child(2) {
-  stroke: #840037;
-  animation-delay: -3s;
-}
-
-.text-copy:nth-child(3) {
-  stroke: #bd0034;
-  animation-delay: -3s;
-}
-
-.text-copy:nth-child(4) {
-  stroke: #bd0034;
-  animation-delay: -4s;
-}
-
-.text-copy:nth-child(5) {
-  stroke: #fdb731;
-  animation-delay: -5s;
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
 }
 
 @keyframes stroke-offset {
@@ -156,114 +88,6 @@ svg {
   }
 }
 
-.svg-right {
-  position: relative;
-  right: 1000px;
-}
-
-select {
-  /*padding: 6px 10px;
-  background: var(--purple-color);
-  color: #fff;
-  font-size: 1rem;
-  border-radius: 20px;
-  border: solid 2px #00bfff;*/
-  appearance: none;
-  background-color: transparent;
-  border: none;
-  padding: 0 1em 0 0;
-  margin: 0;
-  width: 70%;
-  font-family: inherit;
-  font-size: inherit;
-  cursor: inherit;
-  line-height: inherit;
-  outline: none;
-}
-
-.select {
-  /*width: 70%;*/
-  height: 1.8rem;
-  min-width: 16vh;
-  max-width: 20ch;
-  border: solid 2px var(--blue-color);
-  border-radius: 0.68em;
-  padding: 0.02em 0.02em;
-  font-size: 1.1rem;
-  cursor: pointer;
-  line-height: 1.1;
-  background-color: var(--black-color);
-  background-image: linear-gradient(
-    to top,
-    var(--black-color),
-    var(--violet-color) 33%
-  );
-  display: grid;
-  grid-template-areas: "select";
-  align-items: center;
-}
-
-/*.select::after {
-  content: "";
-  width: 0.8em;
-  height: 0.5em;
-  background-color: var(--red-color);
-  clip-path: polygon(100% 0%, 0 0%, 50% 100%);
-  justify-self: end;
-}*/
-
-select,
-.select:after {
-  grid-area: select;
-  color: var(--dark-green-color);
-  cursor: pointer;
-}
-
-select:hover {
-  background: transparent;
-}
-
-option {
-  border-radius: 20px;
-  background-color: var(--black-color);
-  /*cursor: pointer;*/
-}
-
-.footer-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.gameDisplayEffects {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-.gameDisplayEffects button {
-  width: 80px;
-  height: 30px;
-  outline: none;
-  border: none;
-  border-radius: 4px;
-  font-weight: bold;
-  font-family: "Unbounded", cursive;
-  font-size: 18px;
-  cursor: pointer;
-  background-color: unset;
-}
-
-#tic {
-  animation: blink 6.5s 0.5s infinite;
-  background-color: transparent;
-}
-#tac {
-  animation: blink 5.4s 3.8s;
-}
-#toe {
-  animation: blink 5.4s 6.6s;
-}
 @keyframes blink {
   0% {
     box-shadow: 2px 2px 15px 10px var(--red-color);
@@ -288,8 +112,66 @@ option {
   }
 }
 
+body {
+  background: linear-gradient(
+    -115deg,
+    var(--dark-grey-color),
+    var(--black-color),
+    var(--red-color)
+  );
+  color: var(--white-color);
+  font-family: "Unbounded", cursive;
+  overflow: hidden;
+}
+
 h1 {
   font-family: "Karla", sans-serif;
+  margin: 15px;
+}
+
+svg {
+  display: block;
+  font: 10.5em "Unbounded", cursive;
+  width: 700px;
+  height: 300px;
+  position: absolute;
+  bottom: 780px;
+  right: 1400px;
+}
+
+input,
+select {
+  outline: none;
+}
+
+select {
+  /*padding: 6px 10px;
+  background: var(--purple-color);
+  color: #fff;
+  font-size: 1rem;
+  border-radius: 20px;
+  border: solid 2px var(--blue-color);*/
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  padding: 0 1em 0 0;
+  margin: 0;
+  width: 70%;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: inherit;
+  line-height: inherit;
+}
+
+select,
+.select:after {
+  grid-area: select;
+  color: var(--dark-green-color);
+  cursor: pointer;
+}
+
+select:hover {
+  background: transparent;
 }
 
 select.round {
@@ -335,30 +217,98 @@ select.round:focus {
   outline: 0;
 }
 
-html {
-  box-sizing: border-box;
+option {
+  border-radius: 20px;
+  background-color: var(--black-color);
+  /*cursor: pointer;*/
 }
-*,
-*::after,
-*::before {
-  box-sizing: inherit;
-  margin: 0;
-  padding: 0;
+
+p {
+  margin-bottom: 20px;
 }
-:root {
-  --tile-border-style: 2px white solid;
-  --success: #28a745;
-  --info: #17a2b8;
-  --warning: #ffc107;
-  --danger: #dc3545;
+
+footer {
+  margin-top: -40px;
 }
-body {
-  background-color: #222;
-  color: white;
-  /*display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;*/
+
+#difficulty {
+  width: 100%;
+  margin: 0 20px;
+  cursor: pointer;
+}
+
+#tic {
+  animation: blink 6.5s 0.5s infinite;
+  background-color: transparent;
+}
+#tac {
+  animation: blink 5.4s 3.8s;
+}
+#toe {
+  animation: blink 5.4s 6.6s;
+}
+
+.typed {
+  margin-right: 1300px;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  animation: typing;
+  animation-duration: 26.5s;
+  animation-timing-function: steps(280, end);
+  animation-fill-mode: forwards;
+}
+
+.svg-anim {
+  /*animation: 35s anim-svg ease-in-out;*/
+  animation: 15s anim-svg ease-in-out;
+}
+
+.right {
+  font-family: "Unbounded", cursive;
+  position: relative;
+  left: 320px;
+  color: var(--black-color);
+  text-shadow: 6px 0 0 var(--red-color);
+}
+
+.text-copy {
+  fill: none;
+  stroke: var(--white-color);
+  stroke-dasharray: 6% 29%;
+  stroke-width: 8px;
+  stroke-dashoffset: 0%;
+  animation: stroke-offset 5.5s infinite linear;
+}
+
+.text-copy:nth-child(1) {
+  stroke: var(--black-color);
+  animation-delay: -1s;
+}
+
+.text-copy:nth-child(2) {
+  stroke: var(--light-red-color);
+  animation-delay: -3s;
+}
+
+.text-copy:nth-child(3) {
+  stroke: var(--red-color);
+  animation-delay: -3s;
+}
+
+.text-copy:nth-child(4) {
+  stroke: var(--red-color);
+  animation-delay: -4s;
+}
+
+.text-copy:nth-child(5) {
+  stroke: var(--green-color);
+  animation-delay: -5s;
+}
+
+.svg-right {
+  position: relative;
+  right: 1000px;
 }
 
 .body {
@@ -368,21 +318,69 @@ body {
   align-items: center;
 }
 
-h1 {
-  margin: 15px;
-}
-
-input,
-select {
-  outline: none;
-}
-
 .pointer {
   cursor: pointer;
 }
 
 .pointer * {
   cursor: pointer;
+}
+
+.select {
+  /*width: 70%;*/
+  height: 1.8rem;
+  min-width: 16vh;
+  max-width: 20ch;
+  border: solid 2px var(--blue-color);
+  border-radius: 0.68em;
+  padding: 0.02em 0.02em;
+  font-size: 1.1rem;
+  cursor: pointer;
+  line-height: 1.1;
+  background-color: var(--black-color);
+  background-image: linear-gradient(
+    to top,
+    var(--black-color),
+    var(--violet-color) 33%
+  );
+  display: grid;
+  grid-template-areas: "select";
+  align-items: center;
+}
+
+/*.select::after {
+  content: "";
+  width: 0.8em;
+  height: 0.5em;
+  background-color: var(--red-color);
+  clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+  justify-self: end;
+}*/
+
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.gameDisplayEffects {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.gameDisplayEffects button {
+  width: 80px;
+  height: 30px;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  font-family: "Unbounded", cursive;
+  font-size: 18px;
+  cursor: pointer;
+  background-color: unset;
 }
 
 .game-wrapper {
@@ -433,12 +431,6 @@ select {
 
 .input-wrapper > label {
   min-width: 200px;
-}
-
-#difficulty {
-  width: 100%;
-  margin: 0 20px;
-  cursor: pointer;
 }
 
 .radio-wrapper {
@@ -494,16 +486,4 @@ select {
 .output {
   padding: 50px;
   font-size: 1.5rem;
-}
-
-p {
-  margin-bottom: 20px;
-}
-
-footer {
-  margin-top: -40px;
-}
-
-.footer-container {
-  margin-top: 20px;
 }
