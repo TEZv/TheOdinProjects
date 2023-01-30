@@ -397,12 +397,14 @@ const gameFlow = (function () {
     const output = document.querySelector(".output");
     inputControl.removeGameEvents();
     if (!lanes) {
-      output.textContent = "It's a tie!";
+      output.textContent = "U Catch a tie!";
+      output.style.color = "rgba(265, 0, 0, 0.788)";
     } else {
       const winner = players.find(
         (player) => player.symbol === lanes[0].symbol
       );
       output.textContent = `The winner is: ${winner.username}`;
+      output.style.color = "rgba(265, 265, 255, 0.788)";
     }
   }
 

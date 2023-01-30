@@ -139,6 +139,12 @@ a:hover {
   color: var(--light-white-color);
 }
 
+p {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+
 svg {
   display: block;
   font: 10.5em "Unbounded", cursive;
@@ -232,12 +238,6 @@ select.round:focus {
   background-color: var(--black-color);
   cursor: pointer;
 }*/
-
-p {
-  text-align: center;
-  margin-bottom: 80px;
-  font-size: 18px;
-}
 
 #tic {
   animation: blink 6.5s 0.5s infinite;
@@ -363,7 +363,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  margin-top: -50px;
+  margin-bottom: 20px;
 }
 
 .footer-position {
@@ -426,6 +426,7 @@ p {
 
 .start-btn:disabled {
   background-color: var(--black-color);
+  color: var(--red-color);
   cursor: default;
 }
 
@@ -469,7 +470,7 @@ p {
 }
 
 .game {
-  background-color: #333;
+  background-color: var(--dark-purple);
   height: 400px;
   width: 480px;
   display: grid;
@@ -500,8 +501,9 @@ p {
 }
 
 .output {
-  padding: 50px;
+  padding: 30px;
   font-size: 1.5rem;
+  text-align: center;
 }
 
 .p {

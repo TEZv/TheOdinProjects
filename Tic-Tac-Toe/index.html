@@ -26,7 +26,6 @@
       href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,300;0,400;1,400&family=Unbounded:wght@300;400&display=swap"
       rel="stylesheet"
     />
-
     <title>t*T3/TIC-TAC-TOE</title>
   </head>
 
@@ -40,7 +39,6 @@
         <text text-anchor="middle" x="70%" y="100%">TAC</text>
         <text text-anchor="middle" x="1580px" y="80%">TOE</text>
       </symbol>
-
       <g class="g-ants">
         <use xlink:href="#s-text" class="text-copy"></use>
         <use xlink:href="#s-text" class="text-copy"></use>
@@ -49,6 +47,7 @@
         <use xlink:href="#s-text" class="text-copy"></use>
       </g>
     </svg>
+
     <div class="body">
       <div class="game-wrapper">
         <div class="game-controls">
@@ -85,9 +84,7 @@
               <label for="difficulty">ChatGPT-3 Mode: </label>
               <div class="select">
                 <select name="difficulty" id="difficulty" class="round">
-                  <option value="" selected disabled hidden>
-                    0\1|0/1\0|1/
-                  </option>
+                  <option value="hard" selected hidden>0\1|0/1\0|1/</option>
                   <option
                     style="
                       background-color: rgb(6, 255, 6);
@@ -123,6 +120,7 @@
             !--Start--!
           </button>
         </div>
+
         <div class="game">
           <div class="tile" data-tile-id="0"></div>
           <div class="tile" data-tile-id="1"></div>
@@ -136,18 +134,34 @@
         </div>
       </div>
     </div>
+
     <div class="output"></div>
 
-    <footer>
+    <sidebar>
       <div class="footer-position">
-        <p><span class="svg-anim p">Less Smart [S]</span><br> - random moves;</p>
-        <p><span class="svg-anim p">Almost Smart [M]</span><br> - checks for one-move wins or loses;</p>
-        <p><span class="svg-anim p">Smart [L]</span><br>
-          - always makes the best move based on its value<br> (if a few
-          moves have the highest value, one of them is chosen randomly).
+        <p>
+          <span class="svg-anim p">Less Smart [S]</span><br />
+          - random moves;
+        </p>
+        <p>
+          <span class="svg-anim p">Almost Smart [M]</span><br />
+          - checks for one-move wins or loses;
+        </p>
+        <p>
+          <span class="svg-anim p">Smart [L]</span><br />
+          - always makes the best move based on its value<br />
+          (if a few moves have the highest value, one of them is chosen
+          randomly).
+        </p>
+        <p>
+          <span class="svg-anim p">0\1|0/1\0|1/</span><br />
+          - by Default. If you are Risky, let's Try to win ChatGPT-3<br />
+          (I guess it never won't happen but I believe in U)
         </p>
       </div>
+    </sidebar>
 
+    <footer>
       <div class="footer-container">
         <div class="gameDisplayEffects">
           <button id="tic">Tic</button>
