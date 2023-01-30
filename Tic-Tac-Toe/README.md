@@ -44,8 +44,8 @@ The game mechanic is controlled by the object gameBoard with:
 <b>P . S .</b><br>
 
 - Less Smart (S) - random moves;
-- Almost Smart(M) - checks for one-move wins or loses;
-- The Smart(L) - always makes the best move based on its value (if a few moves have the highest value, one of them is chosen randomly -> it may be `Minimax AI` algorithm but instead was realized by `if` statement).<br>
+- Almost Smart (M) - checks for one-move wins or loses;
+- The Smart (L) - always makes the best move based on its value (if a few moves have the highest value, one of them is chosen randomly -> it may be `Minimax AI` algorithm but instead was realized by `if` statement).<br>
 <br>
 [Minimax is a function where the computer will simulate all future moves for the user and itself to determine the best possible move. The <a href="https://en.wikipedia.org/wiki/Minimax">here:)</a> wikipedia for `Minimax` contains pseudocode that took me a while to completely understand. This function is recursive and will continue to run until a winner is decided and then returns a score.]
 
