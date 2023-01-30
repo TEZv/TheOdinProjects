@@ -34,7 +34,7 @@
     <h1 class="typed">
       &#60;img src="<span class="right svg-anim">" alt="TIC TAC TOE"&#62;</span>
     </h1>
-    <svg viewBox="0 0 1740 600" class="svg-anim">
+    <svg viewBox="0 0 1760 600" class="svg-anim">
       <symbol id="s-text">
         <text text-anchor="middle" x="760px" y="84%">TIC</text>
         <text text-anchor="middle" x="70%" y="100%">TAC</text>
@@ -120,49 +120,52 @@
             </div>
           </form>
           <button type="submit" form="game-form" class="start-btn">
-            Start!
+            !--Start--!
           </button>
         </div>
-          <div class="game">
-            <div class="tile" data-tile-id="0"></div>
-            <div class="tile" data-tile-id="1"></div>
-            <div class="tile" data-tile-id="2"></div>
-            <div class="tile" data-tile-id="3"></div>
-            <div class="tile" data-tile-id="4"></div>
-            <div class="tile" data-tile-id="5"></div>
-            <div class="tile" data-tile-id="6"></div>
-            <div class="tile" data-tile-id="7"></div>
-            <div class="tile" data-tile-id="8"></div>
-          </div>
+        <div class="game">
+          <div class="tile" data-tile-id="0"></div>
+          <div class="tile" data-tile-id="1"></div>
+          <div class="tile" data-tile-id="2"></div>
+          <div class="tile" data-tile-id="3"></div>
+          <div class="tile" data-tile-id="4"></div>
+          <div class="tile" data-tile-id="5"></div>
+          <div class="tile" data-tile-id="6"></div>
+          <div class="tile" data-tile-id="7"></div>
+          <div class="tile" data-tile-id="8"></div>
         </div>
       </div>
-      <div class="output"></div>
+    </div>
+    <div class="output"></div>
 
-      <footer>
-        <p>Less Smart [S] - random moves;</p>
-        <p>Almost Smart [M] - checks for one-move wins or loses;</p>
-        <p>
-          Smart [L] - always makes the best move based on its value (if a few
+    <footer>
+      <div class="footer-position">
+        <p><span class="svg-anim p">Less Smart [S]</span><br> - random moves;</p>
+        <p><span class="svg-anim p">Almost Smart [M]</span><br> - checks for one-move wins or loses;</p>
+        <p><span class="svg-anim p">Smart [L]</span><br>
+          - always makes the best move based on its value<br> (if a few
           moves have the highest value, one of them is chosen randomly).
         </p>
-        <div class="footer-container">
-          <div class="gameDisplayEffects">
-            <button id="tic">Tic</button>
-            <button id="tac">Tac</button>
-            <button id="toe">Toe</button>
-          </div>
-          <p class="side-copy-github">
-            <a href="https://github.com/TEZv" target="_blank">
-              <span class="fa fa-github fa-2x"></span>
-            </a>
-          </p>
-          <div class="gameDisplayEffects">
-            <button id="tic">Tic</button>
-            <button id="tac">Tac</button>
-            <button id="toe">Toe</button>
-          </div>
+      </div>
+
+      <div class="footer-container">
+        <div class="gameDisplayEffects">
+          <button id="tic">Tic</button>
+          <button id="tac">Tac</button>
+          <button id="toe">Toe</button>
         </div>
-      </footer>
+        <p class="side-copy-github">
+          <a href="https://github.com/TEZv" target="_blank">
+            <span class="fa fa-github fa-2x"></span>
+          </a>
+        </p>
+        <div class="gameDisplayEffects">
+          <button id="tic">Tic</button>
+          <button id="tac">Tac</button>
+          <button id="toe">Toe</button>
+        </div>
+      </div>
+    </footer>
 
     <script src="./js/script.js"></script>
   </body>
