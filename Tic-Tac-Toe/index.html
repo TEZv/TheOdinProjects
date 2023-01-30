@@ -50,117 +50,116 @@
       </g>
     </svg>
     <div class="body">
-<div class="game-wrapper">
-      <div class="game-controls">
-        <form action="#" class="game-form" id="game-form">
-          <div class="input-wrapper">
-            <label for="player1-name">Your T3*Name:</label>
-            <input type="text" id="player-name" name="player-name" />
-          </div>
-          <div class="input-wrapper radio-wrapper">
-            <label>Your T3*Symbol:</label>
-            <div class="radio">
-              <div class="pointer">
-                <input
-                  type="radio"
-                  id="player-radio-x"
-                  name="player-symbol"
-                  value="X"
-                  checked
-                />
-                <label for="player-radio-x">X</label>
-              </div>
-              <div class="pointer">
-                <input
-                  type="radio"
-                  id="player-radio-o"
-                  name="player-symbol"
-                  value="O"
-                />
-                <label for="player-radio-o">O</label>
+      <div class="game-wrapper">
+        <div class="game-controls">
+          <form action="#" class="game-form" id="game-form">
+            <div class="input-wrapper">
+              <label for="player1-name">Your T3*Name:</label>
+              <input type="text" id="player-name" name="player-name" />
+            </div>
+            <div class="input-wrapper radio-wrapper">
+              <label>Your T3*Symbol:</label>
+              <div class="radio">
+                <div class="pointer">
+                  <input
+                    type="radio"
+                    id="player-radio-x"
+                    name="player-symbol"
+                    value="X"
+                    checked
+                  />
+                  <label for="player-radio-x">X</label>
+                </div>
+                <div class="pointer">
+                  <input
+                    type="radio"
+                    id="player-radio-o"
+                    name="player-symbol"
+                    value="O"
+                  />
+                  <label for="player-radio-o">O</label>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="input-wrapper" style="width: 200px">
-            <label for="difficulty">ChatGPT-3 Mode: </label>
-            <div class="select">
-              <select name="difficulty" id="difficulty" class="round">
-                <option value="" selected disabled hidden>
-                  0\1|0/1\0|1/
-                </option>
-                <option
-                  style="
-                    background-color: rgb(6, 255, 6);
-                    color: rgb(23, 105, 12);
-                  "
-                  value="easy"
-                >
-                  S--m/Od\E
-                </option>
-                <option
-                  style="
-                    background-color: rgba(201, 255, 4, 0.788);
-                    color: rgb(104, 105, 12);
-                  "
-                  value="medium"
-                >
-                  M--m/Od\E
-                </option>
-                <option
-                  style="
-                    background-color: rgb(255, 0, 0);
-                    color: rgb(105, 12, 12);
-                  "
-                  value="hard"
-                >
-                  L--m/Od\E
-                </option>
-              </select>
+            <div class="input-wrapper" style="width: 200px">
+              <label for="difficulty">ChatGPT-3 Mode: </label>
+              <div class="select">
+                <select name="difficulty" id="difficulty" class="round">
+                  <option value="" selected disabled hidden>
+                    0\1|0/1\0|1/
+                  </option>
+                  <option
+                    style="
+                      background-color: rgb(6, 255, 6);
+                      color: rgb(23, 105, 12);
+                    "
+                    value="easy"
+                  >
+                    S--m/Od\E
+                  </option>
+                  <option
+                    style="
+                      background-color: rgba(201, 255, 4, 0.788);
+                      color: rgb(104, 105, 12);
+                    "
+                    value="medium"
+                  >
+                    M--m/Od\E
+                  </option>
+                  <option
+                    style="
+                      background-color: rgb(255, 0, 0);
+                      color: rgb(105, 12, 12);
+                    "
+                    value="hard"
+                  >
+                    L--m/Od\E
+                  </option>
+                </select>
+              </div>
             </div>
+          </form>
+          <div class="game">
+            <div class="tile" data-tile-id="0"></div>
+            <div class="tile" data-tile-id="1"></div>
+            <div class="tile" data-tile-id="2"></div>
+            <div class="tile" data-tile-id="3"></div>
+            <div class="tile" data-tile-id="4"></div>
+            <div class="tile" data-tile-id="5"></div>
+            <div class="tile" data-tile-id="6"></div>
+            <div class="tile" data-tile-id="7"></div>
+            <div class="tile" data-tile-id="8"></div>
           </div>
-        </form>
-        <div class="game">
-          <div class="tile" data-tile-id="0"></div>
-          <div class="tile" data-tile-id="1"></div>
-          <div class="tile" data-tile-id="2"></div>
-          <div class="tile" data-tile-id="3"></div>
-          <div class="tile" data-tile-id="4"></div>
-          <div class="tile" data-tile-id="5"></div>
-          <div class="tile" data-tile-id="6"></div>
-          <div class="tile" data-tile-id="7"></div>
-          <div class="tile" data-tile-id="8"></div>
         </div>
       </div>
-    </div>
-    <div class="output"></div>
+      <div class="output"></div>
 
-    <footer>
-      <p>Less Smart [S] - random moves;</p>
-      <p>Almost Smart [M] - checks for one-move wins or loses;</p>
-      <p>
-        Smart [L] - always makes the best move based on its value (if a few
-        moves have the highest value, one of them is chosen randomly).
-      </p>
-      <div class="footer-container">
-        <div class="gameDisplayEffects">
-          <button id="tic">Tic</button>
-          <button id="tac">Tac</button>
-          <button id="toe">Toe</button>
-        </div>
-        <p class="side-copy-github">
-          <a href="https://github.com/TEZv" target="_blank">
-            <span class="fa fa-github fa-2x"></span>
-          </a>
+      <footer>
+        <p>Less Smart [S] - random moves;</p>
+        <p>Almost Smart [M] - checks for one-move wins or loses;</p>
+        <p>
+          Smart [L] - always makes the best move based on its value (if a few
+          moves have the highest value, one of them is chosen randomly).
         </p>
-        <div class="gameDisplayEffects">
-          <button id="tic">Tic</button>
-          <button id="tac">Tac</button>
-          <button id="toe">Toe</button>
+        <div class="footer-container">
+          <div class="gameDisplayEffects">
+            <button id="tic">Tic</button>
+            <button id="tac">Tac</button>
+            <button id="toe">Toe</button>
+          </div>
+          <p class="side-copy-github">
+            <a href="https://github.com/TEZv" target="_blank">
+              <span class="fa fa-github fa-2x"></span>
+            </a>
+          </p>
+          <div class="gameDisplayEffects">
+            <button id="tic">Tic</button>
+            <button id="tac">Tac</button>
+            <button id="toe">Toe</button>
+          </div>
         </div>
-      </div>
-    </footer>
+      </footer>
     </div>
-    
 
     <script src="./js/script.js"></script>
   </body>
