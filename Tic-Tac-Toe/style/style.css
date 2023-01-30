@@ -200,11 +200,18 @@ select,
 .select:after {
   grid-area: select;
   color: var(--dark-green-color);
+  cursor: pointer;
+}
+
+select:hover {
+  background: transparent;
+  color: var(--light-white-color);
 }
 
 option {
   border-radius: 20px;
   background-color: var(--black-color);
+  cursor: pointer;
 }
 
 .footer-container {
@@ -281,7 +288,7 @@ select.round {
     calc(100% - 15px) calc(1em + 2px),
     calc(100% - .5em) .5em;*/
     background-position:
-    112px;
+    114px;
   background-size:
     /*1px 1px,
     10px 10px,
@@ -290,7 +297,7 @@ select.round {
     1em 1.6em;*/
     0px 0px,
     0px 1px,
-    10px 20px,
+    8px 20px,
     1em 1.6em;
   background-repeat: no-repeat;
 }
