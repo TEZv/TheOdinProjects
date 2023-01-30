@@ -62,15 +62,38 @@
             <label for="difficulty">ChatGPT-3 Mode: </label>
             <div class="select">
               <select name="difficulty" id="difficulty">
-              <option value="" selected disabled hidden>
-                0\1|0/1\0|1/0\1|
-              </option>
-              <option value="easy">S--m/Od\E</option>
-              <option value="medium">M--m/Od\E</option>
-              <option value="hard">L--m/Od\E</option>
-            </select>
+                <option value="" selected disabled hidden>
+                  0\1|0/1\0|1/0\1|
+                </option>
+                <option
+                  style="
+                    background-color: rgb(6, 255, 6);
+                    color: rgb(23, 105, 12);
+                  "
+                  value="easy"
+                >
+                  S--m/Od\E
+                </option>
+                <option
+                  style="
+                    background-color: rgba(201, 255, 4, 0.788);
+                    color: rgb(104, 105, 12);
+                  "
+                  value="medium"
+                >
+                  M--m/Od\E
+                </option>
+                <option
+                  style="
+                    background-color: rgb(255, 0, 0);
+                    color: rgb(105, 12, 12);
+                  "
+                  value="hard"
+                >
+                  L--m/Od\E
+                </option>
+              </select>
             </div>
-            
           </div>
         </form>
         <div class="game">
@@ -87,6 +110,7 @@
       </div>
     </div>
     <div class="output"></div>
+
     <footer>
       <p>Less Smart [S] - random moves;</p>
       <p>Almost Smart [M] - checks for one-move wins or loses;</p>
@@ -94,6 +118,18 @@
         Smart [L] - always makes the best move based on its value (if a few
         moves have the highest value, one of them is chosen randomly).
       </p>
+      <div class="footer-container">
+        <div class="gameDisplayEffects">
+          <button id="tic">Tic</button>
+          <button id="tac">Tac</button>
+          <button id="toe">Toe</button>
+        </div>
+        <div class="gameDisplayEffects">
+          <button id="tic">Tic</button>
+          <button id="tac">Tac</button>
+          <button id="toe">Toe</button>
+        </div>
+      </div>
     </footer>
 
     <script src="./js/script.js"></script>
