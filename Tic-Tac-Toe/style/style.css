@@ -554,4 +554,6 @@ a .fa.fa-github:hover,
   color: var(--red-color);
 }
 
-
+.tezv:hover {
+  color: var(--light-red-color);
+}
