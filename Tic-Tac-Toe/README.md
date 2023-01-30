@@ -73,5 +73,5 @@ When there is a terminal state, `it generates a score`, and the code can proceed
 
 # ALSO 
 
-LIVE is available: <a href="">here:)</a>, just click it.
+LIVE is available: <a href="https://tezv-t3-tic-tac-toe.netlify.app/">here:)</a>, just click it.
 The ASSIGNMENT is <a href="https://www.theodinproject.com/paths/full-stack-javascript/courses/javascript/lessons/tic-tac-toe">here:)</a>
