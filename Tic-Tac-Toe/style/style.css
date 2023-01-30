@@ -33,7 +33,8 @@
   animation-fill-mode: forwards;
 }
 
-@keyframes anim-svg {
+/*-------------- THIS ANIMATION IS TOO ANNOYING ----------------*/
+/*@keyframes anim-svg {
   0% {
     opacity: 0;
     transform: rotateY(360deg);
@@ -44,43 +45,72 @@
   }
   100% {
     /* animate nothing to pause animation at the end */
-    opacity: 0.9;
+    /*opacity: 0.9;
     transform: rotateX(720deg);
+  }
+}*/
+
+@keyframes anim-svg {
+  0% {
+    color: black;
+    transform: scale(1);
+    opacity: 0;
+    text-shadow: 0 0 0 var(--black-color);
+  }
+  25% {
+    transform: scale(1.03);
+    opacity: 1;
+    text-shadow: 3px 10px 5px var(--blue-color);
+  }
+  50% {
+    color: var(--black-color);
+    transform: scale(0.99);
+    opacity: 1;
+    text-shadow: 1px 0 0 var(--dark-green-color);
+  }
+  100% {
+    /* animate nothing to add pause at the end of animation */
+    transform: scale(1.01);
+    opacity: 1;
+    text-shadow: 1px 0 0 var(--blue-color);
   }
 }
 
 .svg-anim {
-  animation: 35s anim-svg ease-in-out;
+  /*animation: 35s anim-svg ease-in-out;*/
+    animation: 15s anim-svg ease-in-out;
   
 }
 
 body {
-  background: linear-gradient(145deg, var(--dark-grey-color), var(--purple-color));
-  color: #fff;
+  background: linear-gradient(-115deg, var(--dark-grey-color), var(--black-color), var(--red-color));
+  color: var(--white-color);
 }
 
 .right {
-    position: relative;
-    left: 300px;
+  position: relative;
+  left: 300px;
+  color: var(--light-red-color);
+  text-shadow: 6px 0 0 var(--dark-green-color);
 }
 
 svg {
-    display: block;
-    font: 10.5em 'Unbounded';
-    width: 700px;
-    height: 300px;
-    position: absolute;
-    bottom: 750px;
-    right: 800px;
+  display: block;
+  font: 10.5em 'Unbounded';
+  width: 700px;
+  height: 300px;
+  position: absolute;
+  bottom: 750px;
+  right: 800px;
 }
 
 .text-copy {
-    fill: none;
-    stroke: white;
-    stroke-dasharray: 6% 29%;
-    stroke-width: 8px;
-    stroke-dashoffset: 0%;
-    animation: stroke-offset 5.5s infinite linear;
+  fill: none;
+  stroke: white;
+  stroke-dasharray: 6% 29%;
+  stroke-width: 8px;
+  stroke-dashoffset: 0%;
+  animation: stroke-offset 5.5s infinite linear;
 }
 
 .text-copy:nth-child(1){
@@ -118,13 +148,63 @@ svg {
 }
 
 select {
-  padding: 6px 10px;
+  /*padding: 6px 10px;
   background: var(--purple-color);
   color: #fff;
   font-size: 1rem;
   border-radius: 20px;
-  border: solid 2px #00bfff;
+  border: solid 2px #00bfff;*/
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  padding: 0 1em 0 0;
+  margin: 0;
+  width: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: inherit;
+  line-height: inherit;
+  outline: none;
 }
+
+.select {
+  width: 50%;
+  height: 1.25rem;
+  min-width: 10ch;
+  max-width: 20ch;
+  border: solid 1px var(--blue-color);
+  border-radius: 0.25em;
+  padding: 0.25em 0.5em;
+  font-size: 1.25rem;
+  cursor: pointer;
+  line-height: 1.1;
+  background-color: var(--black-color);
+  background-image: linear-gradient(to top, var(--black-color), var(--violet-color) 33%);
+  display: grid;
+  grid-template-areas: "select";
+  align-items: center;
+}
+
+.select::after {
+  content: "";
+  width: 0.8em;
+  height: 0.5em;
+  background-color: var(--red-color);
+  clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+  justify-self: end;
+}
+
+select,
+.select:after {
+  grid-area: select;
+  color: var(--red-color);
+}
+
 option {
+  border-radius: 20px;
+  background-color: var(--black-color);
+}
+
+option:focus {
   border-radius: 20px;
 }
