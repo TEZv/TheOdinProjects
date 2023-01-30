@@ -19,8 +19,12 @@
 }
 
 @keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
 
 .typed {
@@ -46,7 +50,7 @@
   }
   100% {
     /* animate nothing to pause animation at the end */
-    /*opacity: 0.9;
+/*opacity: 0.9;
     transform: rotateX(720deg);
   }
 }*/
@@ -79,27 +83,32 @@
 
 .svg-anim {
   /*animation: 35s anim-svg ease-in-out;*/
-    animation: 15s anim-svg ease-in-out;
-  
+  animation: 15s anim-svg ease-in-out;
 }
 
 body {
-  background: linear-gradient(-115deg, var(--dark-grey-color), var(--black-color), var(--red-color));
+  background: linear-gradient(
+    -115deg,
+    var(--dark-grey-color),
+    var(--black-color),
+    var(--red-color)
+  );
   color: var(--white-color);
-  font-family: 'Unbounded', cursive;
+  font-family: "Unbounded", cursive;
+  overflow: hidden;
 }
 
 .right {
-  font-family: 'Unbounded', cursive;
+  font-family: "Unbounded", cursive;
   position: relative;
   left: 320px;
-  color: var(--light-red-color);
-  text-shadow: 6px 0 0 var(--dark-green-color);
+  color: var(--violet-color);
+  text-shadow: 6px 0 0 var(--red-color);
 }
 
 svg {
   display: block;
-  font: 10.5em 'Unbounded', cursive;
+  font: 10.5em "Unbounded", cursive;
   width: 700px;
   height: 300px;
   position: absolute;
@@ -116,33 +125,35 @@ svg {
   animation: stroke-offset 5.5s infinite linear;
 }
 
-.text-copy:nth-child(1){
+.text-copy:nth-child(1) {
   stroke: var(--black-color);
   animation-delay: -1s;
 }
 
-.text-copy:nth-child(2){
+.text-copy:nth-child(2) {
   stroke: #840037;
   animation-delay: -3s;
 }
 
-.text-copy:nth-child(3){
-  stroke: #BD0034;
+.text-copy:nth-child(3) {
+  stroke: #bd0034;
   animation-delay: -3s;
 }
 
-.text-copy:nth-child(4){
-  stroke: #BD0034;
+.text-copy:nth-child(4) {
+  stroke: #bd0034;
   animation-delay: -4s;
 }
 
-.text-copy:nth-child(5){
-  stroke: #FDB731;
+.text-copy:nth-child(5) {
+  stroke: #fdb731;
   animation-delay: -5s;
 }
 
-@keyframes stroke-offset{
-  100% {stroke-dashoffset: -35%;}
+@keyframes stroke-offset {
+  100% {
+    stroke-dashoffset: -35%;
+  }
 }
 
 .svg-right {
@@ -162,7 +173,7 @@ select {
   border: none;
   padding: 0 1em 0 0;
   margin: 0;
-  width: 100%;
+  width: 70%;
   font-family: inherit;
   font-size: inherit;
   cursor: inherit;
@@ -171,18 +182,22 @@ select {
 }
 
 .select {
-  width: 55%;
-  height: 1.15rem;
-  min-width: 10ch;
+  /*width: 70%;*/
+  height: 1.8rem;
+  min-width: 16vh;
   max-width: 20ch;
-  border: solid 1px var(--blue-color);
+  border: solid 2px var(--blue-color);
   border-radius: 0.68em;
-  padding: 0.25em 0.5em;
-  font-size: 1.25rem;
+  padding: 0.02em 0.02em;
+  font-size: 1.1rem;
   cursor: pointer;
   line-height: 1.1;
   background-color: var(--black-color);
-  background-image: linear-gradient(to top, var(--black-color), var(--violet-color) 33%);
+  background-image: linear-gradient(
+    to top,
+    var(--black-color),
+    var(--violet-color) 33%
+  );
   display: grid;
   grid-template-areas: "select";
   align-items: center;
@@ -206,13 +221,12 @@ select,
 
 select:hover {
   background: transparent;
-  color: var(--light-white-color);
 }
 
 option {
   border-radius: 20px;
   background-color: var(--black-color);
-  cursor: pointer;
+  /*cursor: pointer;*/
 }
 
 .footer-container {
@@ -221,130 +235,127 @@ option {
   justify-content: space-between;
 }
 
-.gameDisplayEffects{
+.gameDisplayEffects {
   display: flex;
-  flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
 }
-.gameDisplayEffects button{
+
+.gameDisplayEffects button {
   width: 80px;
   height: 30px;
   outline: none;
-  border:none;
+  border: none;
   border-radius: 4px;
   font-weight: bold;
-  font-family: 'Unbounded', cursive;
+  font-family: "Unbounded", cursive;
   font-size: 18px;
   cursor: pointer;
-  background-color:unset;
+  background-color: unset;
 }
 
-#tic{
+#tic {
   animation: blink 6.5s 0.5s infinite;
-  background-color:transparent;
+  background-color: transparent;
 }
-#tac{
+#tac {
   animation: blink 5.4s 3.8s;
 }
-#toe{
+#toe {
   animation: blink 5.4s 6.6s;
 }
-@keyframes blink{
-  0%{
-      box-shadow: 2px 2px 15px 10px var(--red-color);
-      color: var(--white-color);
-      
+@keyframes blink {
+  0% {
+    box-shadow: 2px 2px 15px 10px var(--red-color);
+    color: var(--white-color);
   }
-  50%{
-      box-shadow: 3px 2px 15px 4px var(--violet-color);
-      box-shadow: 2px 3px 15px 10px var(--grey-color);
-      color: var(--red-color);
-      transform:scaleX(1.11);
-      transform:scaleY(1.21);
+  50% {
+    box-shadow: 3px 2px 15px 4px var(--violet-color);
+    box-shadow: 2px 3px 15px 10px var(--grey-color);
+    color: var(--red-color);
+    transform: scaleX(1.11);
+    transform: scaleY(1.21);
   }
-  65%{
+  65% {
     box-shadow: 2px 3px 15px 10px var(--light-green-color);
     color: var(--black-color);
     background-color: var(--white-color);
-}
- 100%{
-      box-shadow: 2px 3px 15px 10px var(--light-green-color);
-      color: var(--black-color);
-      background-color: var(--light-red-color);
+  }
+  100% {
+    box-shadow: 2px 3px 15px 10px var(--light-green-color);
+    color: var(--black-color);
+    background-color: var(--light-red-color);
   }
 }
 
 h1 {
-  font-family: 'Karla', sans-serif;
+  font-family: "Karla", sans-serif;
 }
 
 select.round {
-  background-image:
-    linear-gradient(45deg, transparent 50%, var(--grey-color) 50%),
+  background-image: linear-gradient(
+      45deg,
+      transparent 50%,
+      var(--grey-color) 50%
+    ),
     linear-gradient(135deg, var(--grey-color) 50%, transparent 50%),
     radial-gradient(var(--dark-green-color) 84%, transparent 22%);
   /*background-position:
     calc(100% - 20px) calc(1em + 2px),
     calc(100% - 15px) calc(1em + 2px),
     calc(100% - .5em) .5em;*/
-    background-position:
-    114px;
+  background-position: 114px;
   background-size:
-    /*1px 1px,
-    10px 10px,
-    10px 10px,
-    2px 2px,
-    1em 1.6em;*/
-    0px 0px,
-    0px 1px,
-    8px 20px,
-    1em 1.6em;
+  1px 1px,
+   10px 10px,
+   10px 10px,
+   2px 2px,
+   1em 1.6em;
+      /*0px 0px,
+    0px 1px, 8px 20px, 1em 1.6em;*/
   background-repeat: no-repeat;
 }
 
 select.round:focus {
-  background-image:
-    linear-gradient(45deg, var(--white-color) 50%, transparent 50%),
+  background-image: linear-gradient(
+      45deg,
+      var(--white-color) 50%,
+      transparent 50%
+    ),
     linear-gradient(135deg, transparent 50%, var(--white-color) 50%),
     radial-gradient(var(--grey-color) 70%, transparent 72%);
-    /*background-position:
+  /*background-position:
     calc(100% - 15px) 1em,
     calc(100% - 20px) 1em,
     calc(100% - .5em) .5em;*/
-    background-position:
-    112px;
-    background-size:
-    1px 1px,
-    10px 10px,
-    0.6em 0.6em;
+  background-position: 112px;
+  background-size: 1px 1px, 10px 10px, 0.6em 0.6em;
   background-repeat: no-repeat;
   border-color: var(--green-color);
   outline: 0;
 }
 
-
 html {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 *,
 *::after,
 *::before {
-	box-sizing: inherit;
-	margin: 0;
-	padding: 0;
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
 }
 :root {
-	--tile-border-style: 2px white solid;
-	--success: #28a745;
-	--info: #17a2b8;
-	--warning: #ffc107;
-	--danger: #dc3545;
+  --tile-border-style: 2px white solid;
+  --success: #28a745;
+  --info: #17a2b8;
+  --warning: #ffc107;
+  --danger: #dc3545;
 }
 body {
-	background-color: #222;
-	color: white;
-	/*display: flex;
+  background-color: #222;
+  color: white;
+  /*display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;*/
@@ -352,142 +363,145 @@ body {
 
 .body {
   display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 h1 {
-	margin: 15px;
+  margin: 15px;
 }
 
 input,
 select {
-	outline: none;
+  outline: none;
 }
 
 .pointer {
-	cursor: pointer;
+  cursor: pointer;
 }
 
 .pointer * {
-	cursor: pointer;
+  cursor: pointer;
 }
 
 .game-wrapper {
-	display: flex;
-	align-items: center;
-	gap: 50px;
-  
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 400px;
 }
 
 .game-controls {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	background-color: #111;
-	padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--dark-black-color);
+  padding: 12px;
 }
 
 .start-btn {
-	padding: 10px;
-	border: none;
-	background-color: var(--success);
-	color: white;
-	cursor: pointer;
-	font-size: 1rem;
-	margin-top: 20px;
+  padding: 10px;
+  border: none;
+  background-color: var(--success);
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 20px;
 }
 
 .start-btn:disabled {
-	background-color: gray;
-	cursor: default;
+  background-color: var(--dark-black-color);
+  cursor: default;
 }
 
 .game-form {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	gap: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
 }
 
 .input-wrapper {
-	display: flex;
-	gap: 15px;
-	padding: 5px;
-	align-items: center;
-	background-color: #222;
-	height: 40px;
+  display: flex;
+  gap: 15px;
+  padding: 15px;
+  align-items: center;
+  background-color: #222;
+  height: 60px;
 }
 
 .input-wrapper > label {
-	min-width: 100px;
+  min-width: 200px;
 }
 
 #difficulty {
-	width: 100%;
-	margin: 0 20px;
-	cursor: pointer;
+  width: 100%;
+  margin: 0 20px;
+  cursor: pointer;
 }
 
 .radio-wrapper {
-	justify-content: flex-end;
-	gap: 0px;
+  justify-content: flex-end;
+  gap: 0px;
 }
 
 .radio {
-	display: flex;
-	justify-content: center;
-	gap: 50px;
-	width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  width: 100%;
 }
 
 .input-wrapper > input {
-	padding: 5px;
+  width: 15rem;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: 'Unbounded', cursive;
 }
 
 .game {
-	background-color: #333;
-	height: 400px;
-	width: 400px;
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: repeat(3, 1fr);
-	margin-top: 20px;
+  background-color: #333;
+  height: 400px;
+  width: 480px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  margin-top: 20px;
 }
 
 .tile {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font-size: 5rem;
-	cursor: default;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5rem;
+  cursor: default;
 }
 
 .tile.highlighted {
-	color: gold;
+  color: gold;
 }
 
 .tile:nth-child(-n + 6) {
-	border-bottom: var(--tile-border-style);
+  border-bottom: var(--tile-border-style);
 }
 
 .tile:nth-child(3n + 2) {
-	border-left: var(--tile-border-style);
-	border-right: var(--tile-border-style);
+  border-left: var(--tile-border-style);
+  border-right: var(--tile-border-style);
 }
 
 .output {
-	padding: 50px;
-	font-size: 1.5rem;
+  padding: 50px;
+  font-size: 1.5rem;
 }
 
 p {
-  margin-bottom: 20px;;
+  margin-bottom: 20px;
 }
 
 footer {
-  margin-bottom: 6px;
+  margin-top: -40px;
 }
 
 .footer-container {
