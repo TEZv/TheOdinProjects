@@ -283,11 +283,15 @@ select.round {
     background-position:
     112px;
   background-size:
-    1px 1px,
+    /*1px 1px,
     10px 10px,
     10px 10px,
     2px 2px,
-    0.6em 0.6em;
+    1em 1.6em;*/
+    0px 0px,
+    0px 1px,
+    10px 20px,
+    1em 1.6em;
   background-repeat: no-repeat;
 }
 
