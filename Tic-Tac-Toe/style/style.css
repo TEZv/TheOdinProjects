@@ -129,6 +129,14 @@ h1 {
   margin: 15px;
 }
 
+a {
+  color: var(--black-color);
+}
+
+a:hover {
+  color: var(--light-white-color);
+}
+
 svg {
   display: block;
   font: 10.5em "Unbounded", cursive;
@@ -482,11 +490,4 @@ footer {
 .output {
   padding: 50px;
   font-size: 1.5rem;
-}
-
-a {
-  color: var(--black-color);
-}
-a:hover {
-  color: var(--light-white-color);
 }
