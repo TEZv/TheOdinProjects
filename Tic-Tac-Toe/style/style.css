@@ -470,7 +470,10 @@ select.round:focus {
 }
 
 .game {
-  background-color: var(--dark-purple);
+  /*background-color: var(--dark-purple);*/
+  /*border: 2px dashed var(--dark-purple);
+  border: 2px waved var(--dark-purple);
+  border-radius: 20px;*/
   height: 400px;
   width: 480px;
   display: grid;
@@ -485,6 +488,7 @@ select.round:focus {
   align-items: center;
   font-size: 5rem;
   cursor: default;
+  
 }
 
 .tile.highlighted {
